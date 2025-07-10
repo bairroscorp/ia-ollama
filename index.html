@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUC</title>
+
+  <!--<link rel="icon" href="icon/simbolo-05.png" type="image/png">-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .navbar {
+      background-color: #1e1e1e;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+      color: #e0e0e0 !important;
+    }
+
+    .navbar-brand {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #4BAE91 !important;
+    }
+
+    .nav-link.nav-green-hover {
+      color: #e0e0e0 !important;
+      transition: color 0.3s;
+    }
+
+    .nav-link.nav-green-hover:hover {
+      color: #4BAE91 !important;
+    }
+
+    .select-type-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .chat-container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .chat-box {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 600px;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .chat-input {
+      border-top: 1px solid #333;
+      padding: 0.75rem;
+      background-color: #1e1e1e;
+    }
+
+    .chat-input form {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .chat-input textarea {
+      resize: none;
+      width: 100%;
+      background-color: #2c2c2c;
+      color: #e0e0e0;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+
+    .btn-send {
+      background-color: #3a3a3a;
+      border: none;
+      color: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 80px;
+    }
+
+    .btn-send:hover {
+      background-color: #505050;
+    }
+
+    .message {
+      margin-bottom: 0.75rem;
+    }
+
+    .message.user {
+      text-align: right;
+    }
+
+    .message.bot {
+      text-align: left;
+    }
+
+    .message .bubble {
+      display: inline-block;
+      padding: 0.5rem 0.75rem;
+      border-radius: 10px;
+      background-color: #2f2f2f;
+      max-width: 75%;
+    }
+
+    .message.user .bubble {
+      background-color: #3a3a3a;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">SUC</a>
+      </div>
+    </nav>
+
+    <div class="chat-container">
+      <div class="chat-box">
+
+        <!-- SELECT dentro do chat-box -->
+        <div class="p-3 border-bottom">
+          <select class="form-select bg-dark text-light border-secondary" v-model="type">
+            <option value=".chat">Chat</option>
+            <option value=".lowcode">Low-code</option>
+            <option value=".sql">SQL</option>
+          </select>
+        </div>
+
+        <!-- MENSAGENS -->
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot">
+            <div class="bubble">Olá! Como posso ajudar?</div>
+          </div>
+          <div v-for="(msg, i) in mensagens" :key="i" :class="'message ' + msg.tipo">
+            <div class="bubble">{{ msg.texto }}</div>
+          </div>
+        </div>
+
+        <!-- Botão para enviar -->
+        <div class="chat-input">
+          <form @submit.prevent="enviar">
+            <textarea v-model="mensagem" rows="2" placeholder="Digite a chave..."></textarea>
+            <button type="submit" class="btn btn-send" :disabled="carregando">
+              <span v-if="carregando" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+              <span v-else>Enviar</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vue 3 + Axios -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script>
+    const { createApp } = Vue;
+
+    createApp({
+      data() {
+        return {
+          mensagem: '',
+          mensagens: [],
+          carregando: false,
+          type: '.chat',
+          chave: '.00000001'
+        }
+      },
+      methods: {
+        async enviar() {
+          const mensagem = this.mensagem.trim();
+          if (!mensagem) return;
+
+          this.mensagens.push({ tipo: 'user', texto: mensagem });
+          this.mensagem = '';
+          this.carregando = true;
+
+          try {
+            const response = await axios.post('api/', { prompt: mensagem, chave: this.chave, type: this.type });
+
+            if (response.data && response.data.conteudo) {
+              this.mensagens.push({ tipo: 'bot', texto: response.data.conteudo });
+            } else {
+              this.mensagens.push({ tipo: 'bot', texto: 'Não sei o que dizer...' });
+            }
+          } catch (error) {
+            const msg = error.response?.data?.erro || 'OPS! Erro 500!';
+            this.mensagens.push({ tipo: 'bot', texto: msg });
+          } finally {
+            this.carregando = false;
+            this.$nextTick(() => {
+              const container = document.getElementById("chatMessages");
+              container.scrollTop = container.scrollHeight;
+            });
+          }
+        }
+      }
+    }).mount('#app');
+  </script>
+</body>
+
+</html>
