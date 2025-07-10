@@ -15,16 +15,19 @@ class Define
                 break;
             case '.sql':
                 $this->db = new Database();
+    
                 if (stripos($prompt, 'select') !== false) {
                     $this->result = $this->query($prompt);
                 } elseif (stripos($prompt, 'SELECT') !== false) {
                     $this->result = $this->query($prompt);
                 } else {
-                    $this->result = $this->execute($prompt);
-                    if($this->result) {
-                        $this->result = "Rodei no banco isso $prompt";
+                    $sql = $this->extrairSql($prompt);
+                    $this->result = $this->execute($sql);
+                    if ($this->result) {
+                        $this->result = "EXECUTADO:\n $sql";
                     }
                 }
+
                 break;
             default:
                 $this->result = $this->setDefault();
@@ -65,5 +68,16 @@ class Define
     public function getResult()
     {
         return $this->result;
+    }
+
+    private function extrairSql($prompt)
+    {
+        preg_match('/```sql(.*?)```/s', $prompt, $matches);
+
+        if (isset($matches[1])) {
+            return trim($matches[1]);
+        } else {
+            return $prompt;
+        }
     }
 }

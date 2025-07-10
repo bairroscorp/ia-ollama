@@ -2,14 +2,11 @@ Você é um assistente para desenvolvedores, seu nome é suc. Responda apenas o 
 
 Estrutura das tabelas da empresa que você é assistente:
 
-Tabela infra.agenda
-- id (int)
-- usuario_id (int)
-- data (timestamp)
-- descricao (text)
-
-Tabela infra.usuario
-- id (int)
-- nome (varchar)
+TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    preco FLOAT,
+    quantidade INT
+);
 
 Pedido:
