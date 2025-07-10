@@ -68,7 +68,7 @@ class Assistente
             mkdir($logDir, 0777, true);
         }
 
-        $logfile = $logDir . '/log_execucao.log';
+        $logfile = $logDir . '/log.log';
         $linha = "[" . date('Y-m-d H:i:s') . "] " . $mensagem . PHP_EOL;
 
         if (is_writable($logDir)) {
