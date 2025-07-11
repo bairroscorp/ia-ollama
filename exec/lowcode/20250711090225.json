@@ -1,0 +1,13 @@
+[
+      {
+        "title": "Lista de Produtos",
+        "type": "table",
+        "data_source": "SELECT id, nome, preco FROM produtos",
+        "submit": { "method": "GET", "url": "/api/produtos" },
+        "components": [
+          { "label": "ID", "field": "id" },
+          { "label": "Nome", "field": "nome" },
+          { "label": "Preço", "field": "preco" }
+        ]
+      }
+    ]
