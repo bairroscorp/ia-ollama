@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Lista e Cadastro de Usuários",
+    "type": "table",
+    "data_source": "SELECT id, nome, email FROM usuarios",
+    "submit": { "method": "POST", "url": "/api/usuarios" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Email", "field": "email" }
+    ]
+  },
+  {
+    "title": "Cadastro de Usuário",
+    "type": "form",
+    "data_source": "SELECT * FROM usuarios WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/usuarios" },
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Email", "field": "email", "type": "text", "required": true, "email": true },
+      { "label": "Senha", "field": "senha", "type": "password", "required": true }
+    ]
+  }
+]

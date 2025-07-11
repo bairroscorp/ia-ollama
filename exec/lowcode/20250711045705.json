@@ -1,0 +1,16 @@
+[
+        {
+          "title": "Dashboard",
+          "type": "dashboard",
+          "data_source": "SELECT 'usuarios' as type, COUNT(id) as total FROM usuarios UNION ALL SELECT 'produtos', COUNT(id) as total FROM produtos",
+          "submit": { "method": "GET", "url": "/api/dashboard" },
+          "components": [
+            {
+              "type": "chart",
+              "chart_type": "pie",
+              "x_field": "type",
+              "y_field": "total"
+            }
+          ]
+        }
+      ]
