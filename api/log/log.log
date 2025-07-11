@@ -18,3 +18,130 @@ Sim, sou um assistente de programação, não sou especializado em materiais rel
 [2025-07-10 19:07:22] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_yqE8UC 2>&1
 [2025-07-10 19:07:50] Saída do Ollama:
 Sim, o Capítulo 1 do Livro de Lucas na Bíblia é chamado de "Capítulo 1 - O Annunciation". Este capítulo abrange as versículos 1 a 25. Ele conta a história da anunciação à Maria de que ela será mãe do Filho de Deus, Jesus Cristo.
+[2025-07-10 19:09:23] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_vNnyAk 2>&1
+[2025-07-10 19:09:29] Saída do Ollama:
+Meu nome é Suc. Qual sua pergunta hoje?
+[2025-07-11 14:33:59] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_u8Ot6f 2>&1
+[2025-07-11 14:34:05] Saída do Ollama:
+Sim, tenho conhecimento sobre Vue.js.
+[2025-07-11 14:36:34] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_K1y80m 2>&1
+[2025-07-11 14:37:56] Saída do Ollama:
+Aqui está o código HTML que utiliza Vue.js em CDN para renderizar as telas do recebimento de um JSON conforme especificado:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js JSON Tela Renderizadora</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Vue instance -->
+    <script>
+      new Vue({
+        el: '#app',
+        data() {
+          return {
+            telaAtual: 0,
+            telas: [
+              {
+                "title": "Cadastro de Clientes",
+                "type": "form",
+                "data_source": "SELECT * FROM clientes WHERE id = :id",
+                "submit": {
+                  "method": "POST",
+                  "url": "/api/clientes"
+                },
+                "components": [
+                  { "label": "Nome", "field": "nome", "type": "text", "required": true },
+                  { "label": "CPF", "field": "cpf", "type": "text", "required": true },
+                  { "label": "Sexo", "field": "sexo", "type": "select", "required": true, "options_query": "SELECT valor, label FROM sexo_opcoes" }
+                ]
+              },
+              {
+                "title": "Lista de Clientes",
+                "type": "table",
+                "data_source": "SELECT id, nome, cpf FROM clientes",
+                "submit": {
+                  "method": "GET",
+                  "url": "/api/clientes"
+                },
+                "components": [
+                  { "label": "Nome", "field": "nome" },
+                  { "label": "CPF", "field": "cpf" }
+                ]
+              }
+            ]
+          };
+        },
+        methods: {
+          renderTela(index) {
+            this.telaAtual = index;
+          }
+        }
+      });
+    </script>
+
+    <!-- Renderizando a tela atual -->
+    <template v-if="telas[telaAtual].type === 'form'">
+      <h1>{{telas[telaAtual].title}}</h1>
+      <form @submit.prevent="submitTela">
+        <div v-for="componente in telas[telaAtual].components" :key="componente.field">
+          <label for="campo-{{componente.field}}">{{componente.label}}</label>
+          <input
+            :id="'campo-'+componente.field"
+            v-if="componente.type !== 'select'"
+            :name="componente.field"
+            type="text"
+            v-model="telas[telaAtual][componente.field]">
+          <select v-else :id="'campo-'+componente.field" v-model="telas[telaAtual][componente.field]">
+            <option v-for="opcao in (componente.options_query ? telas[telaAtual].options_query() : [])" :value="opcao.valor">{{ opcao.label }}</option>
+          </select>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+    </template>
+
+    <!-- Renderizando a tela atual -->
+    <template v-else-if="telas[telaAtual].type === 'table'">
+      <h1>{{telas[telaAtual].title}}</h1>
+      <table>
+        <thead>
+          <tr>
+            <th v-for="componente in telas[telaAtual].components" :key="componente.field">{{componente.label}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in telas[telaAtual].data_source()">
+            <td v-for="componente in telas[telaAtual].components" :key="componente.field">{{ item[componente.field] }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </template>
+
+    <!-- Botoes de navegação entre telas -->
+    <button @click="renderTela(telaAtual - 1)">Voltar</button>
+    <button v-if="telas.length > telaAtual + 1" @click="renderTela(telaAtual + 1)">Próximo</button>
+  </div>
+</body>
+</html>
+```
+[2025-07-11 15:25:01] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_imTiG9 2>&1
+[2025-07-11 15:25:12] Saída do Ollama:
+[
+  {
+    "title": "Lista de Usuários",
+    "type": "table",
+    "data_source": "SELECT id, nome, email FROM usuarios",
+    "submit": {
+      "method": "GET",
+      "url": "/api/usuarios"
+    },
+    "components": [
+      { "label": "Nome", "field": "nome" },
+      { "label": "E-mail", "field": "email" }
+    ]
+  }
+]

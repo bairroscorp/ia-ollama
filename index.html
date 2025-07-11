@@ -29,6 +29,7 @@
     .navbar .nav-link,
     .navbar-brand {
       color: #e0e0e0 !important;
+      cursor: pointer;
     }
 
     .navbar-brand {
@@ -44,6 +45,12 @@
 
     .nav-link.nav-green-hover:hover {
       color: #4BAE91 !important;
+    }
+
+    .navbar .nav-link.active {
+      font-weight: bold;
+      color: #4BAE91 !important;
+      border-bottom: 2px solid #4BAE91;
     }
 
     .select-type-container {
@@ -146,6 +153,23 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">SUC</a>
+
+        <!-- Botão de toggle para menu em telas pequenas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menu colapsável -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ms-auto">
+            <li v-for="(m, ji) in jsons" :key="ji" class="nav-item">
+              <a class="nav-link nav-green-hover" :class="{ active: menuSelecionado === ji }"
+                @click.prevent="menuSelecionado = ji">
+                {{ m.title }}
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -174,13 +198,14 @@
         <!-- Botão para enviar -->
         <div class="chat-input">
           <form @submit.prevent="enviar">
-            <textarea v-model="mensagem" rows="2" placeholder="Digite a chave..."></textarea>
+            <textarea v-model="mensagem" rows="2" placeholder="Digite aqui..."></textarea>
             <button type="submit" class="btn btn-send" :disabled="carregando">
               <span v-if="carregando" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
               <span v-else>Enviar</span>
             </button>
           </form>
         </div>
+
       </div>
     </div>
   </div>
@@ -199,7 +224,9 @@
           mensagens: [],
           carregando: false,
           type: '.chat',
-          chave: '.00000001'
+          chave: '.00000001',
+          jsons: [],
+          menuSelecionado: null
         }
       },
       methods: {
@@ -216,6 +243,7 @@
 
             if (response.data && response.data.conteudo) {
               this.mensagens.push({ tipo: 'bot', texto: response.data.conteudo });
+              this.getMenu();
             } else {
               this.mensagens.push({ tipo: 'bot', texto: 'Não sei o que dizer...' });
             }
@@ -229,8 +257,26 @@
               container.scrollTop = container.scrollHeight;
             });
           }
-        }
-      }
+        },
+        getMenu() {
+          axios({
+            method: "POST",
+            url: `api/menu.php`,
+            data: {
+              chave: this.chave,
+              type: this.type
+            },
+            headers: {
+              "content-type": "application/json",
+            },
+          }).then((response) => {
+            this.jsons = response.data;
+          });
+        },
+      },
+      beforeMount() {
+        this.getMenu();
+      },
     }).mount('#app');
   </script>
 </body>

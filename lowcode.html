@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js JSON Tela Renderizadora</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <div id="app"> <!-- Vue instance -->
+        <script> new Vue({ el: '#app', data() { return { telaAtual: 0, telas: [{ "title": "Cadastro de Clientes", "type": "form", "data_source": "SELECT * FROM clientes WHERE id = :id", "submit": { "method": "POST", "url": "/api/clientes" }, "components": [{ "label": "Nome", "field": "nome", "type": "text", "required": true }, { "label": "CPF", "field": "cpf", "type": "text", "required": true }, { "label": "Sexo", "field": "sexo", "type": "select", "required": true, "options_query": "SELECT valor, label FROM sexo_opcoes" }] }, { "title": "Lista de Clientes", "type": "table", "data_source": "SELECT id, nome, cpf FROM clientes", "submit": { "method": "GET", "url": "/api/clientes" }, "components": [{ "label": "Nome", "field": "nome" }, { "label": "CPF", "field": "cpf" }] }] }; }, methods: { renderTela(index) { this.telaAtual = index; } } }); </script>
+        <!-- Renderizando a tela atual --> <template v-if="telas[telaAtual].type === 'form'">
+            <h1>{{telas[telaAtual].title}}</h1>
+            <form @submit.prevent="submitTela">
+                <div v-for="componente in telas[telaAtual].components" :key="componente.field"> <label
+                        for="campo-{{componente.field}}">{{componente.label}}</label> <input
+                        :id="'campo-'+componente.field" v-if="componente.type !== 'select'" :name="componente.field"
+                        type="text" v-model="telas[telaAtual][componente.field]"> <select v-else
+                        :id="'campo-'+componente.field" v-model="telas[telaAtual][componente.field]">
+                        <option v-for="opcao in (componente.options_query ? telas[telaAtual].options_query() : [])"
+                            :value="opcao.valor">{{ opcao.label }}</option>
+                    </select> </div> <button type="submit">Enviar</button>
+            </form>
+        </template> <!-- Renderizando a tela atual --> <template v-else-if="telas[telaAtual].type === 'table'">
+            <h1>{{telas[telaAtual].title}}</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th v-for="componente in telas[telaAtual].components" :key="componente.field">
+                            {{componente.label}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in telas[telaAtual].data_source()">
+                        <td v-for="componente in telas[telaAtual].components" :key="componente.field">{{
+                            item[componente.field] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </template> <!-- Botoes de navegação entre telas --> <button @click="renderTela(telaAtual - 1)">Voltar</button>
+        <button v-if="telas.length > telaAtual + 1" @click="renderTela(telaAtual + 1)">Próximo</button>
+    </div>
+</body>
+
+</html>
