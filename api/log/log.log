@@ -1,420 +1,415 @@
-[2025-07-10 19:03:55] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_vKPUqT 2>&1
-[2025-07-10 19:04:43] Saída do Ollama:
-TABLE pedidos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    cliente_id INT,
-    produto_id INT,
-    quantidade INT,
-    data DATE,
-    FOREIGN KEY (cliente_id) REFERENCES clientes(id),
-    FOREIGN KEY (produto_id) REFERENCES produtos(id)
+[2025-07-11 19:58:54] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_g2CFxm 2>&1
+[2025-07-11 19:58:57] Saída do Ollama:
+INSERT INTO produto (nome, preco) VALUES ('Produto Aleatório', 19.99);
+[2025-07-11 19:59:22] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_cOwZia 2>&1
+[2025-07-11 19:59:24] Saída do Ollama:
+INSERT INTO fabricante (nome) VALUES ('NomeFabricante');
+[2025-07-11 19:59:50] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_4RFj1Z 2>&1
+[2025-07-11 20:00:00] Saída do Ollama:
+Crie a tabela `produto_fabricante` se não existir:
+
+```sql
+CREATE TABLE IF NOT EXISTS `produto_fabricante` (
+    `produto_id` INT,
+    `fabricante_id` INT,
+    PRIMARY KEY (`produto_id`, `fabricante_id`)
 );
-[2025-07-10 19:06:07] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_5zuOvN 2>&1
-[2025-07-10 19:06:13] Saída do Ollama:
-Olá! Como posso ajudar?
-[2025-07-10 19:06:28] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_CmzDXI 2>&1
-[2025-07-10 19:06:41] Saída do Ollama:
-Sim, sou um assistente de programação, não sou especializado em materiais religiosos como a Bíblia.
-[2025-07-10 19:07:22] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_yqE8UC 2>&1
-[2025-07-10 19:07:50] Saída do Ollama:
-Sim, o Capítulo 1 do Livro de Lucas na Bíblia é chamado de "Capítulo 1 - O Annunciation". Este capítulo abrange as versículos 1 a 25. Ele conta a história da anunciação à Maria de que ela será mãe do Filho de Deus, Jesus Cristo.
-[2025-07-10 19:09:23] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_vNnyAk 2>&1
-[2025-07-10 19:09:29] Saída do Ollama:
-Meu nome é Suc. Qual sua pergunta hoje?
-[2025-07-11 14:33:59] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_u8Ot6f 2>&1
-[2025-07-11 14:34:05] Saída do Ollama:
-Sim, tenho conhecimento sobre Vue.js.
-[2025-07-11 14:36:34] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_K1y80m 2>&1
-[2025-07-11 14:37:56] Saída do Ollama:
-Aqui está o código HTML que utiliza Vue.js em CDN para renderizar as telas do recebimento de um JSON conforme especificado:
-
-```html
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Vue.js JSON Tela Renderizadora</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-</head>
-<body>
-  <div id="app">
-    <!-- Vue instance -->
-    <script>
-      new Vue({
-        el: '#app',
-        data() {
-          return {
-            telaAtual: 0,
-            telas: [
-              {
-                "title": "Cadastro de Clientes",
-                "type": "form",
-                "data_source": "SELECT * FROM clientes WHERE id = :id",
-                "submit": {
-                  "method": "POST",
-                  "url": "/api/clientes"
-                },
-                "components": [
-                  { "label": "Nome", "field": "nome", "type": "text", "required": true },
-                  { "label": "CPF", "field": "cpf", "type": "text", "required": true },
-                  { "label": "Sexo", "field": "sexo", "type": "select", "required": true, "options_query": "SELECT valor, label FROM sexo_opcoes" }
-                ]
-              },
-              {
-                "title": "Lista de Clientes",
-                "type": "table",
-                "data_source": "SELECT id, nome, cpf FROM clientes",
-                "submit": {
-                  "method": "GET",
-                  "url": "/api/clientes"
-                },
-                "components": [
-                  { "label": "Nome", "field": "nome" },
-                  { "label": "CPF", "field": "cpf" }
-                ]
-              }
-            ]
-          };
-        },
-        methods: {
-          renderTela(index) {
-            this.telaAtual = index;
-          }
-        }
-      });
-    </script>
-
-    <!-- Renderizando a tela atual -->
-    <template v-if="telas[telaAtual].type === 'form'">
-      <h1>{{telas[telaAtual].title}}</h1>
-      <form @submit.prevent="submitTela">
-        <div v-for="componente in telas[telaAtual].components" :key="componente.field">
-          <label for="campo-{{componente.field}}">{{componente.label}}</label>
-          <input
-            :id="'campo-'+componente.field"
-            v-if="componente.type !== 'select'"
-            :name="componente.field"
-            type="text"
-            v-model="telas[telaAtual][componente.field]">
-          <select v-else :id="'campo-'+componente.field" v-model="telas[telaAtual][componente.field]">
-            <option v-for="opcao in (componente.options_query ? telas[telaAtual].options_query() : [])" :value="opcao.valor">{{ opcao.label }}</option>
-          </select>
-        </div>
-        <button type="submit">Enviar</button>
-      </form>
-    </template>
-
-    <!-- Renderizando a tela atual -->
-    <template v-else-if="telas[telaAtual].type === 'table'">
-      <h1>{{telas[telaAtual].title}}</h1>
-      <table>
-        <thead>
-          <tr>
-            <th v-for="componente in telas[telaAtual].components" :key="componente.field">{{componente.label}}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="item in telas[telaAtual].data_source()">
-            <td v-for="componente in telas[telaAtual].components" :key="componente.field">{{ item[componente.field] }}</td>
-          </tr>
-        </tbody>
-      </table>
-    </template>
-
-    <!-- Botoes de navegação entre telas -->
-    <button @click="renderTela(telaAtual - 1)">Voltar</button>
-    <button v-if="telas.length > telaAtual + 1" @click="renderTela(telaAtual + 1)">Próximo</button>
-  </div>
-</body>
-</html>
 ```
-[2025-07-11 15:25:01] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_imTiG9 2>&1
-[2025-07-11 15:25:12] Saída do Ollama:
+
+Insira o registro na tabela `produto_fabricante`:
+
+```sql
+INSERT INTO `produto_fabricante` (`produto_id`, `fabricante_id`) VALUES (1, 1);
+```
+[2025-07-11 20:01:00] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_e4MWdU 2>&1
+[2025-07-11 20:01:03] Saída do Ollama:
+INSERT INTO produto_fabricante (produto_id, fabricante_id) VALUES (1, 1);
+[2025-07-11 20:01:22] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_9007VQ 2>&1
+[2025-07-11 20:01:36] Saída do Ollama:
+Para montar um relatório de produtos com seus respectivos fabricantes, podemos utilizar uma `JOIN` entre as tabelas `produto` e `produto_fabricante`, juntamente com a tabela `fabricante`. Abaixo segue o SQL necessário:
+
+```sql
+SELECT produto.nome AS 'Produto', fabricante.nome AS 'Fabricante'
+FROM produto
+JOIN produto_fabricante ON produto.id = produto_fabricante.produto_id
+JOIN fabricante ON produto_fabricante.fabricante_id = fabricante.id;
+```
+
+Esse comando vai retornar a lista de produtos juntamente com seus respectivos fabricantes, fazendo uma junção entre as três tabelas criadas.
+[2025-07-11 20:02:53] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_WgYMRg 2>&1
+[2025-07-11 20:02:55] Saída do Ollama:
+SELECT `produto`.`nome`, `produto`.`preco` FROM `produto`;
+[2025-07-11 20:03:08] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_gTzHIC 2>&1
+[2025-07-11 20:03:09] Saída do Ollama:
+SELECT * FROM fabricante;
+[2025-07-11 20:03:25] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_MVcAIo 2>&1
+[2025-07-11 20:03:32] Saída do Ollama:
+SELECT p.id AS `produto_id`, f.id AS `fabricante_id`, p.nome AS `produto_nome`, f.nome AS `fabricante_nome`
+FROM produto p
+JOIN produto_fabricante tf ON p.id = tf.produto_id
+JOIN fabricante f ON tf.fabricante_id = f.id;
+[2025-07-11 20:04:31] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_2bRSCa 2>&1
+[2025-07-11 20:05:03] Saída do Ollama:
 [
   {
-    "title": "Lista de Usuários",
+    "title": "Produtos",
     "type": "table",
-    "data_source": "SELECT id, nome, email FROM usuarios",
-    "submit": {
-      "method": "GET",
-      "url": "/api/usuarios"
-    },
-    "components": [
-      { "label": "Nome", "field": "nome" },
-      { "label": "E-mail", "field": "email" }
-    ]
-  }
-]
-[2025-07-11 16:37:50] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_P8Jy0h 2>&1
-[2025-07-11 16:38:11] Saída do Ollama:
-[
-  {
-    "title": "Produto",
-    "type": "dashboard",
-    "data_source": "SELECT id, nome, preco FROM produtos",
-    "components": [
-      { "label": "Lista de Produtos", "type": "table", "data_source": "SELECT id, nome, preco FROM produtos" }
-    ],
-    "submit": {
-      "method": "GET",
-      "url": "/api/produtos"
-    }
-  },
-  {
-    "title": "Formulário de Produto",
-    "type": "form",
-    "data_source": "SELECT * FROM produtos WHERE id = :id",
-    "submit": {
-      "method": "POST",
-      "url": "/api/produtos"
-    },
-    "components": [
-      { "label": "Nome", "field": "nome", "type": "text", "required": true },
-      { "label": "Preço", "field": "preco", "type": "number", "required": true }
-    ]
-  }
-]
-[2025-07-11 16:40:19] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_c7cd3u 2>&1
-[2025-07-11 16:40:58] Saída do Ollama:
-[
-    {
-      "title": "Produto",
-      "type": "form",
-      "data_source": "SELECT * FROM produtos WHERE id = :id",
-      "submit": {
-        "method": "POST",
-        "url": "/api/produtos"
-      },
-      "components": [
-        { label: "Nome", field: "nome", type: "text", required: true },
-        { label: "Preço", field: "preco", type: "number", required: true },
-        { label: "Categoria", field: "categoria_id", type: "select", options_query: "SELECT id, nome FROM categorias" }
-      ]
-    },
-    {
-      "title": "Lista de Produtos",
-      "type": "table",
-      "data_source": "SELECT id, nome, preco FROM produtos",
-      "submit": {
-        "method": "GET",
-        "url": "/api/produtos"
-      },
-      "components": [
-        { label: "ID", field: "id" },
-        { label: "Nome", field: "nome" },
-        { label: "Preço", field: "preco" }
-      ]
-    },
-    {
-      "title": "Editar Produto",
-      "type": "form",
-      "data_source": "SELECT * FROM produtos WHERE id = :id",
-      "submit": {
-        "method": "PUT",
-        "url": "/api/produtos/:id"
-      },
-      "components": [
-        { label: "Nome", field: "nome", type: "text", required: true },
-        { label: "Preço", field: "preco", type: "number", required: true },
-        { label: "Categoria", field: "categoria_id", type: "select", options_query: "SELECT id, nome FROM categorias" }
-      ]
-    },
-    {
-      "title": "Excluir Produto",
-      "type": "form",
-      "data_source": "",
-      "submit": {
-        "method": "DELETE",
-        "url": "/api/produtos/:id"
-      }
-    }
-  ]
-[2025-07-11 16:50:38] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_HviZXm 2>&1
-[2025-07-11 16:51:46] Saída do Ollama:
-Para criar uma tela com lista de usuários e opção de criar um novo usuário, você pode utilizar um framework Web como React ou Angular para criar a interface do usuário e Node.js/Express para gerenciar as requisições.
-
-Primeiro, instale os seguintes pacotes:
-
-- express
-- body-parser
-- ejs (se você decidir utilizar EJS) ou nunjucks (se você decidir utilizar Nunjucks)
-
-Deixo abaixo um exemplo de como pode ser implementado.
-
-1. Crie o arquivo `app.js`:
-
-```javascript
-const express = require('express');
-const bodyParser = require('body-parser');
-
-const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.set('view engine', 'ejs');
-
-let users = [];
-
-app.get('/users', (req, res) => {
-    res.render('users', { users });
-});
-
-app.post('/create-user', (req, res) => {
-    const user = req.body;
-    users.push(user);
-    res.redirect('/users');
-});
-
-app.listen(3000, () => console.log('Servidor rodando na porta 3000.'));
-```
-
-2. Crie o diretório `views` e dentro dele crie o arquivo `users.ejs`.
-
-```html
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Usuários</title>
-</head>
-<body>
-    <h1>Lista de Usuários</h1>
-    <ul>
-        <% users.forEach(function (user) { %>
-            <li><%= user.name %></li>
-        <% }); %>
-    </ul>
-    <form action="/create-user" method="post">
-        <label for="name">Nome:</label>
-        <input type="text" name="name" id="name" required>
-        <button type="submit">Criar Usuário</button>
-    </form>
-</body>
-</html>
-```
-
-3. Agora é preciso adicionar rotas de roteamento e o arquivo de roteamento ao seu projeto:
-
-```javascript
-const express = require('express');
-const bodyParser = require('body-parser');
-const routes = require('./routes/index');
-
-// Inicializando app
-const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.set('view engine', 'ejs');
-app.use('/', routes);
-
-// Porta e inicio do servidor
-const port = 3000;
-app.listen(port, () => console.log(`Servidor rodando na porta ${port}.`));
-```
-
-4. Crie o diretório `routes`, dentro dele crie o arquivo `index.js`.
-
-```javascript
-const express = require('express');
-const router = express.Router();
-
-router.get('/', (req, res) => {
-    res.render('users', { users });
-});
-
-router.post('/create-user', (req, res) => {
-    const user = req.body;
-    users.push(user);
-    res.redirect('/');
-});
-
-module.exports = router;
-```
-
-5. Agora é preciso instanciar o objeto de rotas e exportar para o arquivo principal:
-
-```javascript
-const express = require('express');
-const bodyParser = require('body-parser');
-let users = [];
-
-const indexRoutes = require('./routes/index');
-
-const app = express();
-app.use(bodyParser.urlencoded({ extended: false }));
-app.set('view engine', 'ejs');
-app.use('/', indexRoutes);
-```
-
-6. Por fim, inicie o servidor com `node app`.
-[2025-07-11 16:52:09] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_zftffU 2>&1
-[2025-07-11 16:52:30] Saída do Ollama:
-[
-  {
-    "title": "Lista e Cadastro de Usuários",
-    "type": "table",
-    "data_source": "SELECT id, nome, email FROM usuarios",
-    "submit": { method: "POST", url: "/api/usuarios" },
+    "data_source": "SELECT p.id, p.nome, p.preco FROM produto p",
+    "submit": { "method": "GET", "url": "/api/produtos" },
     "components": [
       { "label": "ID", field: "id" },
       { "label": "Nome", field: "nome" },
-      { "label": "Email", field: "email" }
+      { "label": "Preço", field: "preco" }
     ]
   },
   {
-    "title": "Cadastro de Usuário",
-    "type": "form",
-    "data_source": "SELECT * FROM usuarios WHERE id = :id",
-    "submit": { method: "POST", url: "/api/usuarios" },
+    "title": "Fabricantes",
+    "type": "table",
+    "data_source": "SELECT f.id, f.nome FROM fabricante f",
+    "submit": { "method": "GET", "url": "/api/fabricantes" },
     "components": [
-      { "label": "Nome", field: "nome", type: "text", required: true },
-      { "label": "Email", field: "email", type: "text", required: true, email: true },
-      { "label": "Senha", field: "senha", type: "password", required: true }
+      { "label": "ID", field: "id" },
+      { "label": "Nome", field: "nome" }
+    ]
+  },
+  {
+    "title": "Produtos e Fabricantes",
+    "type": "table",
+    "data_source": "SELECT p.id, p.nome, f.nome AS fabricante FROM produto p JOIN fabricante f ON p.fabricante_id = f.id",
+    "submit": { "method": "GET", "url": "/api/produtos-fabricantes" },
+    "components": [
+      { "label": "ID", field: "p.id" },
+      { "label": "Nome do Produto", field: "p.nome" },
+      { "label": "Fabricante", field: "fabricante" }
     ]
   }
 ]
-[2025-07-11 16:56:20] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_8wHla4 2>&1
-[2025-07-11 16:56:44] Saída do Ollama:
-Para criar um dashboard chamado "dashboard" que mostre a quantidade de usuários e produtos, você pode utilizar um framework como React ou Angular para desenvolver uma interface web.
+[2025-07-11 20:14:13] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_uoW6ha 2>&1
+[2025-07-11 20:14:22] Saída do Ollama:
+CREATE TABLE `produtos` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `nome` VARCHAR(255) NOT NULL,
+  `descricao` TEXT,
+  `preco` DECIMAL(10,2),
+  `quantidade` INT,
+  `status` ENUM('ativo', 'desativado') DEFAULT 'ativo'
+);
+[2025-07-11 20:15:00] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_4yPhgN 2>&1
+[2025-07-11 20:15:34] Saída do Ollama:
+Crie a tabela Produtos:
 
-Abra seu editor de código favorito e crie um novo projeto utilizando o framework desejado. Em seguida, instale as bibliotecas necessárias para fazer chamadas aos dados que você deseja exibir no dashboard.
+```sql
+CREATE TABLE `produtos` (
+    `id` int AUTO_INCREMENT PRIMARY KEY,
+    `nome` varchar(255) NOT NULL,
+    `descricao` text,
+    `preco` decimal(10,2),
+    `quantidade` int,
+    `status` enum('ativo', 'inativo')
+);
+```
 
-Para obter os dados de usuários e produtos, é necessário que haja uma API rest disponível que possa ser chamada pelo seu projeto. Se não tiver uma API disponível, crie uma para isso.
+Insira 10 produtos aleatórios:
 
-Na sua aplicação, utilize um componente "Card" personalizado para exibir as informações de usuários e produtos. Ajuste o estilo do componente "Card" utilizando CSS ou Sass de acordo com suas preferências.
+```sql
+INSERT INTO produtos (nome, descricao, preco, quantidade, status)
+VALUES ('Produto 1', 'Descrição do Produto 1', 9.99, 10, 'ativo'),
+       ('Produto 2', 'Descrição do Produto 2', 14.99, 5, 'ativo'),
+       ('Produto 3', 'Descrição do Produto 3', 7.99, 8, 'ativo'),
+       ('Produto 4', 'Descrição do Produto 4', 12.99, 6, 'inativo'),
+       ('Produto 5', 'Descrição do Produto 5', 19.99, 3, 'inativo'),
+       ('Produto 6', 'Descrição do Produto 6', 4.99, 7, 'inativo'),
+       ('Produto 7', 'Descrição do Produto 7', 10.99, 2, 'inativo'),
+       ('Produto 8', 'Descrição do Produto 8', 6.99, 4, 'inativo'),
+       ('Produto 9', 'Descrição do Produto 9', 15.99, 1, 'inativo'),
+       ('Produto 10', 'Descrição do Produto 10', 17.99, 9, 'inativo');
+```
+[2025-07-11 20:16:05] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_mKsutH 2>&1
+[2025-07-11 20:16:32] Saída do Ollama:
+Aqui está o SQL necessário para inserir 10 produtos na tabela `produtos`:
 
-Em seguida, crie duas chamadas a API REST para obter os dados de usuários e produtos respectivamente. Os dados obtidos podem ser exibidos na tela através da renderização do componente "Card".
+```sql
+INSERT INTO produtos (nome, descricao, preco, quantidade, status)
+VALUES ('Produto1', 'Descrição do Produto1', 9.99, 100, 'Ativo'),
+       ('Produto2', 'Descrição do Produto2', 19.99, 50, 'Ativo'),
+       ('Produto3', 'Descrição do Produto3', 29.99, 25, 'Ativo'),
+       ('Produto4', 'Descrição do Produto4', 39.99, 10, 'Ativo'),
+       ('Produto5', 'Descrição do Produto5', 49.99, 8, 'Ativo'),
+       ('Produto6', 'Descrição do Produto6', 59.99, 5, 'Ativo'),
+       ('Produto7', 'Descrição do Produto7', 69.99, 3, 'Ativo'),
+       ('Produto8', 'Descrição do Produto8', 79.99, 2, 'Ativo'),
+       ('Produto9', 'Descrição do Produto9', 89.99, 1, 'Ativo'),
+       ('Produto10', 'Descrição do Produto10', 99.99, 0, 'Ativo');
+```
+[2025-07-11 20:17:09] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_zW5Bvk 2>&1
+[2025-07-11 20:17:16] Saída do Ollama:
+UPDATE produtos SET status = 'novo' WHERE id IN (LAST_INSERT_ID(), LAST_INSERT_ID() - 1);
 
-Finalmente, teste sua aplicação para garantir que os dados sejam exibidos corretamente no dashboard. Se necessário, realize correções e melhorias para que sua aplicação seja mais funcional e fácil de usar.
-[2025-07-11 16:56:53] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_ookdTl 2>&1
-[2025-07-11 16:57:05] Saída do Ollama:
+Nota: Isso assume que você já tenha inserido pelo menos dois produtos em sua tabela. Se não for o caso, você precisa alterar o `LAST_INSERT_ID()` para corresponder às IDs dos produtos desejados.
+[2025-07-11 20:17:40] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_dozlLM 2>&1
+[2025-07-11 20:17:43] Saída do Ollama:
+UPDATE `produtos` SET `status`='desativado' WHERE `id` IN (SELECT `id` FROM `produtos` ORDER BY `id` DESC LIMIT 2);
+[2025-07-11 20:17:57] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_0TowvY 2>&1
+[2025-07-11 20:17:58] Saída do Ollama:
+SELECT * FROM produtos ORDER BY nome DESC LIMIT 2;
+[2025-07-11 20:18:28] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_8f3O8k 2>&1
+[2025-07-11 20:18:30] Saída do Ollama:
+UPDATE produtos SET status = 'desativado' WHERE id IN (8, 9);
+[2025-07-11 20:19:20] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_hfpwDo 2>&1
+[2025-07-11 20:19:32] Saída do Ollama:
 [
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  }
+]
+[2025-07-11 20:20:35] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_w8nCmN 2>&1
+[2025-07-11 20:20:45] Saída do Ollama:
+[
+  {
+    "title": "Produtos Ativos e Desativados",
+    "type": "dashboard",
+    "data_source": "SELECT status, SUM(quantidade) as total FROM produtos GROUP BY status",
+    "submit": { "method": "GET", "url": "/api/produtos/status" },
+    "components": [
+      {
+        "type": "chart",
+        "chart_type": "bar",
+        "x_field": "status",
+        "y_field": "total"
+      }
+    ]
+  }
+]
+[2025-07-11 20:23:29] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_JVsing 2>&1
+[2025-07-11 20:23:39] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_Gyf6ff 2>&1
+[2025-07-11 20:24:14] Saída do Ollama:
+Ao criar uma tabela com MySQL para você, seria necessário definir algumas coisas adicionais além da estrutura fornecida. Para poder gerar um gráfico de pizza, precisamos definir um campo enum que possa ter dois valores distintos para indicar o status do produto (ativo ou desativado). Também é necessário criar uma nova coluna para representar o status do produto. Abaixo está a criação da tabela:
+
+```sql
+CREATE TABLE produtos (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    preco DECIMAL(10, 2),
+    quantidade INT,
+    status ENUM('ativo', 'desativado') DEFAULT 'ativo' COMMENT 'Status do produto (ativo ou desativado)',
+    PRIMARY KEY (id)
+);
+```
+
+Para gerar o gráfico de pizza em MySQL, você pode usar a biblioteca para geração de gráficos Google Charts. Abaixo está um exemplo de SQL que faz essa consulta:
+
+```sql
+SELECT status, COUNT(*) as quantidade
+FROM produtos
+GROUP BY status
+```
+
+Por fim, você pode usar a biblioteca Google Charts para gerar o gráfico:
+
+```php
+<?php
+// Assumindo que o JSON com os dados está em um arquivo chamado 'data.json'
+$dados = file_get_contents('data.json');
+$arrData = json_decode($dados, true);
+
+require('src/googlechart/vendor/autoload.php');
+
+// Instancia a classe com as configurações do gráfico de pizza
+$options = array(
+    'title' => "Produtos ativos e desativos",
+    'pieHole' => 0.4,
+);
+
+$data = new Google_Chart_Data();
+$data->addNumberColumn('Label')
+    ->addStringColumn('Valor');
+
+// Adiciona as labels para cada status do produto
+foreach ($arrData as $key => $value) {
+    $data->addRow([$key, intval($value['quantidade'])]);
+}
+
+// Cria o gráfico de pizza
+$chart = new Google_Chart_Pie($options);
+$chart->setData($data);
+
+// Imprime o código HTML com o gráfico incluído
+echo $chart->getHtmlOutput();
+?>
+```
+[2025-07-11 20:24:35] Saída do Ollama:
+[
+    {
+      "title": "Listagem e Gráfico de Produtos",
+      "type": "dashboard",
+      "data_source": "SELECT nome as label, SUM(status='Ativo') as quantidade_ativo, SUM(status='Desativado') as quantidade_desativado FROM produtos GROUP BY nome",
+      "submit": { "method": "GET", "url": "/api/produtos" },
+      "components": [
         {
-          "title": "Dashboard",
-          "type": "dashboard",
-          "data_source": "SELECT 'usuarios' as type, COUNT(id) as total FROM usuarios UNION ALL SELECT 'produtos', COUNT(id) as total FROM produtos",
-          "submit": { "method": "GET", "url": "/api/dashboard" },
+          "type": "table",
+          "data_source": "SELECT id, nome, status FROM produtos",
           "components": [
-            {
-              "type": "chart",
-              "chart_type": "pie",
-              "x_field": "type",
-              "y_field": "total"
-            }
+            { "label": "ID", "field": "id" },
+            { "label": "Nome", "field": "nome" },
+            { "label": "Status", "field": "status" }
           ]
+        },
+        {
+          "type": "chart",
+          "chart_type": "pie",
+          "x_field": "label",
+          "y_field": "quantidade_ativo, quantidade_desativado"
         }
       ]
-[2025-07-11 18:26:17] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_TVb3o9 2>&1
-[2025-07-11 18:26:24] Saída do Ollama:
-CREATE TABLE usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(255),
-    email VARCHAR(255) UNIQUE,
-    senha VARCHAR(255)
+    }
+]
+[2025-07-11 20:26:16] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_BE2yrg 2>&1
+[2025-07-11 20:26:24] Saída do Ollama:
+A seguir está a lista de produtos baseada na estrutura do banco fornecida:
+
+```kotlin
+val produtos = mutableListOf<Produto>()
+
+data class Produto(
+    val id: Int,
+    val nome: String,
+    val descricao: String?,
+    val preco: BigDecimal?,
+    val quantidade: Int?,
+    val status: String?
+)
+```
+[2025-07-11 20:26:37] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_OxvcVB 2>&1
+[2025-07-11 20:26:49] Saída do Ollama:
+[
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  }
+]
+[2025-07-11 20:27:38] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_eOH667 2>&1
+[2025-07-11 20:27:49] Saída do Ollama:
+[
+    {
+      "title": "Quantidade de Produtos por Status",
+      "type": "dashboard",
+      "data_source": "SELECT status, COUNT(*) as quantidade FROM produtos GROUP BY status",
+      "submit": { "method": "GET", "url": "/api/produtos/estatisticas" },
+      "components": [
+        {
+          "type": "chart",
+          "chart_type": "pie",
+          "x_field": "status",
+          "y_field": "quantidade"
+        }
+      ]
+    }
+]
+[2025-07-11 20:29:13] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_GKJwNV 2>&1
+[2025-07-11 20:29:30] Saída do Ollama:
+[
+      {
+        "title": "Cadastro de Produto",
+        "type": "form",
+        "data_source": "SELECT * FROM produtos WHERE id IS NULL",
+        "submit": { "method": "POST", "url": "/api/produtos" },
+        "components": [
+          { "label": "Nome", "field": "nome", "type": "text", required: true },
+          { "label": "Descrição", "field": "descricao", "type": "textarea" },
+          { "label": "Preço", "field": "preco", "type": "number", required: true },
+          { "label": "Quantidade", "field": "quantidade", "type": "number", required: false },
+          { "label": "Status", "field": "status", "type": "select", options_query: "SELECT * FROM statuses" }
+        ]
+      }
+    ]
+[2025-07-11 20:32:51] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_AYf33D 2>&1
+[2025-07-11 20:33:20] Saída do Ollama:
+[
+  {
+    "title": "Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  },
+  {
+    "title": "Novo Produto",
+    "type": "form",
+    "data_source": "SELECT * FROM produtos WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/produtos" },
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Descrição", "field": "descricao", "type": "textarea" },
+      { "label": "Quantidade", "field": "quantidade", "type": "number" },
+      { "label": "Status", "field": "status", "type": "select", options_query: "SELECT 'ativo' AS id, 'ativo' AS status UNION SELECT 'desativado' AS id, 'desativado' AS status" }
+    ]
+  }
+]
+[2025-07-11 20:34:59] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_j5XzgF 2>&1
+[2025-07-11 20:35:02] Saída do Ollama:
+CREATE TABLE categorias (
+id INT PRIMARY KEY,
+nome VARCHAR NOT NULL
 );
-[2025-07-11 18:28:47] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_jEyNyB 2>&1
-[2025-07-11 18:29:20] Saída do Ollama:
-INSERT INTO usuarios (nome, email, senha) VALUES ('Usuario1', 'email1@example.com', 'senha1'), ('Usuario2', 'email2@example.com', 'senha2'), ('Usuario3', 'email3@example.com', 'senha3'), ('Usuario4', 'email4@example.com', 'senha4'), ('Usuario5', 'email5@example.com', 'senha5'), ('Usuario6', 'email6@example.com', 'senha6'), ('Usuario7', 'email7@example.com', 'senha7'), ('Usuario8', 'email8@example.com', 'senha8'), ('Usuario9', 'email9@example.com', 'senha9'), ('Usuario10', 'email10@example.com', 'senha10');
+[2025-07-11 20:35:17] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_wiXSvG 2>&1
+[2025-07-11 20:35:22] Saída do Ollama:
+Crie a tabela categorias:
 
-Para inserir mais de uma linha ao mesmo tempo, utilize a seguinte sintaxe: INSERT INTO usuarios (nome, email, senha) VALUES ('Usuario1', 'email1@example.com', 'senha1'), ('Usuario2', 'email2@example.com', 'senha2'), ... (uma linha por vez);
+```sql
+CREATE TABLE categorias (
+	id INT PRIMARY KEY,
+	nome VARCHAR NOT NULL,
+	descricao TEXT,
+	status ENUM('disponivel', 'indisponivel')
+);
+```
+[2025-07-11 20:35:27] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_CLMXcp 2>&1
+[2025-07-11 20:35:31] Saída do Ollama:
+CREATE TABLE categorias (
+    id INT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    status ENUM('ativo', 'inativo') DEFAULT 'ativo'
+);
+[2025-07-11 20:36:27] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_RHk7j5 2>&1
+[2025-07-11 20:36:42] Saída do Ollama:
+CREATE TABLE `categorias` (
+    `id` INT NOT NULL,
+    `nome` VARCHAR(255) NOT NULL,
+    `descricao` TEXT,
+    `status` ENUM('ativo', 'inativo') DEFAULT NULL
+);
 
-Obs: A senha de todos os usuários pode ser a mesma se não tiver restrição no seu projeto.
+INSERT INTO `categorias` (`id`, `nome`, `descricao`, `status`) VALUES
+(1, 'Ativo', '', 'ativo'),
+(2, 'Desativado', '', 'inativo');
 
-Se você quiser verificar o número de registros inseridos, execute este comando: SELECT COUNT(*) FROM usuarios;
+CREATE TABLE `produtos` (
+    `id` INT NOT NULL,
+    `nome` VARCHAR(255) NOT NULL,
+    `descricao` TEXT,
+    `preco` DECIMAL(10,2),
+    `quantidade` INT,
+    `status` ENUM('ativo', 'inativo') DEFAULT NULL
+);

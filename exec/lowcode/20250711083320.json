@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  },
+  {
+    "title": "Novo Produto",
+    "type": "form",
+    "data_source": "SELECT * FROM produtos WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/produtos" },
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Descrição", "field": "descricao", "type": "textarea" },
+      { "label": "Quantidade", "field": "quantidade", "type": "number" },
+      { "label": "Status", "field": "status", "type": "select", "options_query": "SELECT 'ativo' AS id, 'ativo' AS nome UNION SELECT 'desativado' AS id, 'desativado' AS nome" }
+    ]
+  }
+]

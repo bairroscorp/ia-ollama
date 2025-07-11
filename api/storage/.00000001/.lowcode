@@ -65,9 +65,9 @@ Editar
               "data_source": "SELECT * FROM produtos WHERE id = :id",
               "submit": { "method": "POST", "url": "/api/produtos" },
               com"ponents: [
-                { "label": "Nome", "field": "nome", "type": "text", required: true },
-                { "label": "Preço", "field": "preco", "type": "number", required: true },
-                { "label": "Categoria", "field": "categoria_id", "type": "select", options_query: "SELECT id, nome FROM categorias" }
+                { "label": "Nome", "field": "nome", "type": "text", "required": true },
+                { "label": "Preço", "field": "preco", "type": "number", "required": true },
+                { "label": "Categoria", "field": "categoria_id", "type": "select", "options_query": "SELECT id, nome FROM categorias" }
               ]
             },
             {
@@ -76,9 +76,9 @@ Editar
               "data_source": "SELECT id, nome, preco FROM produtos",
               "submit": { "method": "GET", "url": "/api/produtos" },
               "components": [
-                { "label": "ID", field: "id" },
-                { "label": "Nome", field: "nome" },
-                { "label": "Preço", field: "preco" }
+                { "label": "ID", "field": "id" },
+                { "label": "Nome", "field": "nome" },
+                { "label": "Preço", "field": "preco" }
               ]
             },
             {
@@ -105,4 +105,4 @@ Use sempre SQLs genéricos no data_source.
 Não gere explicações, apenas o JSON.
 Você precisa garantir que todo nome de chave esteja entre aspas duplas ("), conforme o padrão JSON exige.
 
-Pedido:
+

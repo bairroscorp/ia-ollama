@@ -18,10 +18,23 @@ $josn = json_decode(file_get_contents($caminho . '/' . $file_name));
 foreach ($josn as $key => $j) {
     if (!empty($j->data_source)) {
         try {
+
             $db = new Database();
-            $josn[$key]->data = $db->select($j->data_source);
+            try {
+                $josn[$key]->data = $db->select($j->data_source);
+            } catch (Exception $e) {
+            }
+
+            if (!empty($j->components)) {
+                foreach ($j->components as $key_component => $component) {
+
+                    if ($component->options_query) {
+
+                        $josn[$key]->components[$key_component]->data = $db->select($component->options_query);
+                    }
+                }
+            }
         } catch (Exception $e) {
-            // AQUI TEM QUE PENSAR EM ALGUMA FORMA DE MONTAR UM LOG OU ALGUM AVISO DE QUE NÃO DEU CERTO.
         }
     }
 }

@@ -70,7 +70,7 @@
                     :required="campo.required"></textarea>
 
                 <select v-else-if="campo.type === 'select'" v-model="formData[campo.field]" :required="campo.required">
-                    <option v-for="opt in currentScreen.data" :value="opt.id">{{ opt.nome }}</option>
+                    <option v-for="opt in campo.data" :value="opt.id">{{ opt.nome }}</option>
                 </select>
 
                 <input type="checkbox" v-else-if="campo.type === 'checkbox'" v-model="formData[campo.field]">

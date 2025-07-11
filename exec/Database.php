@@ -47,4 +47,26 @@ class Database
     {
         return $this->pdo;
     }
+
+    public function getEstruturaBancoJson()
+    {
+        $sql = "SELECT table_name, column_name, data_type, is_nullable, column_key
+            FROM information_schema.columns
+            WHERE table_schema = :dbname
+            ORDER BY table_name, ordinal_position";
+
+        $colunas = $this->select($sql, ['dbname' => $this->dbname]);
+       
+        $estrutura = [];
+        foreach ($colunas as $coluna) {
+            $estrutura[$coluna['TABLE_NAME']][] = [
+                'nome' => $coluna['COLUMN_NAME'],
+                'tipo' => $coluna['DATA_TYPE'],
+                'nulo' => $coluna['IS_NULLABLE'],
+                'chave' => $coluna['COLUMN_KEY']
+            ];
+        }
+
+        return json_encode($estrutura, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    }
 }

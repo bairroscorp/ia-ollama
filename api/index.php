@@ -2,6 +2,7 @@
 
 require_once 'Assistente.php';
 require_once '../exec/Define.php';
+require_once '../exec/Database.php';
 
 header("Content-Type: application/json");
 
@@ -39,12 +40,12 @@ if (!file_exists($path)) {
     exit;
 }
 
+$db = new Database();
+$json = $db->getEstruturaBancoJson();
 $conteudo = file_get_contents($path);
-
-$conteudo = $conteudo . ' ' . $input['prompt'];
+$conteudo = $conteudo . " Estrutura do banco:\n\n$json\n\n " . $input['prompt'];
 
 $assistente = new Assistente($conteudo);
-
 $conteudo = $assistente->executar();
 
 if ($type !== '.chat') {
