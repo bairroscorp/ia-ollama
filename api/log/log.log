@@ -145,3 +145,259 @@ Aqui está o código HTML que utiliza Vue.js em CDN para renderizar as telas do 
     ]
   }
 ]
+[2025-07-11 16:37:50] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_P8Jy0h 2>&1
+[2025-07-11 16:38:11] Saída do Ollama:
+[
+  {
+    "title": "Produto",
+    "type": "dashboard",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "components": [
+      { "label": "Lista de Produtos", "type": "table", "data_source": "SELECT id, nome, preco FROM produtos" }
+    ],
+    "submit": {
+      "method": "GET",
+      "url": "/api/produtos"
+    }
+  },
+  {
+    "title": "Formulário de Produto",
+    "type": "form",
+    "data_source": "SELECT * FROM produtos WHERE id = :id",
+    "submit": {
+      "method": "POST",
+      "url": "/api/produtos"
+    },
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true }
+    ]
+  }
+]
+[2025-07-11 16:40:19] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_c7cd3u 2>&1
+[2025-07-11 16:40:58] Saída do Ollama:
+[
+    {
+      "title": "Produto",
+      "type": "form",
+      "data_source": "SELECT * FROM produtos WHERE id = :id",
+      "submit": {
+        "method": "POST",
+        "url": "/api/produtos"
+      },
+      "components": [
+        { label: "Nome", field: "nome", type: "text", required: true },
+        { label: "Preço", field: "preco", type: "number", required: true },
+        { label: "Categoria", field: "categoria_id", type: "select", options_query: "SELECT id, nome FROM categorias" }
+      ]
+    },
+    {
+      "title": "Lista de Produtos",
+      "type": "table",
+      "data_source": "SELECT id, nome, preco FROM produtos",
+      "submit": {
+        "method": "GET",
+        "url": "/api/produtos"
+      },
+      "components": [
+        { label: "ID", field: "id" },
+        { label: "Nome", field: "nome" },
+        { label: "Preço", field: "preco" }
+      ]
+    },
+    {
+      "title": "Editar Produto",
+      "type": "form",
+      "data_source": "SELECT * FROM produtos WHERE id = :id",
+      "submit": {
+        "method": "PUT",
+        "url": "/api/produtos/:id"
+      },
+      "components": [
+        { label: "Nome", field: "nome", type: "text", required: true },
+        { label: "Preço", field: "preco", type: "number", required: true },
+        { label: "Categoria", field: "categoria_id", type: "select", options_query: "SELECT id, nome FROM categorias" }
+      ]
+    },
+    {
+      "title": "Excluir Produto",
+      "type": "form",
+      "data_source": "",
+      "submit": {
+        "method": "DELETE",
+        "url": "/api/produtos/:id"
+      }
+    }
+  ]
+[2025-07-11 16:50:38] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_HviZXm 2>&1
+[2025-07-11 16:51:46] Saída do Ollama:
+Para criar uma tela com lista de usuários e opção de criar um novo usuário, você pode utilizar um framework Web como React ou Angular para criar a interface do usuário e Node.js/Express para gerenciar as requisições.
+
+Primeiro, instale os seguintes pacotes:
+
+- express
+- body-parser
+- ejs (se você decidir utilizar EJS) ou nunjucks (se você decidir utilizar Nunjucks)
+
+Deixo abaixo um exemplo de como pode ser implementado.
+
+1. Crie o arquivo `app.js`:
+
+```javascript
+const express = require('express');
+const bodyParser = require('body-parser');
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'ejs');
+
+let users = [];
+
+app.get('/users', (req, res) => {
+    res.render('users', { users });
+});
+
+app.post('/create-user', (req, res) => {
+    const user = req.body;
+    users.push(user);
+    res.redirect('/users');
+});
+
+app.listen(3000, () => console.log('Servidor rodando na porta 3000.'));
+```
+
+2. Crie o diretório `views` e dentro dele crie o arquivo `users.ejs`.
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuários</title>
+</head>
+<body>
+    <h1>Lista de Usuários</h1>
+    <ul>
+        <% users.forEach(function (user) { %>
+            <li><%= user.name %></li>
+        <% }); %>
+    </ul>
+    <form action="/create-user" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" required>
+        <button type="submit">Criar Usuário</button>
+    </form>
+</body>
+</html>
+```
+
+3. Agora é preciso adicionar rotas de roteamento e o arquivo de roteamento ao seu projeto:
+
+```javascript
+const express = require('express');
+const bodyParser = require('body-parser');
+const routes = require('./routes/index');
+
+// Inicializando app
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'ejs');
+app.use('/', routes);
+
+// Porta e inicio do servidor
+const port = 3000;
+app.listen(port, () => console.log(`Servidor rodando na porta ${port}.`));
+```
+
+4. Crie o diretório `routes`, dentro dele crie o arquivo `index.js`.
+
+```javascript
+const express = require('express');
+const router = express.Router();
+
+router.get('/', (req, res) => {
+    res.render('users', { users });
+});
+
+router.post('/create-user', (req, res) => {
+    const user = req.body;
+    users.push(user);
+    res.redirect('/');
+});
+
+module.exports = router;
+```
+
+5. Agora é preciso instanciar o objeto de rotas e exportar para o arquivo principal:
+
+```javascript
+const express = require('express');
+const bodyParser = require('body-parser');
+let users = [];
+
+const indexRoutes = require('./routes/index');
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.set('view engine', 'ejs');
+app.use('/', indexRoutes);
+```
+
+6. Por fim, inicie o servidor com `node app`.
+[2025-07-11 16:52:09] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_zftffU 2>&1
+[2025-07-11 16:52:30] Saída do Ollama:
+[
+  {
+    "title": "Lista e Cadastro de Usuários",
+    "type": "table",
+    "data_source": "SELECT id, nome, email FROM usuarios",
+    "submit": { method: "POST", url: "/api/usuarios" },
+    "components": [
+      { "label": "ID", field: "id" },
+      { "label": "Nome", field: "nome" },
+      { "label": "Email", field: "email" }
+    ]
+  },
+  {
+    "title": "Cadastro de Usuário",
+    "type": "form",
+    "data_source": "SELECT * FROM usuarios WHERE id = :id",
+    "submit": { method: "POST", url: "/api/usuarios" },
+    "components": [
+      { "label": "Nome", field: "nome", type: "text", required: true },
+      { "label": "Email", field: "email", type: "text", required: true, email: true },
+      { "label": "Senha", field: "senha", type: "password", required: true }
+    ]
+  }
+]
+[2025-07-11 16:56:20] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_8wHla4 2>&1
+[2025-07-11 16:56:44] Saída do Ollama:
+Para criar um dashboard chamado "dashboard" que mostre a quantidade de usuários e produtos, você pode utilizar um framework como React ou Angular para desenvolver uma interface web.
+
+Abra seu editor de código favorito e crie um novo projeto utilizando o framework desejado. Em seguida, instale as bibliotecas necessárias para fazer chamadas aos dados que você deseja exibir no dashboard.
+
+Para obter os dados de usuários e produtos, é necessário que haja uma API rest disponível que possa ser chamada pelo seu projeto. Se não tiver uma API disponível, crie uma para isso.
+
+Na sua aplicação, utilize um componente "Card" personalizado para exibir as informações de usuários e produtos. Ajuste o estilo do componente "Card" utilizando CSS ou Sass de acordo com suas preferências.
+
+Em seguida, crie duas chamadas a API REST para obter os dados de usuários e produtos respectivamente. Os dados obtidos podem ser exibidos na tela através da renderização do componente "Card".
+
+Finalmente, teste sua aplicação para garantir que os dados sejam exibidos corretamente no dashboard. Se necessário, realize correções e melhorias para que sua aplicação seja mais funcional e fácil de usar.
+[2025-07-11 16:56:53] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_ookdTl 2>&1
+[2025-07-11 16:57:05] Saída do Ollama:
+[
+        {
+          "title": "Dashboard",
+          "type": "dashboard",
+          "data_source": "SELECT 'usuarios' as type, COUNT(id) as total FROM usuarios UNION ALL SELECT 'produtos', COUNT(id) as total FROM produtos",
+          "submit": { "method": "GET", "url": "/api/dashboard" },
+          "components": [
+            {
+              "type": "chart",
+              "chart_type": "pie",
+              "x_field": "type",
+              "y_field": "total"
+            }
+          ]
+        }
+      ]

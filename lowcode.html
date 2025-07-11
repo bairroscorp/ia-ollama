@@ -2,45 +2,176 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Vue.js JSON Tela Renderizadora</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <meta charset="UTF-8" />
+    <title>SUC</title>
+
+    <!-- Vue 3 + Axios -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        input,
+        select,
+        textarea {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .chart-bar {
+            background: steelblue;
+            color: white;
+            padding: 5px;
+            margin: 2px 0;
+        }
+
+        body {
+            background: #2f2f2f;
+            color: #e0e0e0;
+            font-family: 'Inter', sans-serif;
+            padding: 20px;
+        }
+
+        pre {
+            background: #2f2f2f;
+            padding: 1rem;
+            border-radius: 8px;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="app"> <!-- Vue instance -->
-        <script> new Vue({ el: '#app', data() { return { telaAtual: 0, telas: [{ "title": "Cadastro de Clientes", "type": "form", "data_source": "SELECT * FROM clientes WHERE id = :id", "submit": { "method": "POST", "url": "/api/clientes" }, "components": [{ "label": "Nome", "field": "nome", "type": "text", "required": true }, { "label": "CPF", "field": "cpf", "type": "text", "required": true }, { "label": "Sexo", "field": "sexo", "type": "select", "required": true, "options_query": "SELECT valor, label FROM sexo_opcoes" }] }, { "title": "Lista de Clientes", "type": "table", "data_source": "SELECT id, nome, cpf FROM clientes", "submit": { "method": "GET", "url": "/api/clientes" }, "components": [{ "label": "Nome", "field": "nome" }, { "label": "CPF", "field": "cpf" }] }] }; }, methods: { renderTela(index) { this.telaAtual = index; } } }); </script>
-        <!-- Renderizando a tela atual --> <template v-if="telas[telaAtual].type === 'form'">
-            <h1>{{telas[telaAtual].title}}</h1>
-            <form @submit.prevent="submitTela">
-                <div v-for="componente in telas[telaAtual].components" :key="componente.field"> <label
-                        for="campo-{{componente.field}}">{{componente.label}}</label> <input
-                        :id="'campo-'+componente.field" v-if="componente.type !== 'select'" :name="componente.field"
-                        type="text" v-model="telas[telaAtual][componente.field]"> <select v-else
-                        :id="'campo-'+componente.field" v-model="telas[telaAtual][componente.field]">
-                        <option v-for="opcao in (componente.options_query ? telas[telaAtual].options_query() : [])"
-                            :value="opcao.valor">{{ opcao.label }}</option>
-                    </select> </div> <button type="submit">Enviar</button>
-            </form>
-        </template> <!-- Renderizando a tela atual --> <template v-else-if="telas[telaAtual].type === 'table'">
-            <h1>{{telas[telaAtual].title}}</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th v-for="componente in telas[telaAtual].components" :key="componente.field">
-                            {{componente.label}}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="item in telas[telaAtual].data_source()">
-                        <td v-for="componente in telas[telaAtual].components" :key="componente.field">{{
-                            item[componente.field] }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </template> <!-- Botoes de navegação entre telas --> <button @click="renderTela(telaAtual - 1)">Voltar</button>
-        <button v-if="telas.length > telaAtual + 1" @click="renderTela(telaAtual + 1)">Próximo</button>
+    <div id="app">
+        
+        <h1>{{ currentScreen.title }}</h1>
+
+        <!-- Se for formulário -->
+        <form v-if="currentScreen.type === 'form'" @submit.prevent="salvar">
+            <div v-for="campo in currentScreen.components" :key="campo.field">
+                <label>{{ campo.label }}</label>
+
+                <input v-if="campo.type === 'text' || campo.type === 'number'" :type="campo.type"
+                    v-model="formData[campo.field]" :required="campo.required">
+
+                <textarea v-else-if="campo.type === 'textarea'" v-model="formData[campo.field]"
+                    :required="campo.required"></textarea>
+
+                <select v-else-if="campo.type === 'select'" v-model="formData[campo.field]" :required="campo.required">
+                    <option v-for="opt in mockSelectOptions" :value="opt.id">{{ opt.nome }}</option>
+                </select>
+
+                <input type="checkbox" v-else-if="campo.type === 'checkbox'" v-model="formData[campo.field]">
+            </div>
+
+            <button type="submit">Salvar</button>
+        </form>
+
+        <!-- Se for tabela -->
+        <table v-if="currentScreen.type === 'table'">
+            <thead>
+                <tr>
+                    <th v-for="col in currentScreen.components" :key="col.field">{{ col.label }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="linha in mockTableData" :key="linha.id">
+                    <td v-for="col in currentScreen.components" :key="col.field">{{ linha[col.field] }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Se for dashboard -->
+        <div v-if="currentScreen.type === 'dashboard'">
+            <div v-for="graf in currentScreen.components" :key="graf.x_field">
+                <h3>{{ graf.chart_type.toUpperCase() }}</h3>
+                <div v-for="item in mockDashboardData" class="chart-bar"
+                    :style="{ width: item[graf.y_field] * 10 + 'px' }">
+                    {{ item[graf.x_field] }}: {{ item[graf.y_field] }}
+                </div>
+            </div>
+        </div>
+
+        <!-- Navegação entre telas -->
+        <hr>
+        <button v-for="(tela, i) in telas" :key="i" @click="setTela(i)">
+            Ir para: {{ tela.title }}
+        </button>
     </div>
 </body>
 
 </html>
+
+<script>
+
+    const { createApp } = Vue;
+
+    createApp({
+        data() {
+            return {
+                telas: [],
+                currentIndex: 0,
+                formData: {},
+                mockTableData: [
+                    { id: 1, nome: "Produto A", preco: 10 },
+                    { id: 2, nome: "Produto B", preco: 20 }
+                ],
+                mockDashboardData: [
+                    { categoria: "Eletrônicos", total: 5 },
+                    { categoria: "Roupas", total: 8 }
+                ],
+                mockSelectOptions: [
+                    { id: 1, nome: "Categoria 1" },
+                    { id: 2, nome: "Categoria 2" }
+                ]
+            }
+        },
+        mounted() {
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+            this.getMenu(getQueryParam('data'));
+        },
+        computed: {
+            currentScreen() {
+                return this.telas[this.currentIndex];
+            }
+        },
+        methods: {
+            getMenu(fileName) {
+                axios({
+                    method: "POST",
+                    url: `api/json.php`,
+                    data: {
+                        fileName: fileName
+                    },
+                    headers: {
+                        "content-type": "application/json",
+                    },
+                }).then((response) => {
+                    this.telas = response.data;
+                });
+            },
+            setTela(i) {
+                this.currentIndex = i;
+                this.formData = {}; // limpa dados
+            },
+            salvar() {
+                alert("Dados enviados: " + JSON.stringify(this.formData));
+            }
+        }
+    }).mount('#app');
+</script>

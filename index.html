@@ -162,9 +162,9 @@
         <!-- Menu colapsável -->
         <div class="collapse navbar-collapse" id="navbarMenu">
           <ul class="navbar-nav ms-auto">
-            <li v-for="(m, ji) in jsons" :key="ji" class="nav-item">
+            <li v-for="(m, ji) in menus" :key="ji" class="nav-item">
               <a class="nav-link nav-green-hover" :class="{ active: menuSelecionado === ji }"
-                @click.prevent="menuSelecionado = ji">
+                @click.prevent="menuSelecionado = ji" @click="popUpLowCode(m)">
                 {{ m.title }}
               </a>
             </li>
@@ -225,7 +225,7 @@
           carregando: false,
           type: '.chat',
           chave: '.00000001',
-          jsons: [],
+          menus: [],
           menuSelecionado: null
         }
       },
@@ -270,9 +270,16 @@
               "content-type": "application/json",
             },
           }).then((response) => {
-            this.jsons = response.data;
+            this.menus = response.data;
           });
         },
+        popUpLowCode(menu) {
+          window.open(
+            `lowcode.html?data=${menu.file_name}`,
+            '_blank',
+            'width=600,height=500,toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes'
+          );
+        }
       },
       beforeMount() {
         this.getMenu();

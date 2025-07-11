@@ -59,39 +59,50 @@ json
 Copiar
 Editar
 [
-  {
-    "title": "Cadastro de Clientes",
-    "type": "form",
-    "data_source": "SELECT * FROM clientes WHERE id = :id",
-    "submit": {
-      "method": "POST",
-      "url": "/api/clientes"
-    },
-    "components": [
-      { "label": "Nome", "field": "nome", "type": "text", "required": true },
-      { "label": "CPF", "field": "cpf", "type": "text", "required": true },
-      { "label": "Sexo", "field": "sexo", "type": "select", "required": true, "options_query": "SELECT valor, label FROM sexo_opcoes" }
-    ]
-  },
-  {
-    "title": "Lista de Clientes",
-    "type": "table",
-    "data_source": "SELECT id, nome, cpf FROM clientes",
-    "submit": {
-      "method": "GET",
-      "url": "/api/clientes"
-    },
-    "components": [
-      { "label": "Nome", "field": "nome" },
-      { "label": "CPF", "field": "cpf" }
-    ]
-  }
-]
+            {
+              "title": "Cadastro de Produto",
+              "type": "form",
+              "data_source": "SELECT * FROM produtos WHERE id = :id",
+              "submit": { "method": "POST", "url": "/api/produtos" },
+              com"ponents: [
+                { "label": "Nome", "field": "nome", "type": "text", required: true },
+                { "label": "Preço", "field": "preco", "type": "number", required: true },
+                { "label": "Categoria", "field": "categoria_id", "type": "select", options_query: "SELECT id, nome FROM categorias" }
+              ]
+            },
+            {
+              "title": "Lista de Produtos",
+              "type": "table",
+              "data_source": "SELECT id, nome, preco FROM produtos",
+              "submit": { "method": "GET", "url": "/api/produtos" },
+              "components": [
+                { "label": "ID", field: "id" },
+                { "label": "Nome", field: "nome" },
+                { "label": "Preço", field: "preco" }
+              ]
+            },
+            {
+              "title": "Resumo de Vendas",
+              "type": "dashboard",
+              "data_source": "SELECT categoria, SUM(valor) as total FROM vendas GROUP BY categoria",
+              "submit": { "method": "GET", "url": "/api/vendas/resumo" },
+              "components": [
+                {
+                  "type": "chart",
+                  "chart_type": "bar",
+                  "x_field": "categoria",
+                  "y_field": "total"
+                }
+              ]
+            }
+          ]
+
 Instruções finais:
 Gere apenas JSON válido como saída.
 
 Use sempre SQLs genéricos no data_source.
 
 Não gere explicações, apenas o JSON.
+Você precisa garantir que todo nome de chave esteja entre aspas duplas ("), conforme o padrão JSON exige.
 
 Pedido:

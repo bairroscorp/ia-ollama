@@ -2,8 +2,6 @@
 
 header("Content-Type: application/json");
 
-$input = json_decode(file_get_contents('php://input'), true);
-
 $caminho = '../exec/lowcode';
 
 if (!is_dir($caminho)) {
@@ -11,7 +9,7 @@ if (!is_dir($caminho)) {
 }
 
 $arquivos = array_filter(scandir($caminho), function ($item) use ($caminho) {
-    return is_file($caminho . DIRECTORY_SEPARATOR . $item);
+    return is_file($caminho . DIRECTORY_SEPARATOR . $item) && pathinfo($item, PATHINFO_EXTENSION) === 'json';
 });
 
 $arrayAquivos = array_values($arquivos);
@@ -19,8 +17,15 @@ $arrayAquivos = array_values($arquivos);
 $menu = [];
 
 foreach ($arrayAquivos as $arquivo) {
-    $josn = json_decode(file_get_contents($caminho . '/' . $arquivo));
-    $menu[] = $josn[0];
+
+    $conteudo = file_get_contents($caminho . '/' . $arquivo);
+
+    $josn = json_decode($conteudo);
+
+    $menu[] = [
+        'title' => $josn[0]->title,
+        'file_name' => $arquivo
+    ];
 }
 
 echo json_encode($menu);
