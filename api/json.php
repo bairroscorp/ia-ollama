@@ -13,22 +13,17 @@ if (!is_dir($caminho)) {
 }
 
 $file_name = $input['fileName'];
-
-// PRECISA PENSAR EM UMA FORMA DE RODAR A QUERY AQUI PARA ALIMENTAR OS 
-//$file_name = '20250711045230.json';
-
 $josn = json_decode(file_get_contents($caminho . '/' . $file_name));
 
 foreach ($josn as $key => $j) {
     if (!empty($j->data_source)) {
-        $db = new Database();
-        try{
+        try {
+            $db = new Database();
             $josn[$key]->data = $db->select($j->data_source);
-        }catch(Exception $e) {
-
+        } catch (Exception $e) {
+            // AQUI TEM QUE PENSAR EM ALGUMA FORMA DE MONTAR UM LOG OU ALGUM AVISO DE QUE NÃO DEU CERTO.
         }
     }
-    //var_dump($josn);die();
 }
 
 echo json_encode($josn);
