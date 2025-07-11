@@ -401,3 +401,20 @@ Finalmente, teste sua aplicação para garantir que os dados sejam exibidos corr
           ]
         }
       ]
+[2025-07-11 18:26:17] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_TVb3o9 2>&1
+[2025-07-11 18:26:24] Saída do Ollama:
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    email VARCHAR(255) UNIQUE,
+    senha VARCHAR(255)
+);
+[2025-07-11 18:28:47] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_jEyNyB 2>&1
+[2025-07-11 18:29:20] Saída do Ollama:
+INSERT INTO usuarios (nome, email, senha) VALUES ('Usuario1', 'email1@example.com', 'senha1'), ('Usuario2', 'email2@example.com', 'senha2'), ('Usuario3', 'email3@example.com', 'senha3'), ('Usuario4', 'email4@example.com', 'senha4'), ('Usuario5', 'email5@example.com', 'senha5'), ('Usuario6', 'email6@example.com', 'senha6'), ('Usuario7', 'email7@example.com', 'senha7'), ('Usuario8', 'email8@example.com', 'senha8'), ('Usuario9', 'email9@example.com', 'senha9'), ('Usuario10', 'email10@example.com', 'senha10');
+
+Para inserir mais de uma linha ao mesmo tempo, utilize a seguinte sintaxe: INSERT INTO usuarios (nome, email, senha) VALUES ('Usuario1', 'email1@example.com', 'senha1'), ('Usuario2', 'email2@example.com', 'senha2'), ... (uma linha por vez);
+
+Obs: A senha de todos os usuários pode ser a mesma se não tiver restrição no seu projeto.
+
+Se você quiser verificar o número de registros inseridos, execute este comando: SELECT COUNT(*) FROM usuarios;

@@ -14,6 +14,7 @@ class Define
                 $this->result = $this->lowcode($prompt);
                 break;
             case '.sql':
+                
                 $this->db = new Database();
     
                 if (stripos($prompt, 'select') !== false) {
