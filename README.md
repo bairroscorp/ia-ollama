@@ -1,6 +1,7 @@
-# DOZER *~decision-making orchestration zero-touch execution reasoning~*
+# DOZER: Decision, Orchestration, Zero-touch, Execution, and Reasoning*
 
-**API + IA + Low-code + DB = orquestração de tomada de decisão, execução com toque zero e muito raciocínio**
+**API + IA + Low-code + DB = Decisão, Orquestração, Zero intervenção, Execução e Raciocínio ** 
+# Automatizando processos com inteligência.
 
 # API 
 descrição: API, vai receber chamadas post com um token, esse token sera uma pasta dentro do projeto, sendo assim, ele vai guardar os promps para aquela chamada.
