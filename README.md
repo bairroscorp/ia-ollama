@@ -1,6 +1,6 @@
-# SUC *~Think With Neurons~*
+# DOZER *~decision-making orchestration zero-touch execution reasoning~*
 
-**API + IA + Roteador de treinamento + Roteador de response**
+**API + IA + Low-code + DB = orquestração de tomada de decisão, execução com toque zero e muito raciocínio**
 
 # API 
 descrição: API, vai receber chamadas post com um token, esse token sera uma pasta dentro do projeto, sendo assim, ele vai guardar os promps para aquela chamada.
