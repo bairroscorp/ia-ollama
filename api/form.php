@@ -6,9 +6,6 @@ header("Content-Type: application/json");
 
 $input = json_decode(file_get_contents('php://input'), true);
 
-
-// INSERT INTO `produto` (`id`, `nome`, `preco`, `quantidade_estoque`) VALUES (NULL, 'celular LG', 100, 10);
-
 $table = $input['table'];
 
 $insert = "INSERT INTO $table (";
@@ -42,5 +39,3 @@ echo json_encode(
         'mensagem' => 'salvo com sucesso'
     ]
 );
-
-
