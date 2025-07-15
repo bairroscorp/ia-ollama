@@ -458,3 +458,1398 @@ CREATE TABLE `produtos` (
         ]
       }
     ]
+[2025-07-14 21:00:07] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run phi < /tmp/prompt_H8153o 2>&1
+[2025-07-14 21:00:51] Saída do Ollama:
+pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest  pulling manifest 
+pulling 04778965089b:   0% ▕                  ▏ 2.3 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   0% ▕                  ▏ 7.3 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   1% ▕                  ▏  11 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   1% ▕                  ▏  17 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   1% ▕                  ▏  19 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   2% ▕                  ▏  27 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   2% ▕                  ▏  32 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   2% ▕                  ▏  36 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   3% ▕                  ▏  41 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   3% ▕                  ▏  48 MB/1.6 GB                  pulling manifest 
+pulling 04778965089b:   3% ▕                  ▏  54 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   3% ▕                  ▏  55 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   4% ▕                  ▏  56 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   4% ▕                  ▏  64 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   4% ▕                  ▏  67 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   5% ▕                  ▏  73 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   5% ▕                  ▏  76 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   5% ▕                  ▏  83 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   6% ▕█                 ▏  89 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   6% ▕█                 ▏  92 MB/1.6 GB   50 MB/s     30spulling manifest 
+pulling 04778965089b:   6% ▕█                 ▏  95 MB/1.6 GB   47 MB/s     31spulling manifest 
+pulling 04778965089b:   6% ▕█                 ▏  99 MB/1.6 GB   47 MB/s     31spulling manifest 
+pulling 04778965089b:   6% ▕█                 ▏ 103 MB/1.6 GB   47 MB/s     31spulling manifest 
+pulling 04778965089b:   7% ▕█                 ▏ 109 MB/1.6 GB   47 MB/s     31spulling manifest 
+pulling 04778965089b:   7% ▕█                 ▏ 115 MB/1.6 GB   47 MB/s     31spulling manifest 
+pulling 04778965089b:   7% ▕█                 ▏ 118 MB/1.6 GB   47 MB/s     31spulling manifest 
+pulling 04778965089b:   8% ▕█                 ▏ 124 MB/1.6 GB   47 MB/s     31spulling manifest 
+pulling 04778965089b:   8% ▕█                 ▏ 130 MB/1.6 GB   47 MB/s     31spulling manifest 
+pulling 04778965089b:   9% ▕█                 ▏ 137 MB/1.6 GB   47 MB/s     30spulling manifest 
+pulling 04778965089b:   9% ▕█                 ▏ 140 MB/1.6 GB   47 MB/s     30spulling manifest 
+pulling 04778965089b:   9% ▕█                 ▏ 147 MB/1.6 GB   48 MB/s     29spulling manifest 
+pulling 04778965089b:   9% ▕█                 ▏ 150 MB/1.6 GB   48 MB/s     29spulling manifest 
+pulling 04778965089b:  10% ▕█                 ▏ 156 MB/1.6 GB   48 MB/s     29spulling manifest 
+pulling 04778965089b:  10% ▕█                 ▏ 162 MB/1.6 GB   48 MB/s     29spulling manifest 
+pulling 04778965089b:  11% ▕█                 ▏ 168 MB/1.6 GB   48 MB/s     29spulling manifest 
+pulling 04778965089b:  11% ▕█                 ▏ 172 MB/1.6 GB   48 MB/s     29spulling manifest 
+pulling 04778965089b:  11% ▕██                ▏ 178 MB/1.6 GB   48 MB/s     29spulling manifest 
+pulling 04778965089b:  12% ▕██                ▏ 184 MB/1.6 GB   48 MB/s     28spulling manifest 
+pulling 04778965089b:  12% ▕██                ▏ 187 MB/1.6 GB   48 MB/s     28spulling manifest 
+pulling 04778965089b:  12% ▕██                ▏ 193 MB/1.6 GB   48 MB/s     28spulling manifest 
+pulling 04778965089b:  12% ▕██                ▏ 196 MB/1.6 GB   48 MB/s     28spulling manifest 
+pulling 04778965089b:  13% ▕██                ▏ 203 MB/1.6 GB   49 MB/s     28spulling manifest 
+pulling 04778965089b:  13% ▕██                ▏ 209 MB/1.6 GB   49 MB/s     27spulling manifest 
+pulling 04778965089b:  13% ▕██                ▏ 215 MB/1.6 GB   49 MB/s     27spulling manifest 
+pulling 04778965089b:  14% ▕██                ▏ 218 MB/1.6 GB   49 MB/s     27spulling manifest 
+pulling 04778965089b:  14% ▕██                ▏ 225 MB/1.6 GB   49 MB/s     27spulling manifest 
+pulling 04778965089b:  14% ▕██                ▏ 227 MB/1.6 GB   49 MB/s     27spulling manifest 
+pulling 04778965089b:  15% ▕██                ▏ 234 MB/1.6 GB   49 MB/s     27spulling manifest 
+pulling 04778965089b:  15% ▕██                ▏ 240 MB/1.6 GB   49 MB/s     27spulling manifest 
+pulling 04778965089b:  15% ▕██                ▏ 243 MB/1.6 GB   49 MB/s     27spulling manifest 
+pulling 04778965089b:  16% ▕██                ▏ 249 MB/1.6 GB   49 MB/s     27spulling manifest 
+pulling 04778965089b:  16% ▕██                ▏ 255 MB/1.6 GB   50 MB/s     26spulling manifest 
+pulling 04778965089b:  16% ▕██                ▏ 257 MB/1.6 GB   50 MB/s     26spulling manifest 
+pulling 04778965089b:  16% ▕██                ▏ 263 MB/1.6 GB   50 MB/s     26spulling manifest 
+pulling 04778965089b:  17% ▕███               ▏ 270 MB/1.6 GB   50 MB/s     26spulling manifest 
+pulling 04778965089b:  17% ▕███               ▏ 276 MB/1.6 GB   50 MB/s     26spulling manifest 
+pulling 04778965089b:  17% ▕███               ▏ 279 MB/1.6 GB   50 MB/s     26spulling manifest 
+pulling 04778965089b:  18% ▕███               ▏ 285 MB/1.6 GB   50 MB/s     26spulling manifest 
+pulling 04778965089b:  18% ▕███               ▏ 288 MB/1.6 GB   50 MB/s     25spulling manifest 
+pulling 04778965089b:  18% ▕███               ▏ 295 MB/1.6 GB   50 MB/s     25spulling manifest 
+pulling 04778965089b:  19% ▕███               ▏ 301 MB/1.6 GB   50 MB/s     25spulling manifest 
+pulling 04778965089b:  19% ▕███               ▏ 304 MB/1.6 GB   50 MB/s     25spulling manifest 
+pulling 04778965089b:  19% ▕███               ▏ 310 MB/1.6 GB   50 MB/s     25spulling manifest 
+pulling 04778965089b:  20% ▕███               ▏ 317 MB/1.6 GB   50 MB/s     25spulling manifest 
+pulling 04778965089b:  20% ▕███               ▏ 323 MB/1.6 GB   50 MB/s     25spulling manifest 
+pulling 04778965089b:  20% ▕███               ▏ 326 MB/1.6 GB   50 MB/s     25spulling manifest 
+pulling 04778965089b:  21% ▕███               ▏ 332 MB/1.6 GB   50 MB/s     25spulling manifest 
+pulling 04778965089b:  21% ▕███               ▏ 335 MB/1.6 GB   50 MB/s     24spulling manifest 
+pulling 04778965089b:  21% ▕███               ▏ 342 MB/1.6 GB   50 MB/s     24spulling manifest 
+pulling 04778965089b:  22% ▕███               ▏ 348 MB/1.6 GB   50 MB/s     24spulling manifest 
+pulling 04778965089b:  22% ▕███               ▏ 351 MB/1.6 GB   50 MB/s     24spulling manifest 
+pulling 04778965089b:  22% ▕████              ▏ 357 MB/1.6 GB   51 MB/s     24spulling manifest 
+pulling 04778965089b:  23% ▕████              ▏ 364 MB/1.6 GB   51 MB/s     24spulling manifest 
+pulling 04778965089b:  23% ▕████              ▏ 370 MB/1.6 GB   51 MB/s     24spulling manifest 
+pulling 04778965089b:  23% ▕████              ▏ 373 MB/1.6 GB   51 MB/s     24spulling manifest 
+pulling 04778965089b:  24% ▕████              ▏ 379 MB/1.6 GB   51 MB/s     23spulling manifest 
+pulling 04778965089b:  24% ▕████              ▏ 385 MB/1.6 GB   51 MB/s     23spulling manifest 
+pulling 04778965089b:  24% ▕████              ▏ 388 MB/1.6 GB   51 MB/s     23spulling manifest 
+pulling 04778965089b:  25% ▕████              ▏ 394 MB/1.6 GB   51 MB/s     23spulling manifest 
+pulling 04778965089b:  25% ▕████              ▏ 397 MB/1.6 GB   51 MB/s     23spulling manifest 
+pulling 04778965089b:  25% ▕████              ▏ 404 MB/1.6 GB   51 MB/s     23spulling manifest 
+pulling 04778965089b:  26% ▕████              ▏ 410 MB/1.6 GB   51 MB/s     23spulling manifest 
+pulling 04778965089b:  26% ▕████              ▏ 413 MB/1.6 GB   51 MB/s     23spulling manifest 
+pulling 04778965089b:  26% ▕████              ▏ 419 MB/1.6 GB   51 MB/s     23spulling manifest 
+pulling 04778965089b:  27% ▕████              ▏ 426 MB/1.6 GB   51 MB/s     22spulling manifest 
+pulling 04778965089b:  27% ▕████              ▏ 432 MB/1.6 GB   51 MB/s     22spulling manifest 
+pulling 04778965089b:  27% ▕████              ▏ 435 MB/1.6 GB   51 MB/s     22spulling manifest 
+pulling 04778965089b:  28% ▕████              ▏ 441 MB/1.6 GB   51 MB/s     22spulling manifest 
+pulling 04778965089b:  28% ▕████              ▏ 444 MB/1.6 GB   51 MB/s     22spulling manifest 
+pulling 04778965089b:  28% ▕█████             ▏ 451 MB/1.6 GB   51 MB/s     22spulling manifest 
+pulling 04778965089b:  29% ▕█████             ▏ 456 MB/1.6 GB   51 MB/s     22spulling manifest 
+pulling 04778965089b:  29% ▕█████             ▏ 462 MB/1.6 GB   51 MB/s     22spulling manifest 
+pulling 04778965089b:  29% ▕█████             ▏ 464 MB/1.6 GB   51 MB/s     22spulling manifest 
+pulling 04778965089b:  29% ▕█████             ▏ 472 MB/1.6 GB   51 MB/s     21spulling manifest 
+pulling 04778965089b:  30% ▕█████             ▏ 475 MB/1.6 GB   51 MB/s     21spulling manifest 
+pulling 04778965089b:  30% ▕█████             ▏ 481 MB/1.6 GB   51 MB/s     21spulling manifest 
+pulling 04778965089b:  30% ▕█████             ▏ 487 MB/1.6 GB   51 MB/s     21spulling manifest 
+pulling 04778965089b:  31% ▕█████             ▏ 493 MB/1.6 GB   51 MB/s     21spulling manifest 
+pulling 04778965089b:  31% ▕█████             ▏ 496 MB/1.6 GB   51 MB/s     21spulling manifest 
+pulling 04778965089b:  31% ▕█████             ▏ 502 MB/1.6 GB   51 MB/s     21spulling manifest 
+pulling 04778965089b:  32% ▕█████             ▏ 505 MB/1.6 GB   51 MB/s     21spulling manifest 
+pulling 04778965089b:  32% ▕█████             ▏ 512 MB/1.6 GB   51 MB/s     21spulling manifest 
+pulling 04778965089b:  32% ▕█████             ▏ 518 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  33% ▕█████             ▏ 521 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  33% ▕█████             ▏ 527 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  33% ▕█████             ▏ 533 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  34% ▕██████            ▏ 540 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  34% ▕██████            ▏ 543 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  34% ▕██████            ▏ 549 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  35% ▕██████            ▏ 555 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  35% ▕██████            ▏ 558 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  35% ▕██████            ▏ 564 MB/1.6 GB   51 MB/s     20spulling manifest 
+pulling 04778965089b:  35% ▕██████            ▏ 568 MB/1.6 GB   52 MB/s     19spulling manifest 
+pulling 04778965089b:  36% ▕██████            ▏ 574 MB/1.6 GB   52 MB/s     19spulling manifest 
+pulling 04778965089b:  36% ▕██████            ▏ 579 MB/1.6 GB   52 MB/s     19spulling manifest 
+pulling 04778965089b:  36% ▕██████            ▏ 583 MB/1.6 GB   52 MB/s     19spulling manifest 
+pulling 04778965089b:  37% ▕██████            ▏ 589 MB/1.6 GB   52 MB/s     19spulling manifest 
+pulling 04778965089b:  37% ▕██████            ▏ 594 MB/1.6 GB   52 MB/s     19spulling manifest 
+pulling 04778965089b:  37% ▕██████            ▏ 597 MB/1.6 GB   52 MB/s     19spulling manifest 
+pulling 04778965089b:  38% ▕██████            ▏ 603 MB/1.6 GB   52 MB/s     19spulling manifest 
+pulling 04778965089b:  38% ▕██████            ▏ 610 MB/1.6 GB   52 MB/s     18spulling manifest 
+pulling 04778965089b:  38% ▕██████            ▏ 612 MB/1.6 GB   52 MB/s     18spulling manifest 
+pulling 04778965089b:  39% ▕██████            ▏ 620 MB/1.6 GB   52 MB/s     18spulling manifest 
+pulling 04778965089b:  39% ▕███████           ▏ 626 MB/1.6 GB   52 MB/s     18spulling manifest 
+pulling 04778965089b:  39% ▕███████           ▏ 629 MB/1.6 GB   52 MB/s     18spulling manifest 
+pulling 04778965089b:  40% ▕███████           ▏ 635 MB/1.6 GB   52 MB/s     18spulling manifest 
+pulling 04778965089b:  40% ▕███████           ▏ 642 MB/1.6 GB   52 MB/s     18spulling manifest 
+pulling 04778965089b:  40% ▕███████           ▏ 648 MB/1.6 GB   52 MB/s     18spulling manifest 
+pulling 04778965089b:  41% ▕███████           ▏ 651 MB/1.6 GB   52 MB/s     18spulling manifest 
+pulling 04778965089b:  41% ▕███████           ▏ 657 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  41% ▕███████           ▏ 663 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  42% ▕███████           ▏ 667 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  42% ▕███████           ▏ 673 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  42% ▕███████           ▏ 676 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  43% ▕███████           ▏ 682 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  43% ▕███████           ▏ 688 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  43% ▕███████           ▏ 695 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  44% ▕███████           ▏ 698 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  44% ▕███████           ▏ 704 MB/1.6 GB   52 MB/s     17spulling manifest 
+pulling 04778965089b:  44% ▕███████           ▏ 710 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  45% ▕████████          ▏ 713 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  45% ▕████████          ▏ 719 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  45% ▕████████          ▏ 722 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  45% ▕████████          ▏ 727 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  46% ▕████████          ▏ 734 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  46% ▕████████          ▏ 739 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  46% ▕████████          ▏ 741 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  47% ▕████████          ▏ 747 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  47% ▕████████          ▏ 751 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  47% ▕████████          ▏ 756 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  48% ▕████████          ▏ 763 MB/1.6 GB   52 MB/s     16spulling manifest 
+pulling 04778965089b:  48% ▕████████          ▏ 766 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  48% ▕████████          ▏ 772 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  49% ▕████████          ▏ 778 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  49% ▕████████          ▏ 782 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  49% ▕████████          ▏ 788 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  50% ▕████████          ▏ 793 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  50% ▕████████          ▏ 796 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  50% ▕█████████         ▏ 803 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  51% ▕█████████         ▏ 809 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  51% ▕█████████         ▏ 815 MB/1.6 GB   52 MB/s     15spulling manifest 
+pulling 04778965089b:  51% ▕█████████         ▏ 819 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  52% ▕█████████         ▏ 825 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  52% ▕█████████         ▏ 828 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  52% ▕█████████         ▏ 834 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  52% ▕█████████         ▏ 841 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  53% ▕█████████         ▏ 847 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  53% ▕█████████         ▏ 850 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  53% ▕█████████         ▏ 856 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  54% ▕█████████         ▏ 859 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  54% ▕█████████         ▏ 866 MB/1.6 GB   52 MB/s     14spulling manifest 
+pulling 04778965089b:  54% ▕█████████         ▏ 871 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  55% ▕█████████         ▏ 875 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  55% ▕█████████         ▏ 881 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  55% ▕█████████         ▏ 887 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  56% ▕██████████        ▏ 891 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  56% ▕██████████        ▏ 897 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  56% ▕██████████        ▏ 903 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  57% ▕██████████        ▏ 906 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  57% ▕██████████        ▏ 913 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  57% ▕██████████        ▏ 917 MB/1.6 GB   52 MB/s     13spulling manifest 
+pulling 04778965089b:  58% ▕██████████        ▏ 925 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  58% ▕██████████        ▏ 928 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  58% ▕██████████        ▏ 934 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  59% ▕██████████        ▏ 938 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  59% ▕██████████        ▏ 944 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  59% ▕██████████        ▏ 950 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  60% ▕██████████        ▏ 953 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  60% ▕██████████        ▏ 960 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  60% ▕██████████        ▏ 966 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  60% ▕██████████        ▏ 969 MB/1.6 GB   52 MB/s     12spulling manifest 
+pulling 04778965089b:  61% ▕██████████        ▏ 974 MB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  61% ▕███████████       ▏ 981 MB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  62% ▕███████████       ▏ 987 MB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  62% ▕███████████       ▏ 990 MB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  62% ▕███████████       ▏ 996 MB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  62% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  63% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  63% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  63% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  64% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     11spulling manifest 
+pulling 04778965089b:  64% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  64% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  65% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  65% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  65% ▕███████████       ▏ 1.0 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  66% ▕███████████       ▏ 1.1 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  66% ▕███████████       ▏ 1.1 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  66% ▕███████████       ▏ 1.1 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  67% ▕███████████       ▏ 1.1 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  67% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s     10spulling manifest 
+pulling 04778965089b:  67% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  68% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  68% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  68% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  68% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  69% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  69% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  70% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  70% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  70% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  71% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      9spulling manifest 
+pulling 04778965089b:  71% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  71% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  71% ▕████████████      ▏ 1.1 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  72% ▕████████████      ▏ 1.2 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  72% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  72% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  73% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  73% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  73% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  74% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      8spulling manifest 
+pulling 04778965089b:  74% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  74% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  75% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  75% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  75% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  76% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  76% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  76% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  77% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  77% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      7spulling manifest 
+pulling 04778965089b:  77% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  78% ▕█████████████     ▏ 1.2 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  78% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  78% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  79% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  79% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  79% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  80% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  80% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  80% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      6spulling manifest 
+pulling 04778965089b:  81% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  81% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  81% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  82% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  82% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  82% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  83% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  83% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  83% ▕██████████████    ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  83% ▕███████████████   ▏ 1.3 GB/1.6 GB   52 MB/s      5spulling manifest 
+pulling 04778965089b:  84% ▕███████████████   ▏ 1.3 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  84% ▕███████████████   ▏ 1.3 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  84% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  85% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  85% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  85% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  86% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  86% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  86% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  87% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      4spulling manifest 
+pulling 04778965089b:  87% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  87% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  87% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  88% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  88% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  89% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  89% ▕███████████████   ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  89% ▕████████████████  ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  89% ▕████████████████  ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  90% ▕████████████████  ▏ 1.4 GB/1.6 GB   52 MB/s      3spulling manifest 
+pulling 04778965089b:  90% ▕████████████████  ▏ 1.4 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  90% ▕████████████████  ▏ 1.4 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  91% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  91% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  91% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  92% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  92% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  92% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  93% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  93% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  93% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      2spulling manifest 
+pulling 04778965089b:  94% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  94% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  94% ▕████████████████  ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  94% ▕█████████████████ ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  95% ▕█████████████████ ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  95% ▕█████████████████ ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  95% ▕█████████████████ ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  96% ▕█████████████████ ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  96% ▕█████████████████ ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  96% ▕█████████████████ ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  97% ▕█████████████████ ▏ 1.5 GB/1.6 GB   52 MB/s      1spulling manifest 
+pulling 04778965089b:  97% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b:  97% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b:  98% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b:  98% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b:  98% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b:  99% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b:  99% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b:  99% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b:  99% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b:  99% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b: 100% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b: 100% ▕█████████████████ ▏ 1.6 GB/1.6 GB   52 MB/s      0spulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest  pulling manifest 
+pulling 04778965089b: 100% ▕██████████████████▏ 1.6 GB                         
+pulling 7908abcab772: 100% ▕██████████████████▏ 1.0 KB                         
+pulling 774a15e6f1e5: 100% ▕██████████████████▏   77 B                         
+pulling 3188becd6bae: 100% ▕██████████████████▏  132 B                         
+pulling 0b8127ddf5ee: 100% ▕██████████████████▏   42 B                         
+pulling 4ce4b16d33a3: 100% ▕██████████████████▏  555 B                         
+verifying sha256 digest 
+writing manifest 
+success 
+                   Esta é a estrutura do banco, sendo que tem uma lista de produtos. A lista tem 5 elementos e cada elemento es un objeto médio. Eles tem 4 entidades informadas: nome (nome), tipo (tipo), nulo (nulo) e chave (chave).
+[2025-07-14 21:01:52] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run phi < /tmp/prompt_KVhZHE 2>&1
+[2025-07-14 21:01:53] Saída do Ollama:
+- What is the structure of the bank?
+The data structure is a list of products, each with a name (string), type (integer), value (boolean), and key (string). The key is used to reference other values in the product.
+[2025-07-14 21:02:27] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run phi < /tmp/prompt_Tx8f8u 2>&1
+[2025-07-14 21:02:30] Saída do Ollama:
+#!/usr/bin/env python3
+import json
+
+def get_data():
+  url = "https://api.example.com"
+  headers = {"Authorization": f"Bearer {get_token()}"}
+
+  response = requests.get(url, headers=headers)
+  if response.status_code != 200:
+    print("Error: Failed to get data.")
+    return None
+
+  data = json.loads(response.text)
+  return data
+
+def get_token():
+  # Code to get access token from the application or server
+  pass
+
+if __name__ == "__main__":
+  data = get_data()
+  print(f"Data received: {json.dumps(data, indent=2)}")
+```
+[2025-07-14 21:03:35] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_m2KBBt 2>&1
+[2025-07-14 21:04:24] Saída do Ollama:
+Para criar uma tela de edição de produtos utilizando um low-code, abaixo segue um exemplo simples de como poderia ser feito usando o Thunkable (antigo App Inventor 2).
+
+1. Crie um novo projeto no Thunkable e adicione as seguintes telas:
+   - Tela principal (MainScreen) com botão "Editar Produto"
+   - Tela de edição (EditProductScreen) com componentes: Label, Entry, Button e um ListView para exibir os produtos.
+
+2. Faça o seguinte configuração em cada tela:
+
+   **MainScreen:**
+   - Crie um botão "Editar Produto" e aponte-o a uma subrotina.
+   - Na subrotina, crie um novo bloco de código (comando) para abrir a Tela de edição e passar o produto selecionado.
+
+   **EditProductScreen:**
+   - Adicione 6 componentes Entry com as seguintes identificadores: id, nome, descricao, preco, quantidade e status.
+   - Crie um botão "Salvar Produto" e aponte-o a uma subrotina.
+   - Na subrotina, crie um novo bloco de código (comando) para salvar os dados do produto editado no banco.
+   - Crie um ListView com as seguintes identificadores: id_produtos, produto_nome e produto_descricao.
+   - Na subrotina "Criar Produtos", adicione os dados do produto editado no ListView.
+
+3. Faça a seguinte configuração no banco de dados:
+   - Crie uma variável "produto" com 6 campos (id, nome, descricao, preco, quantidade e status).
+   - Adicione um bloco de código (comando) para criar um novo produto usando as informações do formulário da Tela de edição.
+
+4. Abra a Tela de edição passando o produto selecionado na subrotina do botão "Editar Produto".
+   - Na Tela de edição, popule os campos do produto editado com as informações do banco.
+
+5. Aponte-o a uma subrotina que salve os dados editados no banco e atualize o ListView com todos os produtos.
+
+6. Adicione um botão "Voltar" na Tela de edição para retornar à tela principal e feche o projeto.
+[2025-07-14 21:04:48] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_cjd3ui 2>&1
+[2025-07-14 21:05:35] Saída do Ollama:
+[
+  {
+    "title": "Edição de Produto",
+    "type": "form",
+    "data_source": "SELECT id, nome, preco, quantidade, status FROM produtos WHERE id = :id",
+    "submit": { "method": "PUT", "url": "/api/produtos/:id" },
+    "components": [
+      { "label": "ID", "field": "id", "type": "text", "required": false, "readonly": true },
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Quantidade", "field": "quantidade", "type": "number", "required": false },
+      { "label": "Status", "field": "status", "type": "select", "options_query": "SELECT value as value, label as label FROM enum_values WHERE table_name = 'produtos' AND field = 'status'" }
+    ]
+  },
+  {
+    "title": "Adição de Produto",
+    "type": "form",
+    "data_source": "SELECT id, nome, preco, quantidade, status FROM produtos WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/produtos" },
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Quantidade", "field": "quantidade", "type": "number", "required": false },
+      { "label": "Status", "field": "status", "type": "select", "options_query": "SELECT value as value, label as label FROM enum_values WHERE table_name = 'produtos' AND field = 'status'" }
+    ]
+  },
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  }
+]
+[2025-07-14 21:13:32] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_zHJNyt 2>&1
+[2025-07-14 21:13:45] Saída do Ollama:
+Para criar uma tabela chamada `importacoes` com as colunas solicitadas e o padrão especificado:
+
+```sql
+CREATE TABLE importacoes (
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    preco DECIMAL(10, 2),
+    quantidade INT,
+    status ENUM('PENDENTE', 'EM_PROCESSAMENTO', 'CONCLUIDA'),
+    DATA_ABERTURA DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    DATA_FECHAMENTO DATETIME DEFAULT NULL,
+    PRIMARY KEY (id)
+);
+```
+[2025-07-14 21:14:29] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_u9leuO 2>&1
+[2025-07-14 21:14:59] Saída do Ollama:
+Para inserir dados aleatórios em três registros na tabela `importacoes`, utilize o seguinte comando:
+
+```sql
+INSERT INTO importacoes (nome, descricao, preco, quantidade, status, DATA_ABERTURA, DATA_FECHAMENTO)
+VALUES ('Embarque 1', 'Descrição do Embarque 1', 10.5, 250, 'Em Aberto', '2022-01-01 00:00:00', NULL),
+       ('Embarque 2', 'Descrição do Embarque 2', 20.7, 500, 'Em Aberto', '2022-02-01 00:00:00', NULL),
+       ('Embarque 3', 'Descrição do Embarque 3', 30.9, 750, 'Em Aberto', '2022-03-01 00:00:00', NULL);
+```
+
+Para inserir dados aleatórios em três registros na tabela `produtos`, utilize o seguinte comando:
+
+```sql
+INSERT INTO produtos (nome, descricao, preco, quantidade, status)
+VALUES ('Produto 1', 'Descrição do Produto 1', 5.0, 100, 'Disponível'),
+       ('Produto 2', 'Descrição do Produto 2', 10.0, 200, 'Disponível'),
+       ('Produto 3', 'Descrição do Produto 3', 15.0, 300, 'Disponível');
+```
+[2025-07-14 21:15:20] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_8fWA24 2>&1
+[2025-07-14 21:15:35] Saída do Ollama:
+Para inserir dados em uma tabela, você usará a instrução `INSERT INTO`. Primeiro, vou mostrar como fazer isso na tabela de importações:
+
+```sql
+INSERT INTO importacoes (nome, descricao, preco, quantidade, status, DATA_ABERTURA)
+VALUES ('Nome da Importação', 'Descrição', 19.99, 100, 'Em Abertura', NOW());
+```
+
+Agora vou mostrar como fazer isso na tabela de produtos:
+
+```sql
+INSERT INTO produtos (nome, descricao, preco, quantidade, status)
+VALUES ('Nome do Produto', 'Descrição', 9.99, 50, 'Em Estoque');
+```
+[2025-07-14 21:18:49] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_xKfokt 2>&1
+[2025-07-14 21:19:08] Saída do Ollama:
+Aqui está as instruções SQL para criar as tabelas com base no JSON fornecido:
+
+```sql
+CREATE TABLE `importacoes` (
+    `id` int NOT NULL,
+    `nome` varchar(255) NOT NULL,
+    `descricao` text,
+    `preco` decimal(10, 2) DEFAULT NULL,
+    `quantidade` int DEFAULT NULL,
+    `status` enum('ABERTO','FECHADO') DEFAULT 'ABERTO',
+    `DATA_ABERTURA` datetime NOT NULL,
+    `DATA_FECHAMENTO` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `produtos` (
+    `id` int NOT NULL,
+    `nome` varchar(255) NOT NULL,
+    `descricao` text,
+    `preco` decimal(10, 2) DEFAULT NULL,
+    `quantidade` int DEFAULT NULL,
+    `status` enum('DISPONIVEL','INDISPONIVEL') DEFAULT 'DISPONIVEL'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
+[2025-07-14 21:21:52] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_MqQKxE 2>&1
+[2025-07-14 21:22:07] Saída do Ollama:
+Crie a tabela `fatura` com os seguintes campos:
+
+```sql
+CREATE TABLE fatura (
+ exporter VARCHAR(255) NOT NULL,
+ importer VARCHAR(255) NOT NULL,
+ invoice_number VARCHAR(50) NOT NULL,
+ invoice_date DATE NOT NULL,
+ port_of_loading VARCHAR(50) NOT NULL,
+ port_of_discharge VARCHAR(50) NOT NULL,
+ incoterm VARCHAR(10) NOT NULL,
+ description_of_goods TEXT NOT NULL,
+ quantity DECIMAL(18,2) NOT NULL,
+ unit_price DECIMAL(18,2) NOT NULL,
+ total_price DECIMAL(18,2) NOT NULL,
+ currency VARCHAR(3) NOT NULL,
+ payment_terms VARCHAR(50) NOT NULL
+);
+```
+[2025-07-14 21:23:07] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_X8RUZZ 2>&1
+[2025-07-14 21:24:30] Saída do Ollama:
+Para criar uma tabela com o nome `fatura` conforme a estrutura fornecida e inserir 10 registros aleatórios, utilize os seguintes comandos SQL:
+
+```sql
+CREATE TABLE fatura (
+    exporter VARCHAR(255) NOT NULL,
+    importer VARCHAR(255) NOT NULL,
+    invoice_number VARCHAR(255) NOT NULL,
+    invoice_date DATE NOT NULL,
+    port_of_loading VARCHAR(255) NOT NULL,
+    port_of_discharge VARCHAR(255) NOT NULL,
+    incoterm VARCHAR(255) NOT NULL,
+    description_of_goods TEXT NOT NULL,
+    quantity DECIMAL(10,2) NOT NULL,
+    unit_price DECIMAL(10,2) NOT NULL,
+    total_price DECIMAL(10,2) NOT NULL,
+    currency VARCHAR(3) NOT NULL,
+    payment_terms VARCHAR(255) NOT NULL
+);
+
+INSERT INTO fatura (exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, total_price, currency, payment_terms)
+VALUES
+('Exporter1', 'Importer1', 'INV001', '2023-01-01', 'Porto1', 'Porto2', 'INCOTERM', 'Goods1', 10.00, 5.00, 50.00, 'USD', 'PTS'),
+('Exporter2', 'Importer2', 'INV002', '2023-02-01', 'Porto3', 'Porto4', 'INCOTERM', 'Goods2', 20.00, 10.00, 200.00, 'EUR', 'PTS'),
+('Exporter3', 'Importer3', 'INV003', '2023-03-01', 'Porto5', 'Porto6', 'INCOTERM', 'Goods3', 30.00, 15.00, 450.00, 'USD', 'PTS'),
+('Exporter4', 'Importer4', 'INV004', '2023-04-01', 'Porto7', 'Porto8', 'INCOTERM', 'Goods4', 40.00, 20.00, 800.00, 'EUR', 'PTS'),
+('Exporter5', 'Importer5', 'INV005', '2023-05-01', 'Porto9', 'Porto10', 'INCOTERM', 'Goods5', 50.00, 25.00, 1250.00, 'USD', 'PTS'),
+('Exporter6', 'Importer6', 'INV006', '2023-06-01', 'Porto11', 'Porto12', 'INCOTERM', 'Goods6', 60.00, 30.00, 1800.00, 'EUR', 'PTS'),
+('Exporter7', 'Importer7', 'INV007', '2023-07-01', 'Porto13', 'Porto14', 'INCOTERM', 'Goods7', 70.00, 35.00, 2450.00, 'USD', 'PTS'),
+('Exporter8', 'Importer8', 'INV008', '2023-08-01', 'Porto15', 'Porto16', 'INCOTERM', 'Goods8', 80.00, 40.00, 3200.00, 'EUR', 'PTS'),
+('Exporter9', 'Importer9', 'INV009', '2023-09-01', 'Porto17', 'Porto18', 'INCOTERM', 'Goods9', 90.00, 45.00, 4100.00, 'USD', 'PTS'),
+('Exporter10', 'Importer10', 'INV010', '2023-10-01', 'Porto19', 'Porto20', 'INCOTERM', 'Goods10', 100.00, 50.00, 5000.00, 'EUR', 'PTS');
+```
+
+Lembre-se de substituir os valores das colunas pelo que for necessário para gerar registros aleatórios.
+[2025-07-14 21:25:48] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_4eGXY9 2>&1
+[2025-07-14 21:26:15] Saída do Ollama:
+Crie a tabela se não existir e inserta as informações na tabela fatura no MySQL:
+
+```sql
+CREATE TABLE IF NOT EXISTS fatura (
+    exporter VARCHAR(255),
+    importer VARCHAR(255),
+    invoice_number VARCHAR(255),
+    invoice_date DATE,
+    port_of_loading VARCHAR(255),
+    port_of_discharge VARCHAR(255),
+    incoterm VARCHAR(255),
+    description_of_goods TEXT,
+    quantity DECIMAL(10,2),
+    unit_price DECIMAL(10,2),
+    total_price DECIMAL(10,2),
+    currency VARCHAR(3),
+    payment_terms VARCHAR(255)
+);
+
+INSERT INTO fatura (exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, currency, payment_terms)
+VALUES ('Global Trade Ltda - Rua das Nações, 123 - São Paulo - SP - Brasil', 'Beijing Import Co. - 88 Trade St. - Beijing - China', 'INV2025-002', '2025-07-02', 'Santos', 'Shanghai', 'CIF', '1000 units of Stainless Steel Bolts', 1000, 1.25, 'USD', '30 days net');
+```
+[2025-07-14 21:27:16] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_ulAYfl 2>&1
+[2025-07-14 21:27:27] Saída do Ollama:
+INSERT INTO fatura (exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, currency, payment_terms)
+VALUES ('Global Trade Ltda', 'Beijing Import Co.', 'INV2025-002', '2025-07-02', 'Santos', 'Shanghai', 'CIF', '1000 units of Stainless Steel Bolts', 1000, 1.25, 'USD', '30 days net');
+[2025-07-14 21:29:00] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_NryLrj 2>&1
+[2025-07-14 21:29:14] Saída do Ollama:
+INSERT INTO fatura (exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, currency, payment_terms)
+VALUES ('Global Trade Ltda - Rua das Nações, 123 - São Paulo - SP - Brasil', 'Beijing Import Co. - 88 Trade St. - Beijing - China', 'INV2025-002', '2025-07-02', 'Santos', 'Shanghai', 'CIF', '1000 units of Stainless Steel Bolts', 1000, 1.25, 'USD', '30 days net');
+[2025-07-14 21:31:13] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_4JW4s9 2>&1
+[2025-07-14 21:31:27] Saída do Ollama:
+INSERT INTO fatura (exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, currency, payment_terms)
+VALUES ('Global Trade Ltda - Rua das Nações, 123 - São Paulo - SP - Brasil', 'Beijing Import Co. - 88 Trade St. - Beijing - China', 'INV2025-002', '2025-07-02', 'Santos', 'Shanghai', 'CIF', '1000 units of Stainless Steel Bolts', 1000, 1.25, 'USD', '30 days net');
+[2025-07-14 21:32:28] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_Kwn5M8 2>&1
+[2025-07-14 21:32:56] Saída do Ollama:
+Crie a tabela `fatura` com as colunas especificadas:
+
+```sql
+CREATE TABLE fatura (
+    exporter VARCHAR(255) NOT NULL,
+    importer VARCHAR(255) NOT NULL,
+    invoice_number VARCHAR(255) NOT NULL,
+    invoice_date DATE NOT NULL,
+    port_of_loading VARCHAR(255) NOT NULL,
+    port_of_discharge VARCHAR(255) NOT NULL,
+    incoterm VARCHAR(255) NOT NULL,
+    description_of_goods TEXT NOT NULL,
+    quantity DECIMAL(10, 4) NOT NULL,
+    unit_price DECIMAL(10, 4) NOT NULL,
+    total_price DECIMAL(10, 4) NOT NULL,
+    currency VARCHAR(255) NOT NULL,
+    payment_terms VARCHAR(255) NOT NULL
+);
+```
+
+Insira um produto chamado `nick` na tabela `fatura`.
+
+```sql
+INSERT INTO fatura (exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, total_price, currency, payment_terms)
+VALUES ('exporter1', 'importer1', 'invoice1', '2022-01-01', 'port1', 'port2', 'incoterm1', 'description of goods for nick', 1.0000, 10.00, 10.000, 'USD', '30 days');
+```
+[2025-07-14 21:33:15] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_HVz0Qt 2>&1
+[2025-07-14 21:33:40] Saída do Ollama:
+Crie a tabela 'fatura' com os campos especificados:
+
+```sql
+CREATE TABLE fatura (
+    exporter VARCHAR(255) NOT NULL,
+    importer VARCHAR(255) NOT NULL,
+    invoice_number VARCHAR(255) NOT NULL,
+    invoice_date DATE NOT NULL,
+    port_of_loading VARCHAR(255) NOT NULL,
+    port_of_discharge VARCHAR(255) NOT NULL,
+    incoterm VARCHAR(255) NOT NULL,
+    description_of_goods TEXT NOT NULL,
+    quantity DECIMAL(10,2) NOT NULL,
+    unit_price DECIMAL(10,2) NOT NULL,
+    total_price DECIMAL(10,2) NOT NULL,
+    currency VARCHAR(3) NOT NULL,
+    payment_terms VARCHAR(255) NOT NULL
+);
+
+INSERT INTO fatura (exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, total_price, currency, payment_terms)
+VALUES ('nick', 'cliente', '123456', '2022-12-01', 'Porto A', 'Porto B', 'INCOTERM', 'Produto X', 10.00, 1.00, 10.00, 'USD', '30 dias');
+```
+[2025-07-14 21:35:05] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_DNVQMV 2>&1
+[2025-07-14 21:35:24] Saída do Ollama:
+Crie a tabela `fatura` com as colunas abaixo:
+
+```sql
+CREATE TABLE fatura (
+    id INT AUTO_INCREMENT,
+    exporter VARCHAR(255),
+    exporter_address VARCHAR(255),
+    city VARCHAR(100),
+    state VARCHAR(50),
+    country VARCHAR(100),
+    importer VARCHAR(255),
+    importer_address VARCHAR(255),
+    city_importer VARCHAR(100),
+    state_importer VARCHAR(50),
+    country_importer VARCHAR(100),
+    invoice_number VARCHAR(50),
+    invoice_date DATE,
+    port_of_loading VARCHAR(100),
+    port_of_discharge VARCHAR(100),
+    incoterm VARCHAR(10),
+    description_of_goods VARCHAR(255),
+    quantity INT,
+    unit_price DECIMAL(6,2),
+    currency VARCHAR(3),
+    PRIMARY KEY (id)
+);
+```
+[2025-07-14 21:35:42] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_QGnLmr 2>&1
+[2025-07-14 21:35:54] Saída do Ollama:
+```sql
+CREATE TABLE `fatura` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `exporter` VARCHAR(255),
+  `importer` VARCHAR(255),
+  `invoice_number` VARCHAR(50),
+  `invoice_date` DATE,
+  `port_of_loading` VARCHAR(100),
+  `port_of_discharge` VARCHAR(100),
+  `incoterm` VARCHAR(50),
+  `description_of_goods` VARCHAR(255),
+  `quantity` INT,
+  `unit_price` DECIMAL(5,2),
+  `currency` VARCHAR(3)
+);
+```
+[2025-07-14 21:36:25] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_GnYEd8 2>&1
+[2025-07-14 21:36:45] Saída do Ollama:
+Crie a tabela se ainda não existir e insira as informações:
+
+```sql
+CREATE TABLE IF NOT EXISTS fatura (
+    id INT PRIMARY KEY,
+    exporter VARCHAR,
+    importer VARCHAR,
+    invoice_number VARCHAR,
+    invoice_date DATE,
+    port_of_loading VARCHAR,
+    port_of_discharge VARCHAR,
+    incoterm VARCHAR,
+    description_of_goods VARCHAR,
+    quantity INT,
+    unit_price DECIMAL,
+    currency VARCHAR
+);
+
+INSERT INTO fatura (exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, currency)
+VALUES ('Global Trade Ltda', 'Beijing Import Co.', 'INV2025-002', '2025-07-02', 'Santos', 'Shanghai', 'CIF', '1000 units of Stainless Steel Bolts', 1000, 1.25, 'USD');
+```
+[2025-07-14 21:37:25] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_6wQ3UI 2>&1
+[2025-07-14 21:37:46] Saída do Ollama:
+Crie a tabela `fatura` no banco de dados MySQL conforme as especificações fornecidas:
+
+```sql
+CREATE TABLE fatura (
+    id INT NOT NULL PRIMARY KEY,
+    exporter VARCHAR(255) DEFAULT NULL,
+    importer VARCHAR(255) DEFAULT NULL,
+    invoice_number VARCHAR(255) DEFAULT NULL,
+    invoice_date DATE DEFAULT NULL,
+    port_of_loading VARCHAR(255) DEFAULT NULL,
+    port_of_discharge VARCHAR(255) DEFAULT NULL,
+    incoterm VARCHAR(255) DEFAULT NULL,
+    description_of_goods VARCHAR(255) DEFAULT NULL,
+    quantity INT DEFAULT 0,
+    unit_price DECIMAL(10,2) DEFAULT NULL,
+    currency VARCHAR(3) DEFAULT 'BRL'
+);
+```
+
+Insira os dados para o registro da fatura com exportador Global Trade Ltda - Rua das Nações, 123 - São Paulo - SP - Brasil:
+
+```sql
+INSERT INTO fatura (exporter) VALUES ('Global Trade Ltda - Rua das Nações, 123 - São Paulo - SP - Brasil');
+```
+[2025-07-14 21:38:09] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_Nx452f 2>&1
+[2025-07-14 21:38:32] Saída do Ollama:
+Crie a tabela `fatura` na sua base de dados:
+
+```sql
+CREATE TABLE fatura (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    exporter VARCHAR(255) NOT NULL,
+    importer VARCHAR(255),
+    invoice_number VARCHAR(255),
+    invoice_date DATE,
+    port_of_loading VARCHAR(255),
+    port_of_discharge VARCHAR(255),
+    incoterm VARCHAR(255),
+    description_of_goods VARCHAR(255),
+    quantity INT,
+    unit_price DECIMAL(10, 2),
+    currency VARCHAR(3)
+);
+```
+
+Inseri um registro na tabela `fatura` com os valores:
+
+```sql
+INSERT INTO fatura (exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, currency)
+VALUES ('Global Trade Ltda', NULL, '123456', '2022-01-01', 'São Paulo', 'Rio de Janeiro', 'FOB', 'Produto teste', 100, 10.00, 'BRL');
+```
+[2025-07-14 21:39:10] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_uhjauu 2>&1
+[2025-07-14 21:39:33] Saída do Ollama:
+Para inserir 10 faturas no banco, você pode usar um loop para gerar as instruções de insert e em seguida executá-las. Por exemplo, se você estiver usando PHP:
+
+```php
+$conn = mysqli_connect("host", "user", "password", "dbname");
+
+for($i = 0; $i < 10; $i++){
+    $exporter = "Exporter_" . $i;
+    $importer = "Importer_" . $i;
+    // Gerar valores aleatórios para as demais colunas se necessário
+    //...
+
+    $sql = "INSERT INTO fatura (id, exporter, importer, invoice_number, invoice_date, port_of_loading, port_of_discharge, incoterm, description_of_goods, quantity, unit_price, currency) VALUES (NULL, '$exporter', '$importer', 'Invoice_Number_' . $i, NOW(), 'Port_Of_Loading_' . $i, 'Port_Of_Discharge_' . $i, 'INCOTERM_' . $i, 'Description_Of_Goods_' . $i, rand(1, 10), rand(1, 10), 'USD')";
+    mysqli_query($conn, $sql);
+}
+```
+[2025-07-14 21:42:52] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_dnYJjC 2>&1
+[2025-07-14 21:43:05] Saída do Ollama:
+Crie a tabela se ainda não foi criada:
+
+```sql
+CREATE TABLE IF NOT EXISTS fatura (
+    exporter varchar,
+    importer varchar,
+    invoice_number varchar,
+    invoice_date date,
+    port_of_loading varchar,
+    port_of_discharge varchar,
+    incoterm varchar,
+    description_of_goods varchar,
+    quantity int,
+    unit_price decimal,
+    currency varchar);
+```
+
+Insira um registro na tabela:
+
+```sql
+INSERT INTO fatura(exporter) VALUES ('Global Trade Ltda - Rua das Nações, 123 - São Paulo - SP - Brasil');
+```
+[2025-07-15 15:57:39] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_9DFaPa 2>&1
+[2025-07-15 15:57:51] Saída do Ollama:
+CREATE TABLE `produtos` (
+  `id_produto` INT AUTO_INCREMENT PRIMARY KEY,
+  `nome_produto` VARCHAR(255) NOT NULL,
+  `preco` DECIMAL(10,2) NOT NULL,
+  `descricao` TEXT,
+  `quantidade` INT NOT NULL DEFAULT 0
+);
+[2025-07-15 15:58:34] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_kmFj42 2>&1
+[2025-07-15 15:59:03] Saída do Ollama:
+[
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco, descricao, quantidade FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" },
+      { "label": "Descrição", "field": "descricao" },
+      { "label": "Quantidade", "field": "quantidade" }
+    ]
+  },
+  {
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "data_source": "SELECT * FROM produtos WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/produtos" },
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Descrição", "field": "descricao", "type": "textarea" },
+      { "label": "Quantidade", "field": "quantidade", "type": "number", "required": false }
+    ]
+  }
+]
+[2025-07-15 15:59:56] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_KeXPyn 2>&1
+[2025-07-15 16:00:20] Saída do Ollama:
+[
+  {
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "data_source": "SELECT id, nome, preco, descricao, quantidade FROM produtos WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/produtos" },
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Descrição", "field": "descricao", "type": "textarea" },
+      { "label": "Quantidade", "field": "quantidade", "type": "number", "required": false }
+    ]
+  },
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  }
+]
+[2025-07-15 16:00:30] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_qAvJIG 2>&1
+[2025-07-15 16:00:38] Saída do Ollama:
+Crie a tabela no banco de dados:
+
+```sql
+CREATE TABLE `produtos` (
+  `id_produto` int NOT NULL,
+  `nome_produto` varchar(255) NOT NULL,
+  `preco` decimal(10,2) NOT NULL,
+  `descricao` text,
+  `quantidade` int NOT NULL
+);
+```
+[2025-07-15 16:07:25] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_NHzW1t 2>&1
+[2025-07-15 16:07:33] Saída do Ollama:
+CREATE TABLE `produto` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `nome` VARCHAR(255) NOT NULL,
+  `descricao` TEXT,
+  `preco` DECIMAL(10,2) NOT NULL,
+  `quantidade_estoque` INT NOT NULL DEFAULT 0
+);
+[2025-07-15 16:07:43] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_FGbwwH 2>&1
+[2025-07-15 16:07:57] Saída do Ollama:
+Crie a tabela produto no seu banco de dados MySQL:
+
+```sql
+CREATE TABLE IF NOT EXISTS `produto` (
+  `id` INT PRIMARY KEY,
+  `nome` VARCHAR(255) NOT NULL,
+  `descricao` TEXT,
+  `preco` DECIMAL(10,2) NOT NULL,
+  `quantidade_estoque` INT NOT NULL
+);
+```
+
+Agora insira um produto na tabela produto:
+
+```sql
+INSERT INTO `produto` (`id`, `nome`, `descricao`, `preco`, `quantidade_estoque`) VALUES (1, 'Produto 1', 'Descrição do Produto 1', 9.99, 50);
+```
+[2025-07-15 16:08:43] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_pmz3Ie 2>&1
+[2025-07-15 16:08:52] Saída do Ollama:
+CREATE TABLE IF NOT EXISTS `produto` (
+    `id` INT PRIMARY KEY,
+    `nome` VARCHAR(255) NOT NULL,
+    `descricao` TEXT,
+    `preco` DECIMAL(10,2) NOT NULL,
+    `quantidade_estoque` INT NOT NULL
+);
+
+INSERT INTO `produto` (`id`, `nome`, `preco`, `quantidade_estoque`) VALUES (NULL, 'celular LG', 100, 10);
+[2025-07-15 16:10:44] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_T5oPLO 2>&1
+[2025-07-15 16:10:48] Saída do Ollama:
+INSERT INTO produto (nome, descricao, preco, quantidade_estoque) VALUES ('guitarra tagima', 'Guitarra elétrica Tagima', 1200.00, 20);
+[2025-07-15 16:11:11] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_qS8eQs 2>&1
+[2025-07-15 16:11:41] Saída do Ollama:
+[
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, descricao, preco, quantidade_estoque FROM produto",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Descrição", "field": "descricao" },
+      { "label": "Preço", "field": "preco" },
+      { "label": "Quantidade em estoque", "field": "quantidade_estoque" }
+    ]
+  },
+  {
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "data_source": "SELECT * FROM produto WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/produtos" },
+    "components": [
+      { "label": "Nome do Produto", "field": "nome", "type": "text", "required": true },
+      { "label": "Descrição do Produto", "field": "descricao", "type": "textarea" },
+      { "label": "Preço do Produto", "field": "preco", "type": "number", "required": true },
+      { "label": "Quantidade em estoque", "field": "quantidade_estoque", "type": "number", "required": true }
+    ]
+  }
+]
+[2025-07-15 16:16:55] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_KM62uw 2>&1
+[2025-07-15 16:17:22] Saída do Ollama:
+[
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  },
+  {
+    "title": "Editar Produto",
+    "type": "form",
+    "data_source": "SELECT * FROM produtos WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id", "type": "text", "required": true },
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Quantidade no Estoque", "field": "quantidade_estoque", "type": "number" }
+    ]
+  }
+]
+[2025-07-15 16:37:59] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_dZFqKa 2>&1
+[2025-07-15 16:38:27] Saída do Ollama:
+[
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  },
+  {
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "data_source": "SELECT * FROM produtos WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/produtos" },
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Descrição", "field": "descricao", "type": "textarea" },
+      { "label": "Quantidade em Estoque", "field": "quantidade_estoque", "type": "number", "required": true }
+    ]
+  }
+]
+[2025-07-15 16:39:51] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_wRW6Yg 2>&1
+[2025-07-15 16:40:11] Saída do Ollama:
+[
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  },
+  {
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "data_source": "SELECT * FROM produtos WHERE id = :id",
+    "submit": { "method": "POST", "url": "/api/produtos" },
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true }
+    ]
+  }
+]
+[2025-07-15 16:46:21] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_6mlOGJ 2>&1
+[2025-07-15 16:46:53] Saída do Ollama:
+[
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "bank_table": "produto",
+    "data_source": "SELECT id, nome, descricao, preco, quantidade_estoque FROM produto",
+    "submit": {
+      "method": "GET",
+      "url": "/api/produto"
+    },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Descrição", "field": "descricao" },
+      { "label": "Preço", "field": "preco" },
+      { "label": "Quantidade no Estoque", "field": "quantidade_estoque" }
+    ]
+  },
+  {
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "bank_table": "produto",
+    "data_source": "SELECT * FROM produto WHERE id = :id",
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Descrição", "field": "descricao", "type": "text" },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Quantidade no Estoque", "field": "quantidade_estoque", "type": "number", "required": true }
+    ]
+  }
+]

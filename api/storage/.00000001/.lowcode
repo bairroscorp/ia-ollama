@@ -11,6 +11,7 @@ Editar
 {
   "title": "Título da tela",
   "type": "form | table | dashboard",
+  "bank_table": 'coloque o nome da tabela do banco que representa essa tela.',
   "data_source": "SQL que retorna os dados",
   "submit": {
     "method": "GET | POST",
@@ -22,6 +23,8 @@ Editar
 Para cada tipo de tela:
 FORMULÁRIO (type: form)
 components deve conter campos com:
+
+bank_table: nome da tabela do banco onde deve ser salvo
 
 label: nome visível
 
@@ -62,8 +65,8 @@ Editar
             {
               "title": "Cadastro de Produto",
               "type": "form",
-              "data_source": "SELECT * FROM produtos WHERE id = :id",
-              "submit": { "method": "POST", "url": "/api/produtos" },
+              "bank_table": "produto",
+              "data_source": "SELECT * FROM produto WHERE id = :id",
               com"ponents: [
                 { "label": "Nome", "field": "nome", "type": "text", "required": true },
                 { "label": "Preço", "field": "preco", "type": "number", "required": true },
@@ -71,10 +74,11 @@ Editar
               ]
             },
             {
-              "title": "Lista de Produtos",
+              "title": "Lista de produto",
               "type": "table",
-              "data_source": "SELECT id, nome, preco FROM produtos",
-              "submit": { "method": "GET", "url": "/api/produtos" },
+              "bank_table": "produto",
+              "data_source": "SELECT id, nome, preco FROM produto",
+              "submit": { "method": "GET", "url": "/api/produto" },
               "components": [
                 { "label": "ID", "field": "id" },
                 { "label": "Nome", "field": "nome" },
@@ -84,8 +88,8 @@ Editar
             {
               "title": "Resumo de Vendas",
               "type": "dashboard",
+              "bank_table": "produto",
               "data_source": "SELECT categoria, SUM(valor) as total FROM vendas GROUP BY categoria",
-              "submit": { "method": "GET", "url": "/api/vendas/resumo" },
               "components": [
                 {
                   "type": "chart",

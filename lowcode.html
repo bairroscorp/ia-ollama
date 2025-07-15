@@ -3,22 +3,45 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>SUC</title>
+    <title>Dozer</title>
 
     <!-- Vue 3 + Axios -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <style>
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            overflow: hidden;
         }
 
         th,
         td {
-            border: 1px solid #ccc;
-            padding: 8px;
+            border: 1px solid #30363d;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #21262d;
+            color: #f0f6fc;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: #0d1117;
+            color: #c9d1d9;
         }
 
         input,
@@ -27,56 +50,69 @@
             display: block;
             margin-bottom: 10px;
             width: 100%;
+            padding: 8px;
+            border: 1px solid #30363d;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            border-radius: 4px;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #58a6ff;
+            box-shadow: 0 0 0 1px #58a6ff;
         }
 
         .chart-bar {
-            background: steelblue;
-            color: white;
-            padding: 5px;
-            margin: 2px 0;
-        }
-
-        body {
-            background: #2f2f2f;
-            color: #e0e0e0;
-            font-family: 'Inter', sans-serif;
-            padding: 20px;
+            background: #238636;
+            /* verde do GitHub */
+            color: #ffffff;
+            padding: 6px 10px;
+            margin: 4px 0;
+            border-radius: 4px;
+            font-weight: 500;
         }
 
         pre {
-            background: #2f2f2f;
+            background: #161b22;
             padding: 1rem;
             border-radius: 8px;
             white-space: pre-wrap;
             word-break: break-word;
+            border: 1px solid #30363d;
         }
     </style>
 </head>
 
 <body>
     <div id="app">
-        
+
         <h1>{{ currentScreen.title }}</h1>
 
         <!-- Se for formulário -->
-        <form v-if="currentScreen.type === 'form'" @submit.prevent="salvar">
+        <form v-if="currentScreen.type === 'form'" @submit.prevent="salvar(null)">
+
             <div v-for="campo in currentScreen.components" :key="campo.field">
+
                 <label>{{ campo.label }}</label>
 
-                <input v-if="campo.type === 'text' || campo.type === 'number'" :type="campo.type"
-                    v-model="formData[campo.field]" :required="campo.required">
+                <input v-if="campo.type === 'text' || campo.type === 'number'" :type="campo.type" v-model="campo.value"
+                    :required="campo.required">
 
-                <textarea v-else-if="campo.type === 'textarea'" v-model="formData[campo.field]"
+                <textarea v-else-if="campo.type === 'textarea'" v-model="campo.value"
                     :required="campo.required"></textarea>
 
-                <select v-else-if="campo.type === 'select'" v-model="formData[campo.field]" :required="campo.required">
+                <select v-else-if="campo.type === 'select'" v-model="campo.value" :required="campo.required">
                     <option v-for="opt in campo.data" :value="opt.id">{{ opt.nome }}</option>
                 </select>
 
-                <input type="checkbox" v-else-if="campo.type === 'checkbox'" v-model="formData[campo.field]">
+                <input type="checkbox" v-else-if="campo.type === 'checkbox'" v-model="campo.value">
+
             </div>
 
-            <button type="submit">Salvar</button>
+            <button @click="salvar(currentScreen)">Salvar</button>
         </form>
 
         <!-- Se for tabela -->
@@ -123,7 +159,7 @@
             return {
                 telas: [],
                 currentIndex: 0,
-                formData: {},
+                name_json: null,
             }
         },
         mounted() {
@@ -131,7 +167,8 @@
                 const urlParams = new URLSearchParams(window.location.search);
                 return urlParams.get(param);
             }
-            this.getMenu(getQueryParam('data'));
+            this.name_json = getQueryParam('data');
+            this.getData(getQueryParam('data'));
         },
         computed: {
             currentScreen() {
@@ -139,7 +176,7 @@
             }
         },
         methods: {
-            getMenu(fileName) {
+            getData(fileName) {
                 axios({
                     method: "POST",
                     url: `api/json.php`,
@@ -155,10 +192,25 @@
             },
             setTela(i) {
                 this.currentIndex = i;
-                this.formData = {}; // limpa dados
             },
-            salvar() {
-                alert("Dados enviados: " + JSON.stringify(this.formData));
+            salvar(form) {
+                if (form) {
+                    axios({
+                        method: "POST",
+                        url: `api/form.php`,
+                        data: {
+                            form: form.components,
+                            table: form.bank_table
+                        },
+                        headers: {
+                            "content-type": "application/json",
+                        },
+                    }).then((response) => {
+                        console.log(response.data);
+                        this.currentIndex = 0;
+                        this.getData(this.name_json);
+                    });
+                }
             }
         }
     }).mount('#app');
