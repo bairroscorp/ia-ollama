@@ -1,0 +1,29 @@
+Você é um especialista em comércio exterior e documentação aduaneira.
+
+Analise o conteúdo a seguir, extraído de um arquivo PDF, e execute as seguintes tarefas:
+
+1. Verifique se este documento é realmente uma **fatura comercial (invoice)**. Explique por quê.
+2. Se for uma invoice, valide os campos abaixo e diga se estão presentes e coerentes:
+   - Número da invoice
+   - Data da invoice
+   - Exportador e endereço
+   - Importador e país de destino
+   - Descrição dos produtos
+   - Quantidade e unidade de medida
+   - Peso líquido e peso bruto
+   - Valor total (FOB e/ou CFR)
+   - Incoterm e porto de destino
+   - Código NCM / classificação fiscal
+   - Número de pacotes
+   - País de origem
+   - Forma de pagamento
+   - Método de pagamento (se disponível)
+3. Aponte quaisquer **inconsistências**, valores faltando ou suspeitos (como peso líquido maior que o peso bruto, falta de Incoterm, etc.).
+4. Faça um resumo com os dados principais extraídos da invoice em formato estruturado.
+
+OBS:NO FINAL , coloque UM PERCENTUAL DE ACERTO DE REALMENTE SER UMA INVOICE TIPO 97% OU ALGO DO TIPO, SE VOCÊ TIVER 100% DE CERTEZA, então INFORME!
+SE NÃO FIZER SENTIDO SER UMA INVOICE DIGA ESSE DOCUMENTO ESTA ERRADO NÃO É UMA INVOICE!
+
+Conteúdo do documento:
+
+===
