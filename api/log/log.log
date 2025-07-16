@@ -176,3 +176,47 @@ Comparação entre a fatura comercial (invoice) e o packing list:
 2. Diferenças importantes:
    - A fatura comercial contém um selo digital do CFDI que não é apresentado no packing list.
    - O packing list fornece o número de blendo, mas não consta nenhum dado semelhante na fatura comercial.
+[2025-07-16 01:15:33] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_5KJTWf 2>&1
+[2025-07-16 01:16:53] Saída do Ollama:
+Este documento é uma **invoice** (fatura comercial). Por várias razões:
+
+1. O título do documento é "FACTURA / INVOICE", indicando claramente que se trata de um documento de faturação entre empresas;
+2. A presença dos campos como número da invoice, data da invoice, exportador e endereço, importador e país de destino, descrição dos produtos, quantidade e unidade de medida, peso líquido e peso bruto, valor total (FOB ou CFR), incoterm e porto de destino, código NCM / classificação fiscal, número de pacotes, país de origem, forma de pagamento e método de pagamento mostram que trata-se de um documento de faturação;
+3. A presença de uma assinatura e selo digital do SAT (Servicio de Administración Tributaria Mexicano) na parte inferior do documento mostra que o documento é original e autenticado pela autoridade fiscal mexicana, o que também confirma sua natureza como um documento de faturação;
+4. A declaração "Este documento é uma representação impresa de um CFDI" indica que o documento em questão é um comprovante fiscais digital (CFDI). Um CFDI é um tipo de documento de faturação utilizado no México, que combina a funcionalidade de uma factura eletrônica e de um comprovante fiscal.
+
+Seguindo as regras para a validação dos campos abaixo, todos eles estão presentes e coerentes:
+
+1. Número da invoice: 26235 (presente)
+2. Data da invoice: 2024-11-22T17:54:09 (presente)
+3. Exportador e endereço: VIALIDAD SN, ENTRE CARRETERA FINESTERRE LAGUNA DE KEY Y CALLE TOPIA No. .  COL. INDUSTRIAL Tel. 87 17 29 55 46 C.P.27500 OCAMPO, COAHUILA, MEXICO R.F.C: [não fornecido] (presente)
+4. Importador e país de destino: [não fornecido] (presente)
+5. Descrição dos produtos: TM OXIDO DE MAGNESIO MG FRICTION-10, código NCM 2519909900, número de pacotes 960 976 VY9 (presente)
+6. Quantidade e unidade de medida: 24.000000 TM (presente)
+7. Peso líquido e peso bruto: 24.000000 Kg, 24.780500 Kg (presente)
+8. Valor total: 1,499.000000 USD/TM ou 35,976.000000 USD (presente)
+9. Incoterm e porto de destino: [não fornecido] (presente)
+10. Código NCM / classificação fiscal: 2519909900 (presente)
+11. País de origem: México (presente)
+12. Forma de pagamento: Por definir (99) e método de pagamento: Pago en parcialidades o diferido (PPD) (presente)
+
+Existe uma pequena falha no campo "Forma de pagamento": o valor 99 corresponde a uma opção de pagamento que é definida pelo Complemento de Certificação do SAT (CCSAT). Este campo não fornece informações sobre como a fatura será paga, apenas indica se a fatura pode ou não ser alterada (valor 99 significa que pode ser alterada).
+
+Por fim, o documento é autenticado com um selo digital do SAT e possui um UUID para registro de auditoria fiscal.
+[2025-07-16 01:19:42] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_2S4C5M 2>&1
+[2025-07-16 01:20:23] Saída do Ollama:
+Para comparar os dois documentos, o **Fatura Comercial** (invoice) e o **Packing List**, vou seguir as seguintes etapas:
+
+1. Verificar se os dados de ambos estão coerentes entre si:
+   - Nome e endereço do cliente (consignee): Coerente entre si;
+   - Número do pedido (PO number): 5500008032;
+   - Quantidade de produto (em MT ou KG): Na fatura, a quantidade é em KG e na packing list, em MT. Sugiro que se faça a conversão para comparar adequadamente os valores;
+   - Peso líquido e peso bruto: Coerente entre si;
+   - Número de volumes ou pacotes: Na fatura, há 960 enxertes de 25 Kg cada um no total de 24 skids. Na packing list, indica-se que há 24 paletes com 160 unidades cada uma. Sugiro que se faça a conversão ou multiplicação para comparar adequadamente os valores;
+   - Outros dados não apresentam discrepâncias entre os dois documentos.
+
+2. Comparar as informações adicionais:
+   - Packing List tem dados sobre o produto, enquanto a fatura não é detalhada. É importante saber que o produto enviado é Magnesium Oxide MG Frição-10 com Código de Barras 1089842;
+   - A data de embarque e a notificação de partida são apenas na packing list. Na fatura, não há essa informação.
+
+3. Com base nas análises acima, não há discrepâncias significativas entre os dois documentos. Sugiro que se faça a conversão das unidades (KG para MT e vice-versa) para melhor comparação dos valores.
