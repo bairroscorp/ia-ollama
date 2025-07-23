@@ -1,9 +1,9 @@
 [
   {
-    "title": "Lista de Produtos",
+    "title": "Listagem de Produtos",
     "type": "table",
     "bank_table": "produto",
-    "data_source": "SELECT id, nome, descricao, preco, quantidade_estoque FROM produto",
+    "data_source": "SELECT id, nome, preco FROM produto",
     "submit": {
       "method": "GET",
       "url": "/api/produto"
@@ -11,9 +11,7 @@
     "components": [
       { "label": "ID", "field": "id" },
       { "label": "Nome", "field": "nome" },
-      { "label": "Descrição", "field": "descricao" },
-      { "label": "Preço", "field": "preco" },
-      { "label": "Quantidade no Estoque", "field": "quantidade_estoque" }
+      { "label": "Preço", "field": "preco" }
     ]
   },
   {
@@ -22,10 +20,11 @@
     "bank_table": "produto",
     "data_source": "SELECT * FROM produto WHERE id = :id",
     "components": [
+      { "label": "ID", "field": "id", "type": "hidden" },
       { "label": "Nome", "field": "nome", "type": "text", "required": true },
-      { "label": "Descrição", "field": "descricao", "type": "text" },
       { "label": "Preço", "field": "preco", "type": "number", "required": true },
-      { "label": "Quantidade no Estoque", "field": "quantidade_estoque", "type": "number", "required": true }
+      { "label": "Descrição", "field": "descricao", "type": "textarea" },
+      { "label": "Quantidade em Estoque", "field": "quantidade_estoque", "type": "number", "required": true }
     ]
   }
 ]

@@ -220,3 +220,173 @@ Para comparar os dois documentos, o **Fatura Comercial** (invoice) e o **Packing
    - A data de embarque e a notificação de partida são apenas na packing list. Na fatura, não há essa informação.
 
 3. Com base nas análises acima, não há discrepâncias significativas entre os dois documentos. Sugiro que se faça a conversão das unidades (KG para MT e vice-versa) para melhor comparação dos valores.
+[2025-07-22 18:15:20] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_Nnglxg 2>&1
+[2025-07-22 18:16:20] Saída do Ollama:
+Para definir o limite de caracteres em um campo do tipo `text` em MySQL, você pode utilizar a opção `CHARACTER SET` para especificar o tamanho total da string (em bytes), e então usar a opção `COLLATION` para especificar o número de caracteres por unidade.
+
+Por exemplo:
+
+```json
+{
+    "nome": "descricao_limite",
+    "tipo": "text",
+    "nulo": "YES",
+    "chave": "",
+    "CHARACTER SET": "utf8mb4",
+    "COLLATION": "utf8mb4_unicode_ci"
+    "MAX_LENGTH": 255
+}
+```
+
+Para a opção `MAX_LENGTH`, você pode definir o tamanho desejado no banco de dados. A opção `CHARACTER SET` e `COLLATION` são necessárias para que possa ser feito o controle de caracteres (por exemplo, para tratar de acentuações e outros símbolos).
+
+Sugiro consultar documentação oficial do MySQL para obter mais detalhes sobre as opções de tabela: https://dev.mysql.com/doc/refman/8.0/en/create-table.html
+[2025-07-22 21:12:45] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run gemma3n < /tmp/prompt_SHhLWj 2>&1
+[2025-07-22 21:12:57] Saída do Ollama:
+suc
+[2025-07-22 21:14:33] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run gemma3n < /tmp/prompt_ak1Hgg 2>&1
+[2025-07-22 21:16:39] Saída do Ollama:
+```json
+[
+  {
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "bank_table": "produto",
+    "data_source": "SELECT * FROM produto WHERE id = :id",
+    "components": [
+      {
+        "label": "Nome",
+        "field": "nome",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Preço",
+        "field": "preco",
+        "type": "number",
+        "required": true
+      },
+      {
+        "label": "Categoria",
+        "field": "categoria_id",
+        "type": "select",
+        "options_query": "SELECT id, nome FROM categorias"
+      }
+    ]
+  },
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "bank_table": "produto",
+    "data_source": "SELECT id, nome, preco FROM produto",
+    "submiit": {
+      "method": "GET",
+      "url": "/api/produto"
+    },
+    "components": [
+      {
+        "label": "ID",
+        "field": "id"
+      },
+      {
+        "label": "Nome",
+        "field": "nome"
+      },
+      {
+        "label": "Preço",
+        "field": "preco"
+      }
+    ]
+  },
+  {
+    "title": "Edição de Produto",
+    "type": "form",
+    "bank_table": "produto",
+    "data_source": "SELECT * FROM produto WHERE id = :id",
+    "components": [
+      {
+        "label": "Nome",
+        "field": "nome",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Preço",
+        "field": "preco",
+        "type": "number",
+        "required": true
+      },
+      {
+        "label": "Categoria",
+        "field": "categoria_id",
+        "type": "select",
+        "options_query": "SELECT id, nome FROM categorias"
+      }
+    ]
+  },
+  {
+    "title": "Criação de Produto",
+    "type": "form",
+    "bank_table": "produto",
+    "data_source": "SELECT * FROM produto WHERE id = :id",
+    "components": [
+      {
+        "label": "Nome",
+        "field": "nome",
+        "type": "text",
+        "required": true
+      },
+      {
+        "label": "Preço",
+        "field": "preco",
+        "type": "number",
+        "required": true
+      },
+      {
+        "label": "Categoria",
+        "field": "categoria_id",
+        "type": "select",
+        "options_query": "SELECT id, nome FROM categorias"
+      }
+    ]
+  }
+]
+```
+[2025-07-22 21:20:43] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_YeBELs 2>&1
+[2025-07-22 21:22:56] Saída do Ollama:
+[
+  {
+    "title": "Listagem de Produtos",
+    "type": "table",
+    "bank_table": "produto",
+    "data_source": "SELECT id, nome, preco FROM produto",
+    "submit": {
+      "method": "GET",
+      "url": "/api/produto"
+    },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  },
+  {
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "bank_table": "produto",
+    "data_source": "SELECT * FROM produto WHERE id = :id",
+    "components": [
+      { "label": "ID", "field": "id", "type": "hidden" },
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Descrição", "field": "descricao", "type": "textarea" },
+      { "label": "Quantidade em Estoque", "field": "quantidade_estoque", "type": "number", "required": true }
+    ]
+  }
+]
+[2025-07-23 21:03:00] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_1ItfVB 2>&1
+[2025-07-23 21:03:31] Saída do Ollama:
+Sim, estou aqui para ajudar! A estrutura de banco fornecida define uma tabela de produto com os seguintes campos: id (inteiro e chave primária), nome (varchar não nulo), descrição (texto e permite null), preço (decimal não nulo) e quantidade_estoque (inteiro não nulo).
+[2025-07-23 21:04:15] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_lfquUd 2>&1
+[2025-07-23 21:04:35] Saída do Ollama:
+SELECT * FROM produto;

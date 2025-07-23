@@ -5,6 +5,7 @@ class Assistente
     private string $prompt;
     private bool $logAtivado = true;
     private string $modelo = 'mistral';
+    private string $ollamaPath = '/usr/local/bin/ollama';
 
     public function __construct(string $prompt)
     {
@@ -20,7 +21,7 @@ class Assistente
         $tempFile = tempnam(sys_get_temp_dir(), 'prompt_');
         file_put_contents($tempFile, $this->prompt);
 
-        $cmd = "export HOME=/root; /usr/local/bin/ollama run {$this->modelo} < $tempFile 2>&1";
+        $cmd = "export HOME=/root; {$this->ollamaPath} run {$this->modelo} < $tempFile 2>&1";
 
         $this->log("Comando shell executado: $cmd");
 
