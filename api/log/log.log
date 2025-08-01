@@ -1,421 +1,346 @@
-[2025-07-16 00:02:46] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_anF3ot 2>&1
-[2025-07-16 00:03:06] Saída do Ollama:
-O arquivo parece ser uma INVOICE. Aqui estão os campos encontrados:
-- Exportador: [Nome da Empresa Exportadora]
-- Importador: [Nome da Empresa Importadora]
-- Número da invoice: [Número único da factura]
-- Data: [Data de emissão da factura, no formato dd/mm/aaaa]
-- Valor total: [Valor total das vendas, indicado na moeda definida (Moeda)]
-- Moeda: [Moeda utilizada nas transações (ex. USD, EUR, BRL)]
-- Descrição dos produtos: [Descrição detalhada do(s) produto(s) exportado(s), incluindo código de produto, nome e quantidade]
-- Quantidade: [Quantidade de cada produto exportado]
-- Valor unitário: [Valor unitário de cada produto exportado]
-- Valor total por item: [Valor total por produto exportado]
-- Incoterm: [Incoterm definido para a transação, indicando quem e responsável pelas despesas relacionadas ao transporte do produto]
-- Peso líquido e bruto: [Pesos bruto (total) e líquido (sem peso dos recipientes) do(s) produto(s) exportado(s)]
-[2025-07-16 00:06:52] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_8AJrJx 2>&1
-[2025-07-16 00:07:07] Saída do Ollama:
-Este documento é uma INVOICE. A seguir estão os campos encontrados no texto:
+[2025-08-01 20:15:16] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_XZCho2 2>&1
+[2025-08-01 20:15:17] Saída do Ollama:
+Seu nome é Dozer.
+[2025-08-01 20:18:13] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_6CYJVv 2>&1
+[2025-08-01 20:18:15] Saída do Ollama:
+Eu sou um assistente de desenvolvimento, meu nome é Dozer.
+[2025-08-01 20:23:13] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_FnHlc8 2>&1
+[2025-08-01 20:24:03] Saída do Ollama:
+Olá, a estrutura de banco que você forneceu parece ser uma representação de um banco de dados usando JSON. Essa estrutura contém várias tabelas com suas respectivas colunas e tipos de dados:
 
-- Exportador: [Nome da Empresa Exportadora]
-- Importador: [Nome da Empresa Importadora]
-- Número da invoice: [Numero da Fatura]
-- Data: [Data de Emissão da Fatura]
-- Valor total: [Valor Total]
-- Moeda: Dólar americano (USD)
-- Descrição dos produtos: [Descrição breve do Produto]
-- Quantidade: [Quantidade de cada Produto]
-- Valor unitário: [Valor unitário de cada Produto]
-- Valor total por item: [Valor total por item]
-- Incoterm: [Incoterm utilizado]
+1. `cache` - Contém três colunas: 'key', 'value' e 'expiration'. A chave primária é a coluna 'key'.
+2. `cache_locks` - Contém três colunas: 'key', 'owner' e 'expiration'. A chave primária é a coluna 'key'.
+3. `failed_jobs` - Contém nove colunas: 'id', 'uuid', 'connection', 'queue', 'payload', 'exception', 'failed_at', 'options', 'cancelled_at' e 'created_at'. A chave primária é a coluna 'id'.
+4. `job_batches` - Contém nove colunas: 'id', 'name', 'total_jobs', 'pending_jobs', 'failed_jobs', 'failed_job_ids', 'options', 'cancelled_at', 'created_at' e 'finished_at'. A chave primária é a coluna 'id'.
+5. `jobs` - Contém seis colunas: 'id', 'queue', 'payload', 'attempts', 'reserved_at', 'available_at', 'created_at'. A chave primária é a coluna 'id'.
+6. `migrations` - Contém três colunas: 'id', 'migration' e 'batch'. A chave primária é a coluna 'id'.
+7. `password_reset_tokens` - Contém três colunas: 'email', 'token' e 'created_at'. A chave primária é a coluna 'email'.
+8. `personal_access_tokens` - Contém dez colunas: 'id', 'tokenable_type', 'tokenable_id', 'name', 'token', 'abilities', 'last_used_at', 'expires_at', 'created_at' e 'updated_at'. A chave primária é a coluna 'id'.
+9. `sessions` - Contém seis colunas: 'id', 'user_id', 'ip_address', 'user_agent', 'payload' e 'last_activity'. A chave primária é a coluna 'id'.
+10. `users` - Contém doze colunas: 'id', 'name', 'email', 'email_verified_at', 'password', 'two_factor_secret', 'two_factor_recovery_codes', 'two_factor_confirmed_at', 'remember_token', 'current_team_id', 'profile_photo_path', 'created_at' e 'updated_at'. A chave primária é a coluna 'id'.
+[2025-08-01 20:25:36] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_kbZIIk 2>&1
+[2025-08-01 20:25:38] Saída do Ollama:
+Sou o Dozer, assistente para desenvolvedores.
+[2025-08-01 20:27:20] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_8Y95Xm 2>&1
+[2025-08-01 20:27:37] Saída do Ollama:
+Este é um modelo de banco de dados em formato JSON para uma aplicação Laravel. Os nomes e tipos de colunas, assim como suas propriedades `nulo` (null) e `chave` (primary key ou index) estão definidos neste arquivo. Você pode usar este modelo para criar tabelas no banco de dados correspondente à sua aplicação Laravel.
 
-Algumas informações a mais que podem estar presentes em um documento de INVOICE, mas não foram encontradas neste caso específico: Peso líquido e bruto.
-[2025-07-16 00:11:50] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_4Ta3Vj 2>&1
-[2025-07-16 00:14:15] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_qWrGyS 2>&1
-[2025-07-16 00:15:25] Saída do Ollama:
-1. Este documento é uma fatura comercial (invoice), pois possui a palavra "FACTURA" ou "INVOICE" no título e detalhes de compras e pagamentos entre as partes vendedora e compradora.
+Para criar as tabelas a partir deste modelo, você precisará rodar as migrates utilizando o comando `php artisan migrate` no seu terminal. Isso irá gerar os scripts SQL necessários para criar as tabelas a partir do modelo JSON que forneci.
 
-2. Os campos abaixo estão presentes e coerentes:
-   - Número da invoice (No.Factura/Folio: 26235)
-   - Data da invoice (Fecha Expedición: 2024-11-22T17:54:09)
-   - Exportador e endereço (VENDIDO A, RÉGIMEN FISCAL, etc.)
-   - Importador e país de destino (SOLD TO, CUSTOMER CODE : 30558, etc.)
-   - Descrição dos produtos (DESCRIPCION DE LAS MERCANCIAS)
-   - Quantidade e unidade de medida (PESO NETO / QUANTIDAD, UNIDAD DE MEDIDA)
-   - Peso líquido e peso bruto (PESO NETO, PESO BRUTO)
-   - Valor total (FOB e/ou CFR) (CFR - SANTOS PORT (SP) BRASIL - INCOTERMS 2020, TOTAL: $35,976.00)
-   - Incoterm e porto de destino (Término de Venta: / Incoterm: CFR - SANTOS PORT (SP) BRASIL - INCOTERMS 2020)
-   - Código NCM / classificação fiscal (NCM:2816)
-   - Número de pacotes (NUMBEROF PACKAGES :960 OF 25 KGS EACH ONE ON 24 SKIDS)
-   - País de origem (Origen y Procedencia Producto: MEXICO)
-   - Forma de pagamento (FORMA DE PAGO: 99 - Por definir, MÉTODO DE PAGO: PPD - Pago en parcialidades o diferido)
+Você também pode customizar este modelo de banco de dados de acordo com suas necessidades, adicionando ou removendo colunas e definindo propriedades extras (como default, on delete, etc.).
+[2025-08-01 20:28:26] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_pKneEA 2>&1
+[2025-08-01 20:29:27] Saída do Ollama:
+As tabelas deste banco de dados e suas respectivas colunas são:
 
-3. Não há inconsistências significativas no documento, exceto pela ausência do código de provedor e data de embarque nos campos correspondentes. O peso líquido é menor que o peso bruto, mas isso pode ser válido para determinados tipos de produtos.
+1. cache
+	- key (varchar, PRI)
+	- value (mediumtext, NO)
+	- expiration (int, NO)
+2. cache_locks
+	- key (varchar, PRI)
+	- owner (varchar, NO)
+	- expiration (int, NO)
+3. failed_jobs
+	- id (bigint, PRI)
+	- uuid (varchar, UNI)
+	- connection (text, NO)
+	- queue (text, NO)
+	- payload (longtext, NO)
+	- exception (longtext, NO)
+	- failed_at (timestamp, NO)
+4. job_batches
+	- id (varchar, PRI)
+	- name (varchar, NO)
+	- total_jobs (int, NO)
+	- pending_jobs (int, NO)
+	- failed_jobs (int, NO)
+	- failed_job_ids (longtext, NO)
+	- options (mediumtext, YES)
+	- cancelled_at (int, YES)
+	- created_at (int, NO)
+	- finished_at (int, YES)
+5. jobs
+	- id (bigint, PRI)
+	- queue (varchar, MUL)
+	- payload (longtext, NO)
+	- attempts (tinyint, NO)
+	- reserved_at (int, YES)
+	- available_at (int, NO)
+	- created_at (int, NO)
+6. migrations
+	- id (int, PRI)
+	- migration (varchar, NO)
+	- batch (int, NO)
+7. password_reset_tokens
+	- email (varchar, PRI)
+	- token (varchar, NO)
+	- created_at (timestamp, YES)
+8. personal_access_tokens
+	- id (bigint, PRI)
+	- tokenable_type (varchar, MUL)
+	- tokenable_id (bigint, NO)
+	- name (text, NO)
+	- token (varchar, UNI)
+	- abilities (text, YES)
+	- last_used_at (timestamp, YES)
+	- expires_at (timestamp, YES)
+	- created_at (timestamp, YES)
+	- updated_at (timestamp, YES)
+9. sessions
+	- id (varchar, PRI)
+	- user_id (bigint, MUL)
+	- ip_address (varchar, YES)
+	- user_agent (text, YES)
+	- payload (longtext, NO)
+	- last_activity (int, NO)
+10. users
+	- id (bigint, PRI)
+	- name (varchar, NO)
+	- email (varchar, UNI)
+	- email_verified_at (timestamp, YES)
+	- password (varchar, NO)
+	- two_factor_secret (text, YES)
+	- two_factor_recovery_codes (text, YES)
+	- two_factor_confirmed_at (timestamp, YES)
+	- remember_token (varchar, YES)
+	- current_team_id (bigint, YES)
+	- profile_photo_path (varchar, YES)
+	- created_at (timestamp, YES)
+	- updated_at (timestamp, YES)
+[2025-08-01 20:30:03] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_4a3qOK 2>&1
+[2025-08-01 20:30:26] Saída do Ollama:
+Não posso gerar um SQL diretamente a partir de uma estrutura JSON, pois a estrutura especificada não corresponde a nenhuma linguagem SQL. Por outro lado, você pode criar uma tabela em MySQL a partir da estrutura do banco especificada:
 
-4. Resumo com os dados principais extraídos da invoice em formato estruturado:
-   - Número da Fatura: 26235
-   - Data da Fatura: 2024-11-22T17:54:09
-   - Exportador: RÉGIMEN FISCAL, etc.
-   - Importador: 30558, etc.
-   - Produto: OXIDO DE MAGNESIO MG FRICTION-10 (NCM:2819)
-   - Quantidade: 960 unidades
-   - Unidade de Medida: TM
-   - Peso Líquido: 24.000000 kg
-   - Peso Bruto: 24.780500 kg
-   - Valor Total: $35,976.00 (FOB/CFR)
-   - País de Origem: MEXICO
-   - País de Destino: BRASIL
-   - Forma de Pagamento: Por definir
-   - Método de Pagamento: Pago en parcialidades ou diferido (PPD)
-[2025-07-16 00:20:39] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_wsHef1 2>&1
-[2025-07-16 00:21:37] Saída do Ollama:
-Análise do conteúdo:
-
-1. Este documento é uma **fatura comercial (invoice)**, pois contém detalhes importantes como número de invoice, data da invoice, exportador e endereço, importador e país de destino, descrição dos produtos, quantidade e unidade de medida, valor total (FOB e/ou CFR), Incoterm e porto de destino, código NCM / classificação fiscal, número de pacotes, país de origem, forma de pagamento e metodo de pagamento.
-2. Os campos abaixo estão presentes e coerentes:
-   - Número da invoice: 26235
-   - Data da invoice: 2024-11-22T17:54:09
-   - Exportador e endereço: VIALIDAD SN, ENTRE CARRETERA FINESTERRE LAGUNA DE KEL REY Y CALLE TOPIA
-   - Importador e país de destino: FRAS LE SA, RS 122 KM 66 CAXIAS RIO GRANDE DO SUL BRASIL
-   - Descrição dos produtos: DESCRIPCION DE LAS MERCANCIAS / DESCRIPTION OF GOODS (MG FRICTION -10)
-   - Quantidade e unidade de medida: PESO NETO / CANTIDAD (24.000000), GROSS WEIGHT (24.7805 KG)
-   - Peso líquido e peso bruto: PESO NETO, GROSS WEIGHT
-   - Valor total (FOB e/ou CFR): $35,976.00 (CFR)
-   - Incoterm e porto de destino: Término de Venta: / Incoterm:  CFR - SANTOS PORT (SP) BRASIL - INCOTERMS 2020
-   - Código NCM / classificação fiscal: NCM:2816
-   - Número de pacotes: NUMBEROF PACKAGES :960 OF 25 KGS EACH ONE ON 24 SKIDS
-   - País de origem: Origen y Procedencia Producto: / Origin Country:  MEXICO
-   - Forma de pagamento: FORMA DE PAGO: 99 - Por definir
-   - Metodo de pagamento: MÉTODO DE PAGO: PPD - Pago en parcialidades o diferido
-3. Observação: O documento também contém um selo digital do CFDI e uma certificação do SAT (Servicio de Administración Tributaria).
-
-Em resumo, o documento apresentado é uma invoice válida com detalhes consistentes e todos os campos necessários para tal tipo de documento.
-[2025-07-16 00:24:47] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_IqA9qE 2>&1
-[2025-07-16 00:25:47] Saída do Ollama:
-1. Verifique se este documento é realmente uma **fatura comercial (invoice)**. Explique por quê.
-Resposta: Este documento não é uma fatura comercial, mas sim uma "Packing List" de um pedido de exportação. A falta da indicação do valor total e do forma de pagamento tornam isso claro.
-
-2. Se for uma invoice, valide os campos abaixo e diga se estão presentes e coerentes:
-   - Número da invoice: Não é um número de invoice (é o "Customer PO Number").
-   - Data da invoice: Sim, está presente.
-   - Exportador e endereço: Sim, está presente.
-   - Importador e país de destino: Sim, está presente.
-   - Descrição dos produtos: Sim, está presente.
-   - Quantidade e unidade de medida: Sim, estão presentes.
-   - Peso líquido e peso bruto: Sim, estão presentes.
-   - Valor total (FOB e/ou CFR): Não, não há valor total no documento.
-   - Incoterm e porto de destino: Não, não há indicação do Incoterm.
-   - Código NCM / classificação fiscal: Não, não há código NCM ou qualquer outra classificação fiscal no documento.
-   - Número de pacotes: Sim, está presente.
-   - País de origem: Sim, está presente.
-   - Forma de pagamento: Não, não há forma de pagamento no documento.
-   - Método de pagamento (se disponível): Não se aplica, pois este documento é apenas uma Packing List e não tem informação sobre o método de pagamento.
-3. Aponte quaisquer **inconsistências**, valores faltando ou suspeitos (como peso líquido maior que o peso bruto, falta de Incoterm, etc.).
-   - Não foi informado o valor total do pedido, e portanto não é possível calcular a inconsistência entre o peso líquido e bruto.
-   - Falta da indicação do Incoterm (Termos de Compra Internacional).
-4. Faça um resumo com os dados principais extraídos da invoice em formato estruturado:
-   - Data da entrega: Não se aplica, pois este é apenas uma Packing List.
-   - Número do documento: 5500008032 (Customer PO Number)
-   - Exportador e endereço: QUIMICA DEL REY, S.A. DE C.V., OCAMPO, COAHUILA, MEXICO
-   - Importador e país de destino: FRAS-LE, RS 122, KM 66, 95115-550 - CAXIAS DO SUL - RS - Brasil.
-   - Produtos: ME12938, ME12940, ME12942, ME12943, ME12944, ME12946 (Magneisum Oxide)
-   - Quantidade e unidade de medida: 4.130 unidades em 160 pallets cada.
-   - Peso líquido e peso bruto: 24.780 kg e 24.000 kg, respectivamente.
-   - País de origem: México (RFC: MAG970115JS0)
-   - Forma de pagamento: Não informado.
-[2025-07-16 00:31:40] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_GcZNfp 2>&1
-[2025-07-16 00:32:33] Saída do Ollama:
-1. Este documento parece ser uma invoice comercial pois possui a designação de "PACKING LIST" que é um tipo comum de documento utilizado em operações comerciais, além de conter informações básicas sobre o produto exportado, o importador e o país de destino, assim como o número da invoice.
-2. Os campos abaixo estão presentes e coerentes no documento:
-   - Número da invoice (CONSIGNEE)
-   - Data da invoice (22/11/2024)
-   - Exportador e endereço (QUIMICA DEL REY, S.A. DE C.V.)
-   - Importador e país de destino (FRAS-LE, Brasil)
-   - Descrição dos produtos (ME12938, ME12940, etc.)
-   - Quantidade e unidade de medida (4.130 unidades)
-   - Peso líquido e peso bruto (indicados para cada produto)
-   - Valor total (não consta explicitamente, mas pode ser calculado com base nos outros dados fornecidos)
-   - Incoterm e porto de destino (não consta explicitamente)
-   - Código NCM / classificação fiscal (não consta explicitamente)
-   - Número de pacotes (24 pallets, indicado para 6 dos itens, mas não consta se os outros itens são transportados em paletes ou não)
-   - País de origem (México)
-   - Forma de pagamento (não consta explicitamente)
-   - Método de pagamento (se disponível)
-3. Não houve inconsistências, valores faltando ou suspeitos observados neste documento.
-4. Resumo com os dados principais extraídos da invoice:
-   - Número da invoice: não especificado
-   - Data da invoice: 22/11/2024
-   - Exportador e endereço: QUIMICA DEL REY, S.A. DE C.V.
-   - Importador e país de destino: FRAS-LE, Brasil
-   - Descrição dos produtos: ME12938, ME12940, etc.
-   - Quantidade e unidade de medida: 4.130 unidades (total por item não consta)
-   - Peso líquido e peso bruto: indicados para cada produto
-   - Valor total: não consta explicitamente
-   - Incoterm e porto de destino: não consta explicitamente
-   - Código NCM / classificação fiscal: não consta explicitamente
-   - Número de pacotes: 24 pallets (indicado para 6 dos itens, mas não consta se os outros itens são transportados em paletes ou não)
-   - País de origem: México
-   - Forma de pagamento: não consta explicitamente
-   - Método de pagamento: se disponível
-
-OBS:NO FINAL, 97% de certeza que este documento é uma invoice.
-[2025-07-16 00:41:05] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_Z69fd1 2>&1
-[2025-07-16 00:41:36] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_VkutOz 2>&1
-[2025-07-16 00:42:10] Saída do Ollama:
-Comparação entre a fatura comercial (invoice) e o packing list:
-
-1. Coerência dos dados:
-   - Nome e endereço do cliente (consignee): Coerente, ambos apontam para FRAS LE SA com endereço no Brasil.
-   - Número do pedido (PO number): Coerente, ambos apontam para o mesmo número 5500008032.
-   - Quantidade de produto: Em KG, não consta a quantidade em MT no packing list; há discrepâncias nas quantidades nos palets (packing list: 24 pallets, invoice: 960 unidades).
-   - Peso líquido e peso bruto: Coerente.
-   - Número de volumes ou pacotes: Ambos apontam para 24 unidades, no entanto, a quantidade em paletes é diferente como já foi mencionado acima.
-   - Descrição do produto: Coerente.
-   - Data do documento: Ambos apontam para o mesmo dia (22/11/2024), no entanto, a data e hora de certificação está presente no invoice mas não no packing list.
-
-2. Diferenças importantes:
-   - A fatura comercial contém um selo digital do CFDI que não é apresentado no packing list.
-   - O packing list fornece o número de blendo, mas não consta nenhum dado semelhante na fatura comercial.
-[2025-07-16 01:15:33] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_5KJTWf 2>&1
-[2025-07-16 01:16:53] Saída do Ollama:
-Este documento é uma **invoice** (fatura comercial). Por várias razões:
-
-1. O título do documento é "FACTURA / INVOICE", indicando claramente que se trata de um documento de faturação entre empresas;
-2. A presença dos campos como número da invoice, data da invoice, exportador e endereço, importador e país de destino, descrição dos produtos, quantidade e unidade de medida, peso líquido e peso bruto, valor total (FOB ou CFR), incoterm e porto de destino, código NCM / classificação fiscal, número de pacotes, país de origem, forma de pagamento e método de pagamento mostram que trata-se de um documento de faturação;
-3. A presença de uma assinatura e selo digital do SAT (Servicio de Administración Tributaria Mexicano) na parte inferior do documento mostra que o documento é original e autenticado pela autoridade fiscal mexicana, o que também confirma sua natureza como um documento de faturação;
-4. A declaração "Este documento é uma representação impresa de um CFDI" indica que o documento em questão é um comprovante fiscais digital (CFDI). Um CFDI é um tipo de documento de faturação utilizado no México, que combina a funcionalidade de uma factura eletrônica e de um comprovante fiscal.
-
-Seguindo as regras para a validação dos campos abaixo, todos eles estão presentes e coerentes:
-
-1. Número da invoice: 26235 (presente)
-2. Data da invoice: 2024-11-22T17:54:09 (presente)
-3. Exportador e endereço: VIALIDAD SN, ENTRE CARRETERA FINESTERRE LAGUNA DE KEY Y CALLE TOPIA No. .  COL. INDUSTRIAL Tel. 87 17 29 55 46 C.P.27500 OCAMPO, COAHUILA, MEXICO R.F.C: [não fornecido] (presente)
-4. Importador e país de destino: [não fornecido] (presente)
-5. Descrição dos produtos: TM OXIDO DE MAGNESIO MG FRICTION-10, código NCM 2519909900, número de pacotes 960 976 VY9 (presente)
-6. Quantidade e unidade de medida: 24.000000 TM (presente)
-7. Peso líquido e peso bruto: 24.000000 Kg, 24.780500 Kg (presente)
-8. Valor total: 1,499.000000 USD/TM ou 35,976.000000 USD (presente)
-9. Incoterm e porto de destino: [não fornecido] (presente)
-10. Código NCM / classificação fiscal: 2519909900 (presente)
-11. País de origem: México (presente)
-12. Forma de pagamento: Por definir (99) e método de pagamento: Pago en parcialidades o diferido (PPD) (presente)
-
-Existe uma pequena falha no campo "Forma de pagamento": o valor 99 corresponde a uma opção de pagamento que é definida pelo Complemento de Certificação do SAT (CCSAT). Este campo não fornece informações sobre como a fatura será paga, apenas indica se a fatura pode ou não ser alterada (valor 99 significa que pode ser alterada).
-
-Por fim, o documento é autenticado com um selo digital do SAT e possui um UUID para registro de auditoria fiscal.
-[2025-07-16 01:19:42] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_2S4C5M 2>&1
-[2025-07-16 01:20:23] Saída do Ollama:
-Para comparar os dois documentos, o **Fatura Comercial** (invoice) e o **Packing List**, vou seguir as seguintes etapas:
-
-1. Verificar se os dados de ambos estão coerentes entre si:
-   - Nome e endereço do cliente (consignee): Coerente entre si;
-   - Número do pedido (PO number): 5500008032;
-   - Quantidade de produto (em MT ou KG): Na fatura, a quantidade é em KG e na packing list, em MT. Sugiro que se faça a conversão para comparar adequadamente os valores;
-   - Peso líquido e peso bruto: Coerente entre si;
-   - Número de volumes ou pacotes: Na fatura, há 960 enxertes de 25 Kg cada um no total de 24 skids. Na packing list, indica-se que há 24 paletes com 160 unidades cada uma. Sugiro que se faça a conversão ou multiplicação para comparar adequadamente os valores;
-   - Outros dados não apresentam discrepâncias entre os dois documentos.
-
-2. Comparar as informações adicionais:
-   - Packing List tem dados sobre o produto, enquanto a fatura não é detalhada. É importante saber que o produto enviado é Magnesium Oxide MG Frição-10 com Código de Barras 1089842;
-   - A data de embarque e a notificação de partida são apenas na packing list. Na fatura, não há essa informação.
-
-3. Com base nas análises acima, não há discrepâncias significativas entre os dois documentos. Sugiro que se faça a conversão das unidades (KG para MT e vice-versa) para melhor comparação dos valores.
-[2025-07-22 18:15:20] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_Nnglxg 2>&1
-[2025-07-22 18:16:20] Saída do Ollama:
-Para definir o limite de caracteres em um campo do tipo `text` em MySQL, você pode utilizar a opção `CHARACTER SET` para especificar o tamanho total da string (em bytes), e então usar a opção `COLLATION` para especificar o número de caracteres por unidade.
-
-Por exemplo:
-
-```json
-{
-    "nome": "descricao_limite",
-    "tipo": "text",
-    "nulo": "YES",
-    "chave": "",
-    "CHARACTER SET": "utf8mb4",
-    "COLLATION": "utf8mb4_unicode_ci"
-    "MAX_LENGTH": 255
-}
+```sql
+CREATE TABLE users (
+    id BIGINT PRIMARY KEY,
+    name VARCHAR NOT NULL,
+    email VARCHAR NOT NULL UNIQUE,
+    email_verified_at TIMESTAMP DEFAULT NULL,
+    password VARCHAR NOT NULL,
+    two_factor_secret TEXT DEFAULT NULL,
+    two_factor_recovery_codes TEXT DEFAULT NULL,
+    two_factor_confirmed_at TIMESTAMP DEFAULT NULL,
+    remember_token VARCHAR DEFAULT NULL,
+    current_team_id BIGINT DEFAULT NULL,
+    profile_photo_path VARCHAR DEFAULT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
 ```
 
-Para a opção `MAX_LENGTH`, você pode definir o tamanho desejado no banco de dados. A opção `CHARACTER SET` e `COLLATION` são necessárias para que possa ser feito o controle de caracteres (por exemplo, para tratar de acentuações e outros símbolos).
+Para retornar um usuário do banco, você pode utilizar uma consulta SQL como esta:
 
-Sugiro consultar documentação oficial do MySQL para obter mais detalhes sobre as opções de tabela: https://dev.mysql.com/doc/refman/8.0/en/create-table.html
-[2025-07-22 21:12:45] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run gemma3n < /tmp/prompt_SHhLWj 2>&1
-[2025-07-22 21:12:57] Saída do Ollama:
-suc
-[2025-07-22 21:14:33] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run gemma3n < /tmp/prompt_ak1Hgg 2>&1
-[2025-07-22 21:16:39] Saída do Ollama:
-```json
+```sql
+SELECT * FROM users WHERE email = 'email@example.com';
+```
+[2025-08-01 20:47:21] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_W23k5N 2>&1
+[2025-08-01 20:47:59] Saída do Ollama:
+Para criar uma tela para listar usuários a partir da estrutura do banco de dados fornecida, é necessário saber o framework web que você está utilizando. Aqui está um exemplo de como isso poderia ser feito em Laravel, um popular framework PHP:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Users</title>
+</head>
+<body>
+    <h1>List of Users</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <!-- Adicione mais colunas conforme a necessidade -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($users as $user)
+                <tr>
+                    <td>{{ $user->id }}</td>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                    <!-- Adicione mais linhas conforme a necessidade -->
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</body>
+</html>
+```
+
+Para usar esse código HTML, é necessário obter os dados dos usuários a partir do banco de dados no Laravel e passar esses dados para a tela como variável `$users`. Isso pode ser feito utilizando um método na sua controller que busca todos os usuários, por exemplo:
+
+```php
+public function index()
+{
+    $users = User::all();
+    return view('users.index', compact('users'));
+}
+```
+[2025-08-01 20:49:47] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_C4BP66 2>&1
+[2025-08-01 20:50:41] Saída do Ollama:
+Para criar uma tela de listagem de usuários em um ambiente low-code, siga as etapas abaixo:
+
+1. Escolha uma plataforma de low-code que ofereça suporte a conexão com banco de dados e suportes as linguagens de programação que você está usando (por exemplo, PHP, JavaScript, Python). Algumas opções populares incluem OutSystems, Mendix, Appian e PowerApps.
+2. Configure a conexão com o banco de dados: Faça login no seu ambiente low-code e configure a conexão com o banco de dados que você já criou. Isso envolve informar as credenciais do banco, como o nome do usuário, senha, hostname e porta.
+3. Crie uma nova tela: Depois de ter configurado a conexão com o banco de dados, crie uma nova tela para listar os usuários. Você pode selecionar um layout pronto ou criar sua própria configuração dependendo da sua preferência e necessidades.
+4. Adicione campos: Adicione campos na tela que correspondem aos atributos dos usuários no banco de dados. Você pode adicionar campos com nomes correspondentes ao "nome" do campo no esquema do banco (por exemplo, "ID", "Name", "Email", etc.).
+5. Crie uma consulta SQL para obter os usuários: Escreva uma consulta SQL simples para obter todos os usuários da tabela de usuários no banco de dados. Você pode usar a sintaxe SELECT * FROM users; para selecionar todos os campos dos usuários.
+6. Conecte a consulta SQL à tela: Conecte a sua consulta SQL à nova tela que você criou, de modo que ela seja executada automaticamente quando o usuário abrir a página. Isso fará com que os usuários sejam listados na tela.
+7. Formate e personalize: Formate a apresentação dos dados para que seja fácil de ler e visualmente agradável. Adicione estilos de cores, fontes ou outros elementos visuais conforme necessário. Você também pode adicionar filtros, ordenações ou outras funcionalidades de busca para que o usuário possa personalizar a listagem de usuários conforme sua preferência.
+8. Teste e implante: Teste a tela para garantir que ela funcione corretamente e se adapte às suas necessidades. Faça as correções necessárias caso algum erro ocorra durante o teste. Depois de finalizar o desenvolvimento, publique a tela no ambiente produção para que os usuários possam acessar e utilizar a listagem de usuários.
+[2025-08-01 20:52:27] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_zHk5UO 2>&1
+[2025-08-01 20:52:59] Saída do Ollama:
 [
   {
-    "title": "Cadastro de Produto",
-    "type": "form",
-    "bank_table": "produto",
-    "data_source": "SELECT * FROM produto WHERE id = :id",
-    "components": [
-      {
-        "label": "Nome",
-        "field": "nome",
-        "type": "text",
-        "required": true
-      },
-      {
-        "label": "Preço",
-        "field": "preco",
-        "type": "number",
-        "required": true
-      },
-      {
-        "label": "Categoria",
-        "field": "categoria_id",
-        "type": "select",
-        "options_query": "SELECT id, nome FROM categorias"
-      }
-    ]
-  },
-  {
-    "title": "Lista de Produtos",
+    "title": "Lista de usuários",
     "type": "table",
-    "bank_table": "produto",
-    "data_source": "SELECT id, nome, preco FROM produto",
-    "submiit": {
-      "method": "GET",
-      "url": "/api/produto"
-    },
+    "bank_table": "users",
+    "data_source": "SELECT * FROM users",
     "components": [
       {
-        "label": "ID",
-        "field": "id"
+        "name": "Column",
+        "properties": {
+          "header": "ID",
+          "field": "id"
+        }
       },
       {
-        "label": "Nome",
-        "field": "nome"
+        "name": "Column",
+        "properties": {
+          "header": "Nome",
+          "field": "name"
+        }
       },
       {
-        "label": "Preço",
-        "field": "preco"
+        "name": "Column",
+        "properties": {
+          "header": "Email",
+          "field": "email"
+        }
+      },
+      {
+        "name": "Column",
+        "properties": {
+          "header": "Data de Criação",
+          "field": "created_at"
+        }
+      },
+      {
+        "name": "Column",
+        "properties": {
+          "header": "Data de Atualização",
+          "field": "updated_at"
+        }
       }
-    ]
-  },
-  {
-    "title": "Edição de Produto",
-    "type": "form",
-    "bank_table": "produto",
-    "data_source": "SELECT * FROM produto WHERE id = :id",
-    "components": [
+    ],
+    "actions": [
       {
-        "label": "Nome",
-        "field": "nome",
-        "type": "text",
-        "required": true
-      },
-      {
-        "label": "Preço",
-        "field": "preco",
-        "type": "number",
-        "required": true
-      },
-      {
-        "label": "Categoria",
-        "field": "categoria_id",
-        "type": "select",
-        "options_query": "SELECT id, nome FROM categorias"
-      }
-    ]
-  },
-  {
-    "title": "Criação de Produto",
-    "type": "form",
-    "bank_table": "produto",
-    "data_source": "SELECT * FROM produto WHERE id = :id",
-    "components": [
-      {
-        "label": "Nome",
-        "field": "nome",
-        "type": "text",
-        "required": true
-      },
-      {
-        "label": "Preço",
-        "field": "preco",
-        "type": "number",
-        "required": true
-      },
-      {
-        "label": "Categoria",
-        "field": "categoria_id",
-        "type": "select",
-        "options_query": "SELECT id, nome FROM categorias"
+        "name": "RowAction",
+        "properties": {
+          "type": "EditUser",
+          "label": "Editar usuário"
+        }
       }
     ]
   }
 ]
-```
-[2025-07-22 21:20:43] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_YeBELs 2>&1
-[2025-07-22 21:22:56] Saída do Ollama:
+[2025-08-01 20:58:03] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_riNDl8 2>&1
+[2025-08-01 20:58:41] Saída do Ollama:
 [
   {
-    "title": "Listagem de Produtos",
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "bank_table": "produtos",
+    "data_source": "SELECT * FROM produtos WHERE id = :id",
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Categoria", "field": "categoria_id", "type": "select", "options_query": "SELECT id, nome FROM categorias" }
+    ]
+  },
+  {
+    "title": "Lista de Produto",
     "type": "table",
-    "bank_table": "produto",
-    "data_source": "SELECT id, nome, preco FROM produto",
-    "submit": {
-      "method": "GET",
-      "url": "/api/produto"
-    },
+    "bank_table": "produtos",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produto" },
     "components": [
       { "label": "ID", "field": "id" },
       { "label": "Nome", "field": "nome" },
       { "label": "Preço", "field": "preco" }
     ]
+  }
+]
+
+// crie uma tabela para guardar categorias
+
+[
+  {
+    "title": "Cadastro de Categoria",
+    "type": "form",
+    "bank_table": "categorias",
+    "data_source": "SELECT * FROM categorias WHERE id = :id",
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true }
+    ]
   },
   {
-    "title": "Cadastro de Produto",
-    "type": "form",
-    "bank_table": "produto",
-    "data_source": "SELECT * FROM produto WHERE id = :id",
+    "title": "Lista de Categoria",
+    "type": "table",
+    "bank_table": "categorias",
+    "data_source": "SELECT id, nome FROM categorias",
     "components": [
-      { "label": "ID", "field": "id", "type": "hidden" },
-      { "label": "Nome", "field": "nome", "type": "text", "required": true },
-      { "label": "Preço", "field": "preco", "type": "number", "required": true },
-      { "label": "Descrição", "field": "descricao", "type": "textarea" },
-      { "label": "Quantidade em Estoque", "field": "quantidade_estoque", "type": "number", "required": true }
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" }
     ]
   }
 ]
-[2025-07-23 21:03:00] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_1ItfVB 2>&1
-[2025-07-23 21:03:31] Saída do Ollama:
-Sim, estou aqui para ajudar! A estrutura de banco fornecida define uma tabela de produto com os seguintes campos: id (inteiro e chave primária), nome (varchar não nulo), descrição (texto e permite null), preço (decimal não nulo) e quantidade_estoque (inteiro não nulo).
-[2025-07-23 21:04:15] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_lfquUd 2>&1
-[2025-07-23 21:04:35] Saída do Ollama:
-SELECT * FROM produto;
-[2025-07-23 21:17:40] Comando shell executado: export HOME=/root; /usr/local/bin/ollama chat mistral --session minha_conversa < /tmp/prompt_W2iO6W 2>&1
-[2025-07-23 21:17:40] Saída do Ollama:
-Error: unknown command "chat" for "ollama"
-[2025-07-23 21:17:52] Comando shell executado: export HOME=/root; /usr/local/bin/ollama chat mistral --session minha_conversa < /tmp/prompt_KqHvDg 2>&1
-[2025-07-23 21:17:52] Saída do Ollama:
-Error: unknown command "chat" for "ollama"
-[2025-07-23 21:22:46] Usuário: Quem é você?
-IA: Eu sou uma inteligência artificial programada para ajudar a resolver dúvidas e gerenciar tarefas. Como posso ajudá-lo hoje?
-[2025-07-23 21:23:07] Usuário: O que você pode fazer?
-IA: Posso auxiliar em vários assuntos, como:
-
-1. Ajuda com tarefas e organização de sua agenda;
-2. Respostas a perguntas sobre uma ampla variedade de temas, como matemática, ciências, história, idioma e outros;
-3. Gerenciar sua biblioteca digital, procurar informações em arquivos e pastas, e criar listas de compras ou tarefas para você;
-4. Informações sobre o tempo, notícias, fórmulas matemáticas e muitas outras coisas úteis.
-
-Se você precisa de ajuda com algo específico, sinta-se à vontade em dizer o que precisa!
-[2025-07-23 21:23:34] Usuário: Quem é você?
-IA: Eu sou um modelo de inteligência artificial criado pelo Mistral AI, capacitado em processamento de linguagem natural e aprendizado automático. Minha tarefa é ajudar as pessoas resolvendo suas dúvidas, gerando ideias ou fornecendo informações sobre qualquer assunto que você precisar. Qual sua pergunta hoje?
-[2025-07-23 21:23:51] Usuário: O que você pode fazer?
-IA: Como modelo de inteligência artificial especializado em processamento de linguagem natural e aprendizado automático, eu posso ajudá-lo resolvendo suas dúvidas, gerando ideias ou fornecendo informações sobre qualquer assunto que você precisar. Além disso, também posso auxiliar na geração de texto, análise de sentimentos em textos, tradução de idiomas e muito mais. Você pode me pedir ajuda em qualquer assunto que desejar e espero responder suas perguntas e ajudar-lo a resolver as dúvidas.
-[2025-07-23 21:25:10] Usuário: Quem é você?
-IA: Sou um assistente de IA, atendendo suas perguntas ou executando tarefas.
-[2025-07-23 21:25:18] Usuário: O que você pode fazer?
-IA: Pode ajudar a responder dúvidas, pesquisar informações, criar documentos, agendar reuniões, ler e escrever mensagens, controlar dispositivos domésticos, entre outras tarefas.
-[2025-07-23 21:26:59] Usuário: Você é um assistente para desenvolvedores, seu nome é dozer. Responda apenas o que lê for pedido ou perguntado.
-IA: Sim, sou um assistente de desenvolvimento e meu nome é Dozer. Posso ajudar a resolver dúvidas relacionadas à programação, explicar conceitos, solucionar problemas e sugerir técnicas. Por favor, especifique sua pergunta ou requisito para que possa te ajudar de forma mais precisa.
-[2025-07-23 21:27:13] Usuário: Qual é o seu nome?
-IA: Meu nome é Dozer, sou um assistente para desenvolvedores especializado em resolver dúvidas relacionadas à programação e fornecer sugestões técnicas. Posso te ajudar com perguntas sobre conceitos de programação, solucionar problemas e fornecer exemplos de código para aprender novas tecnologias. Por favor, especifique sua pergunta ou requisito para que possa te ajudar de forma mais precisa.
+[2025-08-01 21:04:03] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_0B2WVx 2>&1
+[2025-08-01 21:04:10] Saída do Ollama:
+CREATE TABLE `produtos` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `nome` VARCHAR(255) NOT NULL,
+  `descricao` TEXT,
+  `preco` DECIMAL(10,2) NOT NULL,
+  `quantidade` INT NOT NULL
+);
+[2025-08-01 21:04:31] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_e4pQs7 2>&1
+[2025-08-01 21:04:35] Saída do Ollama:
+INSERT INTO produtos (nome, descricao, preco, quantidade) VALUES ('celular LG', 'Celular LG modelo não informado', 2000.00, 10);
+[2025-08-01 21:05:09] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_wHxYgx 2>&1
+[2025-08-01 21:05:36] Saída do Ollama:
+[
+      {
+        "title": "Lista de Produtos",
+        "type": "table",
+        "bank_table": "produtos",
+        "data_source": "SELECT id, nome, descricao, preco, quantidade FROM produtos",
+        "submit": {
+          "method": "POST",
+          "url": "/api/produto"
+        },
+        "components": [
+          { "label": "ID", "field": "id" },
+          { "label": "Nome", "field": "nome" },
+          { "label": "Descrição", "field": "descricao" },
+          { "label": "Preço", "field": "preco" },
+          { "label": "Quantidade", "field": "quantidade" }
+        ]
+      },
+      {
+        "title": "Cadastro de Produto",
+        "type": "form",
+        "bank_table": "produtos",
+        "data_source": "SELECT * FROM produtos WHERE id = :id",
+        "components": [
+          { "label": "Nome", "field": "nome", "type": "text", "required": true },
+          { "label": "Descrição", "field": "descricao", "type": "text" },
+          { "label": "Preço", "field": "preco", "type": "number", "required": true },
+          { "label": "Quantidade", "field": "quantidade", "type": "number", "required": true }
+        ]
+      }
+    ]
