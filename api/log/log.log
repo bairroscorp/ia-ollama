@@ -344,3 +344,364 @@ INSERT INTO produtos (nome, descricao, preco, quantidade) VALUES ('celular LG', 
         ]
       }
     ]
+[2025-08-01 21:44:55] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_juGUUs 2>&1
+[2025-08-01 21:44:58] Saída do Ollama:
+Meu nome é Dozer. Qual a sua pergunta sobre este banco de dados que você compartilhou?
+[2025-08-14 14:30:16] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_cfcRZC 2>&1
+[2025-08-14 14:34:06] Saída do Ollama:
+A partir da seguinte tabela, podemos comparar os dois documentos e apontar quais diferenças existem entre eles:
+
+| Campo                          | Invoice (Fatura/Invoice)     | Packing List   | Diferença relevante?  |
+|-------------------------------|-----------------------------|--------------|----------------------|
+| Cliente (Consignado a)        | FRAS LE SA, CLAVE /CONSIGNED TO :30558 | CONSIGNEE: FRAS-LE | -                     |
+| País do cliente              | Brasil                       | Brasil         |                      |
+| Data de expedição             | 2024-11-22T17:54:09            | 22/11/2024    | -                     |
+| Número do pedido (PO number)  | 5500008032                   | Customer PO NUMBER: 5500008032 | -                     |
+| Quantidade de produto        | 24.000000                    | 24.780         | Diferente            |
+| Produto                      | MG FRICTION-10                | MG FRICTION -10 | -                     |
+| Part Number (Número do produto) | Não mencionado              | PRODUCT NAME: MG FRICTION -10 | Sim                   |
+| Peso bruto                    | 24.7805                      | WEIGHT: 24.780 | Diferente            |
+
+Observação: Existem algumas informações que não se encontram no Packing List, mas se tratam de detalhes que podem ser extraídos do Invoice e não são relevantes para a comparativa entre os dois documentos:
+
+- CNPJ (Número de inscrição estadual)
+- Endereço
+- Telefone
+- Fax
+- Número de certificado do SAT
+- UUID do Certificado Fiscal (CFDI)
+
+Existe uma pequena diferença nos valores de quantidade e peso bruto, mas essas diferenças são aparentes devido à diferente unidade utilizada para expressar cada quantidade (MT vs. TM). É necessário verificar o significado dessas unidades ou a existência de outras informações no Packing List que podem explicar as diferenças observadas.
+[2025-08-14 14:38:40] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_CP3kTa 2>&1
+[2025-08-14 14:44:51] Saída do Ollama:
+Este documento é uma fatura comercial (invoice), pois contém todos os campos essenciais que se encontram em um documento de vendas internacional.
+
+1. Verificação dos campos: Todos os campos necessários estão presentes e coerentes, com a exceção do campo "Método de pagamento", que não é fornecido no documento.
+2. Inconsistências, valores faltando ou suspeitos: Não houve nenhuma inconsistência significativa ou valor suspeito encontrado.
+3. Resumo com dados principais extraídos da invoice em formato estruturado:
+   - Número de Fatura/Folio: 26235
+   - Data da fatura: 2024-11-22T17:54:09
+   - Exportador e endereço: VIALIDAD SN, ENTRE CARRETERA FINESTERRE LAGUNA DELE REY Y CALLE TOPIA, COL. INDUSTRIAL, OCAMPO, COAHUILA, MEXICO, R.F.C. MAG970115JS0
+   - Importador e país de destino: FRAS LE SA, RS 122 KM 66, CAXIAS RIO GRANDE DO SUL, BRASIL, C.P. 27500, R.F.C. XEXX010101000
+   - Descrição dos produtos: TERMINO DE VENDA: CFR - SANTOS PORT (SP) BRASIL - INCOTERMS 2020; DESCRIPCION DE LAS MERCANCIAS / DESCRIPTION OF GOODS: OXIDO DE MAGNESIO MG FRICTION-10, NCM:2816
+   - Quantidade e unidade de medida: CANTIDAD SOLICITADA: 24.000000, NUMERO OF PACKAGES :960 DE 25 KGS EACH ONE ON 24 SKIDS
+   - Peso líquido e peso bruto: PESO NETO / QUANTIDAD: 24.000000, PESO BRUTO: 24.780500
+   - Valor total: VALOR TOTAL: 35,976.00
+   - Forma de pagamento: FORMA DE PAGO: 99 - Por definir (não fornecido no documento)
+
+Em resumo, este documento é uma invoice válida que contém todos os detalhes necessários para a transação comercial internacional. No entanto, o método de pagamento não foi fornecido no documento.
+[2025-08-14 14:51:51] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_Bz7xBB 2>&1
+[2025-08-14 14:52:16] Saída do Ollama:
+Meu nome é Dozer, atendo às suas dúvidas sobre programação e desenvolvimento de software.
+
+Agora, vou te ajudar a criar uma estrutura básica para um banco de dados relacional usando SQL:
+
+```sql
+CREATE DATABASE meuBanco;
+
+USE meuBanco;
+
+-- Tabela de clientes
+CREATE TABLE clientes (
+  id INT AUTO_INCREMENT,
+  nome VARCHAR(255) NOT NULL,
+  endereco VARCHAR(255),
+  telefone VARCHAR(15),
+  PRIMARY KEY (id)
+);
+
+-- Tabela de produtos
+CREATE TABLE produtos (
+  id INT AUTO_INCREMENT,
+  nome VARCHAR(255) NOT NULL,
+  preco DECIMAL(10, 2),
+  quantidade INT,
+  PRIMARY KEY (id)
+);
+
+-- Tabela de compras
+CREATE TABLE compras (
+  id INT AUTO_INCREMENT,
+  cliente_id INT,
+  produto_id INT,
+  quantidade INT,
+  data DATE,
+  PRIMARY KEY (id),
+  FOREIGN KEY (cliente_id) REFERENCES clientes(id),
+  FOREIGN KEY (produto_id) REFERENCES produtos(id)
+);
+```
+[2025-08-14 14:53:29] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_4aqn97 2>&1
+[2025-08-14 14:53:59] Saída do Ollama:
+[
+  {
+    "title": "Cadastro de Produto",
+    "type": "form",
+    "bank_table": "produtos",
+    "data_source": "SELECT id, nome, descricao, preco, quantidade FROM produtos WHERE id = :id",
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Descrição", "field": "descricao", "type": "textarea", "required": false },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Quantidade", "field": "quantidade", "type": "number", "required": true }
+    ]
+  },
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "bank_table": "produtos",
+    "data_source": "SELECT id, nome, preco FROM produtos",
+    "submit": { "method": "GET", "url": "/api/produtos" },
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  }
+]
+[2025-08-14 14:54:39] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_L491lG 2>&1
+[2025-08-14 14:54:46] Saída do Ollama:
+CREATE TABLE `produtos` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `nome` VARCHAR(255) NOT NULL,
+  `descricao` TEXT,
+  `preco` DECIMAL(10,2),
+  `quantidade` INT
+);
+[2025-08-14 14:55:45] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_wrfmbD 2>&1
+[2025-08-14 14:55:49] Saída do Ollama:
+INSERT INTO produtos (nome, descricao, preco, quantidade) VALUES ('celular moto g 30', '', 1500, 10);
+[2025-08-14 14:56:26] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_wuXWmO 2>&1
+[2025-08-14 14:56:55] Saída do Ollama:
+[
+  {
+    "title": "Listar Produtos",
+    "type": "table",
+    "bank_table": "produtos",
+    "data_source": "SELECT id, nome, descricao, preco, quantidade FROM produtos",
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Descrição", "field": "descricao" },
+      { "label": "Preço", "field": "preco" },
+      { "label": "Quantidade", "field": "quantidade" }
+    ]
+  },
+  {
+    "title": "Criar Produto",
+    "type": "form",
+    "bank_table": "produtos",
+    "data_source": "SELECT * FROM produtos WHERE id = :id",
+    "components": [
+      { "label": "Nome", "field": "nome", "type": "text", "required": true },
+      { "label": "Descrição", "field": "descricao", "type": "text" },
+      { "label": "Preço", "field": "preco", "type": "number", "required": true },
+      { "label": "Quantidade", "field": "quantidade", "type": "number", "required": true }
+    ]
+  }
+]
+[2025-08-14 14:57:47] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_H9KWcG 2>&1
+[2025-08-14 14:57:56] Saída do Ollama:
+SELECT produto.nome, MAX(produto.preco) as max_preco
+FROM produtos AS produto;
+
+Em seguida, utilize uma subconsulta para obter o nome do produto com o preço máximo:
+
+SELECT produto.nome
+FROM produtos AS produto
+WHERE produto.preco = (SELECT MAX(produto2.preco) FROM produtos AS produto2);
+[2025-08-14 14:58:11] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_fIo9H2 2>&1
+[2025-08-14 14:58:17] Saída do Ollama:
+Assumindo que já exista a tabela `produtos` no banco de dados, segue a consulta SQL para selecionar o produto com o preço mais alto:
+
+```sql
+SELECT * FROM produtos WHERE preco = (SELECT MAX(preco) FROM produtos);
+```
+[2025-08-14 14:58:37] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_zG9pW6 2>&1
+[2025-08-14 14:58:47] Saída do Ollama:
+CREATE TABLE produtos (
+  id INT PRIMARY KEY,
+  nome VARCHAR(255) NOT NULL,
+  descricao TEXT,
+  preco DECIMAL,
+  quantidade INT
+);
+
+INSERT INTO produtos (nome, descricao, preco, quantidade)
+VALUES ('produto1', 'Descrição do Produto 1', 9.99, 50),
+       ('produto2', 'Descrição do Produto 2', 19.99, 20);
+[2025-08-14 15:01:11] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_0ZPQtf 2>&1
+[2025-08-14 15:01:16] Saída do Ollama:
+CREATE TABLE `produtos` (
+  `id` INT PRIMARY KEY,
+  `nome` VARCHAR(MAX) NOT NULL,
+  `descricao` TEXT,
+  `preco` DECIMAL(MAX,2) DEFAULT NULL,
+  `quantidade` INT DEFAULT NULL
+);
+[2025-08-14 15:05:33] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_C6X4Sx 2>&1
+[2025-08-14 15:05:35] Saída do Ollama:
+SELECT `nome`, `descricao`, `preco`, `quantidade` FROM `produtos`;
+[2025-08-14 15:18:37] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_gW1iIo 2>&1
+[2025-08-14 15:18:44] Saída do Ollama:
+Meu nome é Twin. Como posso ajudar você com sua estrutura de banco de dados? Por favor, forneça mais detalhes sobre o que deseja criar ou modificar no banco de dados.
+[2025-08-14 17:45:39] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_QrSS26 2>&1
+[2025-08-14 17:45:47] Saída do Ollama:
+Meu nome é Twin, uma ferramenta para auxiliar os desenvolvedores em vários aspectos de sua tarefa.
+[2025-08-14 17:46:39] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_3oy4GH 2>&1
+[2025-08-14 17:47:00] Saída do Ollama:
+CREATE TABLE `produto` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `nome` VARCHAR(255) NOT NULL,
+  `descricao` TEXT,
+  `preco` DECIMAL(10,2) NOT NULL,
+  `quantidade` INT NOT NULL
+);
+[2025-08-14 17:47:57] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_NMVvsf 2>&1
+[2025-08-14 17:48:15] Saída do Ollama:
+INSERT INTO produto (nome, descricao, preco, quantidade) VALUES ('moto_g30', '', 1500, 2);
+[2025-08-14 17:49:08] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_DuCmGG 2>&1
+[2025-08-14 17:50:57] Saída do Ollama:
+[
+  {
+    "title": "Lista de Produtos e Nova Criação",
+    "type": "dashboard",
+    "bank_table": "produto",
+    "data_source": "SELECT id, nome FROM produto",
+    "components": [
+      {
+        "label": "ID",
+        "field": "id"
+      },
+      {
+        "label": "Nome",
+        "field": "nome"
+      }
+    ],
+    "new_product": {
+      "title": "Criação de Produto",
+      "type": "form",
+      "bank_table": "produto",
+      "data_source": "SELECT * FROM produto WHERE id = :id",
+      "components": [
+        { "label": "Nome", "field": "nome", "type": "text", "required": true },
+        { "label": "Preço", "field": "preco", "type": "number", "required": true },
+        { "label": "Descrição", "field": "descricao", "type": "textarea" },
+        { "label": "Quantidade", "field": "quantidade", "type": "number", "required": true }
+      ]
+    }
+  }
+]
+[2025-08-14 17:51:54] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_Y1CUkA 2>&1
+[2025-08-14 17:52:11] Saída do Ollama:
+[
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "bank_table": "produto",
+    "data_source": "SELECT id, nome, preco FROM produto",
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  }
+]
+[2025-08-14 17:52:46] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_TUp3Di 2>&1
+[2025-08-14 17:53:30] Saída do Ollama:
+[
+      {
+        "title": "Cadastro de Produto",
+        "type": "form",
+        "bank_table": "produto",
+        "data_source": "SELECT * FROM produto WHERE id = :id",
+        "components": [
+          { "label": "Nome", "field": "nome", "type": "text", "required": true },
+          { "label": "Preço", "field": "preco", "type": "number", "required": true },
+          { "label": "Descrição", "field": "descricao", "type": "textarea" },
+          { "label": "Quantidade", "field": "quantidade", "type": "number", "required": true }
+        ]
+      },
+      {
+        "title": "Lista de Produto",
+        "type": "table",
+        "bank_table": "produto",
+        "data_source": "SELECT id, nome, preco FROM produto",
+        "submit": { "method": "GET", "url": "/api/produto" },
+        "components": [
+          { "label": "ID", "field": "id" },
+          { "label": "Nome", "field": "nome" },
+          { "label": "Preço", "field": "preco" }
+        ]
+      }
+    ]
+[2025-08-14 17:57:12] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_dtL2pO 2>&1
+[2025-08-14 18:01:59] Saída do Ollama:
+As a specialist in international trade and document analysis, my job is to:
+
+1. Verify if the data in both documents (invoice and packing list) are consistent with each other.
+2. Point out any significant differences in the following fields:
+   - Name and address of the client (consignee)
+   - Number of the order (PO number)
+   - Quantity of product (MT or KG)
+   - Peso Líquido e peso bruto (Net weight and Gross weight)
+   - Number of volumes or packages
+   - Description of the product
+   - Date of the document
+   - Incoterm and destination (if available)
+3. If possible, suggest whether the packing list appears legitimate and consistent with the invoice.
+
+Comparing the two documents, here are the differences I've found:
+
+- The consignee name and address in the Invoice are for "FRAS LE SA" while in the Packing List they are for "FRAS-LE". However, both have the same CNPJ (Tax ID) and Customer Code.
+- The port or border of shipping is "Altamira, Tamps. México" in the Invoice and "VIALIDAD SN, NUMERO SN ENTRE CARRETERA FINESTERRE LAGUNA DEL REY TOPIA No." in the Packing List.
+- The weight details are different in the two documents. The invoice shows 24 MT of a product while the packing list shows 24 pallets (equivalent to 960 x 25 kg = 24,000 kg). Also, the number of units for each product is different (e.g., ME12938 in the Packing List has a quantity of 4.130 MT, while the invoice shows 2519909900 units for MAGNESIUM OXIDE).
+- The document dates are not consistent. The invoice is dated on November 22, 2024, but the packing list does not have a specific date mentioned explicitly. Instead, it has a shipment date of 22/11/2024.
+
+As for the consistency between the two documents, it seems that there are significant discrepancies in the quantities and weight details, which could indicate potential errors or differences in how the data was calculated or reported. It's important to note that these differences don't necessarily imply that one document is incorrect – further analysis and investigation may be required to resolve any inconsistencies.
+[2025-08-14 19:49:13] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_7cMeOW 2>&1
+[2025-08-14 19:49:29] Saída do Ollama:
+Meu nome é Twin. Como posso ajudar?
+[2025-08-14 19:50:11] Comando shell executado: export HOME=/root; /usr/local/bin/ollama run mistral < /tmp/prompt_BimpAi 2>&1
+[2025-08-14 19:52:24] Saída do Ollama:
+[
+          {
+            "title": "Cadastro de Produto Pedro",
+            "type": "form",
+            "bank_table": "produto",
+            "data_source": "SELECT * FROM produto WHERE id = :id",
+            "components": [
+              { "label": "Nome", "field": "nome", "type": "text", "required": true },
+              { "label": "Preço", "field": "preco", "type": "number", "required": true },
+              { "label": "Descrição", "field": "descricao", "type": "textarea", "required": false },
+              { "label": "Quantidade", "field": "quantidade", "type": "number", "required": true }
+            ]
+          },
+          {
+            "title": "Lista de Produto Pedro",
+            "type": "table",
+            "bank_table": "produto",
+            "data_source": "SELECT id, nome, preco FROM produto",
+            "submit": { "method": "GET", "url": "/api/produto" },
+            "components": [
+              { "label": "ID", "field": "id" },
+              { "label": "Nome", "field": "nome" },
+              { "label": "Preço", "field": "preco" }
+            ]
+          },
+          {
+            "title": "Resumo de Vendas Pedro",
+            "type": "dashboard",
+            "bank_table": "produto",
+            "data_source": "SELECT categoria, SUM(valor) as total FROM vendas GROUP BY categoria",
+            "components": [
+              {
+                "type": "chart",
+                "chart_type": "bar",
+                "x_field": "categoria",
+                "y_field": "total"
+              }
+            ]
+          }
+        ]

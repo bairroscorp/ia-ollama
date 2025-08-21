@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Lista de Produtos e Nova Criação",
+    "type": "dashboard",
+    "bank_table": "produto",
+    "data_source": "SELECT id, nome FROM produto",
+    "components": [
+      {
+        "label": "ID",
+        "field": "id"
+      },
+      {
+        "label": "Nome",
+        "field": "nome"
+      }
+    ],
+    "new_product": {
+      "title": "Criação de Produto",
+      "type": "form",
+      "bank_table": "produto",
+      "data_source": "SELECT * FROM produto WHERE id = :id",
+      "components": [
+        { "label": "Nome", "field": "nome", "type": "text", "required": true },
+        { "label": "Preço", "field": "preco", "type": "number", "required": true },
+        { "label": "Descrição", "field": "descricao", "type": "textarea" },
+        { "label": "Quantidade", "field": "quantidade", "type": "number", "required": true }
+      ]
+    }
+  }
+]

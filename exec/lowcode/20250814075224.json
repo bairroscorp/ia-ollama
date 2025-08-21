@@ -1,0 +1,40 @@
+[
+          {
+            "title": "Cadastro de Produto Pedro",
+            "type": "form",
+            "bank_table": "produto",
+            "data_source": "SELECT * FROM produto WHERE id = :id",
+            "components": [
+              { "label": "Nome", "field": "nome", "type": "text", "required": true },
+              { "label": "Preço", "field": "preco", "type": "number", "required": true },
+              { "label": "Descrição", "field": "descricao", "type": "textarea", "required": false },
+              { "label": "Quantidade", "field": "quantidade", "type": "number", "required": true }
+            ]
+          },
+          {
+            "title": "Lista de Produto Pedro",
+            "type": "table",
+            "bank_table": "produto",
+            "data_source": "SELECT id, nome, preco FROM produto",
+            "submit": { "method": "GET", "url": "/api/produto" },
+            "components": [
+              { "label": "ID", "field": "id" },
+              { "label": "Nome", "field": "nome" },
+              { "label": "Preço", "field": "preco" }
+            ]
+          },
+          {
+            "title": "Resumo de Vendas Pedro",
+            "type": "dashboard",
+            "bank_table": "produto",
+            "data_source": "SELECT categoria, SUM(valor) as total FROM vendas GROUP BY categoria",
+            "components": [
+              {
+                "type": "chart",
+                "chart_type": "bar",
+                "x_field": "categoria",
+                "y_field": "total"
+              }
+            ]
+          }
+        ]

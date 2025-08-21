@@ -1,0 +1,13 @@
+[
+  {
+    "title": "Lista de Produtos",
+    "type": "table",
+    "bank_table": "produto",
+    "data_source": "SELECT id, nome, preco FROM produto",
+    "components": [
+      { "label": "ID", "field": "id" },
+      { "label": "Nome", "field": "nome" },
+      { "label": "Preço", "field": "preco" }
+    ]
+  }
+]
