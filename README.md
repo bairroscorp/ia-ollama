@@ -1,4 +1,4 @@
-# SUC: Decision, Orchestration, Zero-touch, Execution, and Reasoning*
+# DOZER: Decision, Orchestration, Zero-touch, Execution, and Reasoning*
 
 **API + IA + Low-code + DB = Decisão, Orquestração, Zero intervenção, Execução e Raciocínio ** 
 # Automatizando processos com inteligência.
