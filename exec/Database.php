@@ -4,9 +4,9 @@ class Database
 {
     private $pdo;
     private $host = 'localhost';
-    private $dbname = 'suc';
-    private $username = 'suc';
-    private $password = 'suc';
+    private $dbname = '';
+    private $username = '';
+    private $password = '';
 
     public function __construct()
     {
